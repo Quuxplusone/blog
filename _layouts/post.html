@@ -18,6 +18,4 @@ layout: default
       <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify: 'pretty' | url_encode }}" class="post-tag">{{ tag | slugify: 'pretty' | escape }}</a>
     {% endfor %}
   </div>
-
-  {% include disqus.html %}
 </article>
