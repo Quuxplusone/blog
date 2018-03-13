@@ -1,6 +1,10 @@
 ---
 layout: post
 title: First post — Jekyll Now
+tags:
+  jekyll
+  meta
+  slack
 ---
 
 I've been putting off creating a blog for years now, because I dreaded being one of those blogs
