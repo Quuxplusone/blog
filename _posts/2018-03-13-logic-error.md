@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Using `future_error` for control flow
-date: 2018-03-13 00:03:00
+title: 'Using `future_error` for control flow'
+date: 2018-03-13 00:03:00 +0000
 tags:
   c++-style
   exception-handling
-excerpt:
+excerpt: |
   `logic_error` is itself a logic error... or is it?
 ---
 

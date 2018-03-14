@@ -1,14 +1,13 @@
 ---
 layout: post
-title: The "`unsigned` for value range" antipattern
-date: 2018-03-13 00:02:00
+title: 'The "`unsigned` for value range" antipattern'
+date: 2018-03-13 00:02:00 +0000
 tags:
   c++-style
   undefined-behavior
-excerpt:
+excerpt: |
   At the WG21 committee meeting which is currently underway in Jacksonville, JF Bastien will be presenting [a proposal](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0907r0.html) to make C++'s `int` data type wrap around on overflow.
 ---
-
 
 ## Background: Signed Integers Are (Not Yet) Two's Complement
 

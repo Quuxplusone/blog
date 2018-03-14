@@ -1,10 +1,10 @@
 ---
 layout: post
-title: *Providentissimus Deus*
-date: 2018-03-13 00:04:00
+title: '*Providentissimus Deus*'
+date: 2018-03-13 00:04:00 +0000
 tags:
   undefined-behavior
-excerpt:
+excerpt: |
   On 1893-11-18, Pope Leo XIII issued the encyclical *[Providentissimus Deus](https://en.wikipedia.org/wiki/Providentissimus_Deus)*.
   In this letter, among much else, the Pope writes:
   > In the second place, we have to contend against those who, making an evil use of physical science, minutely scrutinize the Sacred Book
