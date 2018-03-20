@@ -283,6 +283,26 @@ footer {
   text-align: center;
 }
 
+.float-left {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: -20%;
+  margin-right: 2em;
+  max-width: 300px;
+  float: left;
+}
+
+.float-right {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: -20%;
+  max-width: 300px;
+  float: right;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
