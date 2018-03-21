@@ -3,6 +3,7 @@ layout: post
 title: 'P0732R0 and "trivially comparable"'
 date: 2018-03-19 00:01:00 +0000
 tags:
+  jacksonville-2018
   language-design
   templates
   wg21
