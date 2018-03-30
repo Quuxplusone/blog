@@ -42,6 +42,14 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+sub {
+	font-size: smaller;
+	vertical-align: sub;
+}
+sup {
+	font-size: smaller;
+	vertical-align: super;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
