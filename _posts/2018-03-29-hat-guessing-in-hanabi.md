@@ -237,6 +237,15 @@ or I've implemented it only to find that it is outperformed by Jeff's original
 The complete code in Rust can be seen [here](https://github.com/WuTheFWasThat/hanabi.rs/blob/master/src/strategies/information.rs),
 and my C++ port [here](https://github.com/Quuxplusone/Hanabi/blob/master/InfoBot.cc).
 
+Jeff adds that the following paper was helpful:
+
+- ["How to Make the Perfect Fireworks Display: Two Strategies for Hanabi"](/blog/images/how-to-make-the-perfect-fireworks-display.pdf) (2015)
+
+The following resources might also be interesting:
+
+- ["Hanabi is NP-complete, Even for Cheaters who Look at Their Cards"](http://www.dais.is.tohoku.ac.jp/~andre/publications/papers//2017/Baffier,%20Chiu,%20Diez,%20Korman,%20Mitsou,%20van%20Renssen,%20Roeloffzen,%20Uno%20-%20Hanabi%20is%20NP-hard,%20Even%20for%20Cheaters%20who%20Look%20at%20Their%20Cards%20(TCS%202017).pdf) (2017)
+- https://github.com/chikinn/hanabi (several bots, in Python)
+
 ----
 
 P.S. — I think I'd head to the cable car turntable on Powell Street.
