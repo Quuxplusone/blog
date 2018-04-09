@@ -53,7 +53,18 @@ sup {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	border: 1px solid gray;
 }
+table td {
+	border: 1px solid #dfe2e5;
+	padding: 6px 13px;
+}
+table th {
+	border: 1px solid #dfe2e5;
+	font-weight: bold;
+	padding: 6px 13px;
+}
+
 // Apply a natural box layout model to all elements
 // from: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 *, *:before, *:after {
