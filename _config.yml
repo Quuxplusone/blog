@@ -39,6 +39,9 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
+# Enter your Mixpanel project token to activate tracking
+mixpanel: f8050bba65fe16fa9054e8656aebef3d
+
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: https://quuxplusone.github.io
