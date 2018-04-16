@@ -244,6 +244,7 @@ Jeff adds that the following paper was helpful:
 The following resources might also be interesting:
 
 - ["Hanabi is NP-complete, Even for Cheaters who Look at Their Cards"](http://www.dais.is.tohoku.ac.jp/~andre/publications/papers//2017/Baffier,%20Chiu,%20Diez,%20Korman,%20Mitsou,%20van%20Renssen,%20Roeloffzen,%20Uno%20-%20Hanabi%20is%20NP-hard,%20Even%20for%20Cheaters%20who%20Look%20at%20Their%20Cards%20(TCS%202017).pdf) (2017)
+- ["Playing Hanabi Near-Optimally"](http://www.mi.parisdescartes.fr/~bouzy/publications/bouzy-hanabi-2017.pdf) (2017)
 - https://github.com/chikinn/hanabi (several bots, in Python)
 
 ----
