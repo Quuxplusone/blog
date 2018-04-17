@@ -133,9 +133,42 @@ On the other hand, it _is_ possible to write the typedef
 (again, ignoring the horrible requirement to `#include <typeinfo>` before doing so), and this should not
 be taken as compelling evidence that `std::type_info` is awesome!
 
-Trivia: I notice that it is not currently possible to write typedefs for
+Trivia: I notice that it is not currently possible to write a typedef for
 
     using weak_ordering = ???;
-    using weak_equality = ???;
 
-because you cannot create a C++ type with these comparison categories using only core-language features.
+because you cannot create a C++ type with that comparison category using only core-language features.
+It is also not *currently* possible to write a typedef for `weak_equality`; but there has been
+a suggestion of
+
+    union U { int a; int b; };
+    using weak_equality = decltype(&U::a <=> &U::b);
+
+because it is [guaranteed](http://eel.is/c++draft/expr.eq#3.5) that `U::a` and `U::b` must be equal,
+yet they are not substitutable.
+
+However, none of the "big three" compilers implement C++ pointers-to-union-members correctly,
+so I think it is likely that the Committee will end up just "fixing" pointers-to-union-members somehow
+so that they become sane, rather than trying to pretend that they are actually a good example of
+`weak_equality`.
+
+[A fun test program for your compiler of choice is:](https://wandbox.org/permlink/7TcTDdFS4kmTlVtD)
+
+
+    #include <iostream>
+
+    union U { int a; int b; };
+
+    int main() {
+        constexpr auto pa = &U::a;
+        constexpr auto pb = &U::b;
+
+        constexpr bool x = (pa == pb);
+                  bool y = (pa == pb);
+
+        std::cout << std::boolalpha << x << ' ' << y << ' ' << (pa == pb) << std::endl;
+    }
+
+
+GCC prints "false false true"; Clang and MSVC print "false true true".
+Intel's ICC compiler correctly prints "true true true".
