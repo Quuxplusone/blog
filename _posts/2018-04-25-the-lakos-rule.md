@@ -83,7 +83,7 @@ Or even something like this:
     public:
         int unsafe(int i) const {
     #ifdef PARANOID
-            if (0 <= i && i < 10) throw std::out_of_range("precondition violation");
+            if (0 > i || i >= 10) throw std::out_of_range("precondition violation");
     #endif
             return data[i];
         }
