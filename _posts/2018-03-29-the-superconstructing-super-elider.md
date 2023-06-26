@@ -169,7 +169,7 @@ One of these conditions is that the source must *not* be a function parameter.
 So the move-constructions from `x` into the return slot of `identity`, and again from
 `x` into the return slot of `identity`, are not elidable; but the final move
 from the return slot of `identity` into the address of `y` *is* elidable
-(because it is moving out of a return slot, and that's [specifically permitted](http://eel.is/c++draft/class.copy#elision-1)
+(because it is moving out of a return slot, and that's [specifically permitted](http://eel.is/c++draft/class.copy.elision#1)
 to be elided).
 
 [As Stepanov said in 1998](http://stepanovpapers.com/DeSt98.pdf),
