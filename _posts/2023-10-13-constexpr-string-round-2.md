@@ -14,7 +14,7 @@ showing some surprising behavior in libc++. As of a week ago, that surprising be
 is gone!
 
 The same day my post hit Hacker News,
-James Y. Knight filed [libstdc++ bug 111351](https://gcc.gnu.org/bugzilla//show_bug.cgi?id=111351)
+James Y. Knight filed [libstdc++ bug 111351](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=111351)
 asking for libstdc++ to match libc++'s more conservative behavior by disabling its
 [SSO](/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#sbo-soo-sso) at constexpr time.
 After some pushback there, Knight (quite awesomely, in my view) pivoted to create
