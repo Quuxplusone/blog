@@ -134,12 +134,21 @@ Speaking of how a policeless world would deal with harms, see
 [this quite shareable Twitter thread](https://web.archive.org/web/20200614175557/https://twitter.com/djmckenna00/status/1269218616861437952)
 from Dave McKenna:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Most theft is wage theft.
-Meaning, the dollar value of stolen wages is greater than the value, each year,
-of all burglaries+robberies, shoplifting, auto theft, combined. Yet, wage theft is NOT A CRIME 2/
-<a href="https://t.co/BOj2yXXmtP">pic.twitter.com/BOj2yXXmtP</a></p>&mdash; Dave McKenna (@djmckenna00)
-<a href="https://twitter.com/djmckenna00/status/1269219453637623808">June 6, 2020</a>
-</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="fake-tweet">
+  <div>
+    <div class="fake-tweet-firstline">
+      <div>
+        <a href="https://twitter.com/djmckenna00"><img src="/blog/images/twitter-avatar-djmckenna00.jpg" class="fake-tweet-avatar"/></a>
+      </div>
+      <div class="fake-tweet-byline">Dave McKenna<br><span class="fake-tweet-light">@djmckenna00</span></div>
+      <a href="https://twitter.com/djmckenna00/status/1269219453637623808"><img src="/blog/images/twitter-logo.svg"/></a>
+    </div>
+    <p>Most theft is wage theft.
+    Meaning, the dollar value of stolen wages is greater than the value, each year,
+    of all burglaries+robberies, shoplifting, auto theft, combined. Yet, wage theft is NOT A CRIME 2/</p>
+    <p class="fake-tweet-light">6:47 AM · Jun 6, 2020</p>
+  </div>
+</div>
 
 Ibram X. Kendi, in ["The End of Denial,"](https://www.theatlantic.com/magazine/archive/2020/09/the-end-of-denial/614194/)
 analogizes his own stage-4 cancer diagnosis and his own urgent grapple with "two choices: denial and death, or recognition and life."
