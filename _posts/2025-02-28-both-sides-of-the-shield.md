@@ -20,7 +20,6 @@ From John Cooper Mendenhall's ["Aureate Terms"](https://archive.org/details/aure
 > Who dare call the clerks blind who saw only the golden side of the shield?
 
 This is a reference to a fable originating
-with [Joseph Spence](https://en.wikipedia.org/wiki/Joseph_Spence_(author)) (writing as "Sir Harry Beaumont")
 in [_Beaumont's Moralities_](https://archive.org/details/bim_eighteenth-century_moralities-or-essays-_spence-joseph_1753/page/99) (1753).
 There it is titled "The Parti-Colored Shield":
 
@@ -182,3 +181,28 @@ a collection of American writings on bimetallism:
 
 Finally, Ambassador [Archibald Butt](https://en.wikipedia.org/wiki/Archibald_Butt) wrote a novel titled
 _Both Sides of the Shield_ (published posthumously in 1912, after Butt went down with the _Titanic_).
+
+---
+
+I wasn't the first to wonder the source of this story. From _Notes & Queries_
+([1880-02-14](https://archive.org/details/s6notesqueries01londuoft/page/137)),
+the Rev. Edward Marshall of Sandford St Martin inquires:
+
+> <span class="headline">"The gold and silver shield."</span>—[Lord Granville](https://en.wikipedia.org/wiki/Granville_Leveson-Gower,_2nd_Earl_Granville)
+> is reported to have said, in his speech at the opening of Parliament,
+> "Unlike the old knight, he sees both the silver and the golden side of the shield."
+> I take the opportunity to ask whether any correspondent of "N. & Q." can refer to the
+> origin of the story here alluded to. The question was asked some time since [i.e. on
+> [1875-10-30](https://archive.org/details/s5notesqueries04londuoft/page/349/)], and obtained no reply.
+
+The following week ([1880-02-21](https://archive.org/details/s6notesqueries01londuoft/page/165)) William Platt
+of Piccadilly provided the answer:
+
+> <span class="headline">"The gold and silver shield"</span> (6th S. i. 137).—The story of
+> "the party-coloured shield," selected from Beaumont's _Moralities_, was reprinted in a collection
+> of [_Useful and Entertaining Passages in Prose_](https://books.google.com/books?id=CW1RAAAAcAAJ&pg=PA92) (pp. 92–4),
+> and published at Paris in 1826 by G. Hamonière.
+
+The editor of _Notes & Queries_ expresses further puzzlement as to the identity of this "Beaumont"; but
+in fact "Sir Harry Beaumont" was a pen name of [Joseph Spence](https://en.wikipedia.org/wiki/Joseph_Spence_(author))
+(1699–1768).
