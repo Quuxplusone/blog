@@ -118,6 +118,24 @@ is also the name of a processor architecture used by many embedded devices, incl
 most Android smartphones. Your C++ compiler might produce code to run _on_ ARM, but
 your C++ compiler almost certainly does not accept the dialect of C++ described _by_ the ARM!
 
+## ASan, MSan, TSan, UBSan
+
+"Address Sanitizer," "Memory Sanitizer," "Thread Sanitizer," and "[Undefined Behavior](#ub) Sanitizer,"
+respectively. These are the colloquial names for the runtime error-detection instrumentation packages
+supported by GCC and Clang. [MSVC supports ASan as well](https://learn.microsoft.com/en-us/cpp/build/reference/fsanitize),
+but as far as I can tell (as of 2025) doesn't offer the other three yet.
+
+ASan is similar to `valgrind`, but whereas `valgrind` observes an otherwise uninstrumented process,
+with ASan you actually tell the compiler to generate special instrumented code so that the program
+itself is always trying to detect its own problems.
+
+|:---|:---|:---|:---|
+| ASan | [Address Sanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) | `-fsanitize=address` | Use-after-free; buffer overflow |
+| MSan | [Memory Sanitizer](https://clang.llvm.org/docs/MemorySanitizer.html) | `-fsanitize=memory` | Read from uninitialized |
+| TSan | [Thread Sanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html) | `-fsanitize=thread` | Data race |
+| UBSan | [UB Sanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html) | `-fsanitize=undefined` | Integer overflow; null pointer dereference |
+{:.smaller}
+
 ## BMI, CMI
 
 "Binary Module Interface." Just as .cpp files are compiled into .o files, and some compilers provide
@@ -351,6 +369,58 @@ This manifests as a [difference in `-std=c++11` behavior](https://godbolt.org/z/
 (shipped January 2015) and Clang 3.8 (shipped March 2016) — not as a difference between `-std=c++11` and
 `-std=c++17` on any compiler! So in this sense, to "resolve _foo_ as a DR" connotes "to apply the same fix
 uniformly across all language modes."
+
+## EB
+
+"Erroneous Behavior." This is a new term of art [introduced](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2795r5.html) into the C++26 draft.
+The idea is that some things that were full-on ["UB"](#ub) before, such as reading from
+uninitialized variables, are now merely "erroneous." Erroneous behavior is defined as
+["well-defined behavior that the implementation is recommended to diagnose."](https://eel.is/c++draft/defns.erroneous)
+
+You can think of the real feature here as _erroneous values_, which are a standardese-ization of
+LLVM's [`poison` values](https://llvm.org/docs/LangRef.html#poison-values).
+<a href="https://eel.is/c++draft/basic.indet">[basic.indet]</a> says that reading from an uninitialized
+byte is not itself EB; rather, it yields an _erroneous value_. Actually _doing_ anything
+with an erroneous (poison) value, however, will produce EB. Consider:
+
+    unsigned char g;
+    void f() { unsigned char c; g = c; }
+
+Inside `f`, loading from the uninitialized `c` produces an erroneous value. But storing into
+`g` cannot _store_ an erroneous value, because of course it must store a value between 0 and 255 inclusive,
+and all of those are real values. So (per [[basic.indet]/2](https://eel.is/c++draft/basic.indet#2)) when we
+do this store
+"the behavior is erroneous and the result of the evaluation is [...] not erroneous." If the implementation
+diagnoses erroneous behavior, it will diagnose the assignment `g = c` at runtime. But if it _doesn't_
+diagnose erroneous behavior, then it will just make sure to initialize `c` to zero. (Or some other
+value "determined by the implementation independently of the state of the program" — but in particular
+[it is _forbidden_](https://stackoverflow.com/questions/78792583/in-c26-are-implementations-required-to-initialize-uninitialized-variables-t)
+in C++26 to do what C and C++ have always done and just "initialize" `c` to whatever garbage
+was already on the stack, because that wouldn't be "independent of the state of the program.")
+
+In practice, you should treat "EB" the same as "UB"; don't think it's "safer" just because the acronym
+has changed! For example, look at what GCC does with this function ([Godbolt](https://godbolt.org/z/Y41cxsjK8)):
+
+    int a[10] = {};
+    int h(bool b) {
+      if (b) {
+        unsigned char c; // uninitialized
+        return a[c]; // EB followed by UB; thus inferred to be unreachable
+      } else {
+        return 42; // this is the only relevant branch
+      }
+    }
+
+If `b` were true, then the `if` branch would have EB (when the erroneous value loaded from `c` is promoted to `int`).
+But the "erroneous value's" actual _value_ is chosen by the optimizer; and it will certainly prefer to
+choose a large value such as 42, such that `a[c]` indexes off the end of the array and causes UB.
+Since GCC doesn't diagnose EB at runtime, it is free to consider the EB branch unreachable and
+optimize `h` down to a simple `return 42`, exactly as it could in the bad old days when loading from `c` was UB.
+
+Who _does_ diagnose EB? Well, C++26 isn't out the door yet, so right now of course the answer is "nobody";
+but in the long run you should expect this to be the domain of "sanitizers" such as [MSan and UBSan](#asan-msan-tsan-ubsan).
+Naturally it is _not_ the domain of UBSan, because EB isn't UB! It's possible that we'll eventually see
+some sort of "EBSan" sanitizer whose job is to diagnose EB at runtime.
 
 ## EBO, EBCO
 
@@ -935,6 +1005,22 @@ For more on this topic, see my talk "[An Allocator is a Handle to a Heap](https:
 
 "[Plain Old Data](https://en.cppreference.com/w/cpp/named_req/PODType)."
 This term has been deprecated in C++20, along with the type trait `std::is_pod<T>`.
+
+## POF
+
+"Plain Old Function." This term was formerly used in the context of [`<csignal>`](https://en.cppreference.com/w/cpp/header/csignal)
+to encompass the kinds of functions that were safe to install as [signal handlers](https://linux.die.net/man/7/signal).
+A "Plain Old Function" was basically any function that you could have written in C, eschewing all the C++ stuff —
+no `throw`, `new`/`delete`, lambdas, `std::vector`, etc. [csignal.syn] said:
+
+> The behavior of any function other than a POF used as a signal handler in a C++ program is implementation-defined.
+
+However, this notion of "POF" erroneously excluded things like lambdas, `std::array`, and `std::min`,
+which were perfectly safe; erroneously included things like `malloc` which were not; and required the C++ implementation
+to somehow "define" the result of installing a signal handler with undefined behavior. So the entire notion was
+[rightly scrapped](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0270r2.html) in C++17.
+Now we talk only of "signal-safe functions," with a definition reasonably similar to [the POSIX one](https://man7.org/linux/man-pages/man7/signal-safety.7.html),
+and "POFs" are a thing of the past.
 
 ## PR
 
