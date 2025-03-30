@@ -30,7 +30,7 @@ I might occasionally say things that aren't about C++, too.
 * 2018–2019: Co-organized the NYC C++ meetup, along with Andrew Morrow
 * 2019–2020: Chaired CppCon's "Back to Basics" Track
 * 2021: Exhumed [_Castlequest_](https://quuxplusone.github.io/blog/2021/03/09/castlequest/) (1980)
-
+* 2025: Published [_Essays on Modern C++_](https://leanpub.com/essays-on-modern-cpp) (Leanpub)
 
 ### Contact Me
 
