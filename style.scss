@@ -355,6 +355,12 @@ span.headline {
   }
 }
 
+.vertical-align-middle-table {
+  td {
+    vertical-align: middle;
+  }
+}
+
 .dfa-table {
   td {
     vertical-align: middle;
@@ -426,6 +432,25 @@ div.fake-tweet {
     font-size: 15px;
     line-height: 20px;
     color: rgb(83, 100, 113);
+  }
+
+  p > a {
+    color: rgb(0, 111, 214);
+    text-decoration: none;
+  }
+  div.fake-tweet-photos {
+    width: 100%;
+    height: 337px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+
+    img {
+      height: 100%;
+    }
   }
 }
 

@@ -365,4 +365,5 @@ See also:
 
 * ["Is your constructor an object-factory or a type-conversion?"](/blog/2018/06/21/factory-vs-conversion/) (2018-06-21)
 * ["The Knightmare of Initialization in C++"](/blog/2019/02/18/knightmare-of-initialization/) (2019-02-18)
+* ["How the STL uses `explicit`"](/blog/2024/06/25/most-stl-ctors-arent-explicit-but-yours-still-should-be/) (2024-06-25)
 {% endraw %}

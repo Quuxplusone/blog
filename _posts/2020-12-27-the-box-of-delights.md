@@ -96,7 +96,7 @@ In December 2005, Michael Dirda of the _Washington Post_ perceptively
 > that the great days are over, the gods have departed, and we have
 > come too late upon the scene. One feels that same sense of twilight
 > in Kenneth Grahame's _The Wind in the Willows_ (1908)
-> and Hope Mirrlees's _Lud-in-the Mist_ (1926).
+> and Hope Mirrlees's _Lud-in-the-Mist_ (1926).
 >
 > [...] Symbolically, the hunger for connectedness with nature
 > and for a renewal of our own passional selves led to an obsession
