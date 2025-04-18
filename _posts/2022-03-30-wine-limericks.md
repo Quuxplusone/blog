@@ -27,7 +27,7 @@ Here are our also-rans (the first by my mom, the others by me):
 > Gave first prize this season to our son.  
 > His key to success?  
 > He says, "Well, I guess  
-> The other guy entered a warse 'un."
+> The other guy entered a warse ’un."
 
 In actual fact none of us won first prize, but the following
 limerick got an honorable mention in the

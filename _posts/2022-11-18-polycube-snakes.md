@@ -77,7 +77,7 @@ How many polycube _snakes_ are there of a given size?
 
 Every polycube of size less than 4 is a snake. At size 4, we already run into a fiddly difficulty!
 Certainly the I, L, and Z tetracubes, and the two "twists" that the [Soma cube](https://en.wikipedia.org/wiki/Soma_cube)
-calls A and B, are snakes. But what about the square ([smashboy](https://nerdist.com/article/jeopardy-fake-tetris-name-error/))?
+calls A and B, are snakes. But what about the square ([smashboy](/blog/2025/04/19/tetromino-names/))?
 Its head adjoins its tail, making it a non-snake if our rule is that no cube may adjoin any cube except its neighbors.
 But by Martin Gardner's definition above, the square _is_ a snake: each cube adjoins no more than
 two others. We might call the square tetromino a _polycube ouroboros_.
