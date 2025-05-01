@@ -1,0 +1,37 @@
+<table class="smaller">
+<tr><th>C++ code</th><th>x86-64</th><th>ARMv8.3-a</th></tr>
+<tr>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void relocate_gamma(Gamma *src, Gamma *dst) {
+  std::construct_at(dst, std::move(*src));
+  std::destroy_at(src);
+}</code></pre></div></div></td>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>movups (%rdi), %xmm0
+movups %xmm0, (%rsi)
+retq
+</code></pre></div></div></td>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ldr q0, [x0]
+str q0, [x1]
+ret
+</code></pre></div></div></td>
+</tr><tr>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void relocate_delta(Delta *src, Delta *dst) {
+  std::construct_at(dst, std::move(*src));
+  std::destroy_at(src);
+}
+</code></pre></div></div></td>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>leaq _ZTV5Delta+16(%rip), %rax
+movq %rax, (%rsi)
+movl 8(%rdi), %eax
+movl %eax, 8(%rsi)
+retq
+</code></pre></div></div></td>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adrp x8, _ZTV5Delta+16
+add x8, x8, :lo12:_ZTV5Delta+16
+ldr w9, [x0, #8]
+pacdza x8
+str w9, [x1, #8]
+str x8, [x1]
+ret
+</code></pre></div></div></td>
+</tr>
+</table>

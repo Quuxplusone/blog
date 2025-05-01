@@ -1,0 +1,32 @@
+<table class="smaller">
+<tr><th>C++ code</th><th>ARMv8.3-a</th></tr>
+<tr>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct Zeta {
+  void * __ptrauth(0,1,0) p_;
+  int y_ = 1;
+  int operator()(int x) const { return x + y_; }
+};
+void relocate_zeta(Zeta *src, Zeta *dst) {
+  std::construct_at(dst, std::move(*src));
+  std::destroy_at(src);
+}
+</code></pre></div></div></td>
+<td><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ldr x16, [x0]
+  cbz x16, .LBB2_2
+  autia x16, x0
+  mov x17, x16
+  xpaci x17
+  cmp x16, x17
+  b.eq .Lauth_success_0
+  mov x16, x17
+  b .Lresign_end_0
+.Lauth_success_0:
+  pacia x16, x1
+.Lresign_end_0:
+.LBB2_2:
+  ldr w8, [x0, #8]
+  str x16, [x1]
+  str w8, [x1, #8]
+</code></pre></div></div></td>
+</tr>
+</table>
