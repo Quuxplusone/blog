@@ -286,3 +286,9 @@ must change in order to make what remains both correct and performant.
 
 If you'd like to be listed among the supporters of P1144R13, please
 [send me an email](mailto:arthur.j.odwyer@gmail.com).
+
+----
+
+See also:
+
+* ["Constexpr `Optional` and trivial relocation"](/blog/2025/05/08/siren-song-2-optional/) (2025-05-08)
