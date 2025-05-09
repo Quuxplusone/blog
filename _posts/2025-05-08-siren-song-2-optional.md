@@ -5,11 +5,24 @@ date: 2025-05-08 00:01:00 +0000
 tags:
   proposal
   relocatability
+  sum-types
   triviality
   wg21
+excerpt: |
+  Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/crac1vrcv))
+
+      template<class T>
+      class [[trivially_relocatable(std::is_trivially_relocatable_v<T>)]] Optional {
+      ~~~~
+        union {
+          char pad_;
+          T t_;
+        };
+        bool engaged_ = false;
+      };
 ---
 
-Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/5T6nzY7dh))
+Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/crac1vrcv))
 
     template<class T>
     class [[trivially_relocatable(std::is_trivially_relocatable_v<T>)]] Optional {
@@ -101,6 +114,10 @@ Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://go
           std::destroy_at(&t_);
         }
       }
+
+      T& value() { assert(engaged_); return t_; }
+      const T& value() const { assert(engaged_); return t_; }
+
     private:
       union {
         char pad_;
@@ -150,7 +167,7 @@ either generically:
     template<class T>
     class [[trivially_relocatable(std::is_trivially_relocatable_v<T> ||
         (std::is_trivially_move_constructible_v<T> && std::is_trivially_destructible_v<T>))]]
-        optional {
+        Optional {
       ~~~~
 
 or by name:
@@ -164,7 +181,7 @@ or by name:
       ((std::is_reference_v<Ts> || std::is_trivially_relocatable_v<Ts>) && ...);
 
     template<class T>
-    class [[trivially_relocatable(optional_be_trivially_relocatable<T>)]] optional {
+    class [[trivially_relocatable(optional_be_trivially_relocatable<T>)]] Optional {
       ~~~~
 
 Either way, we accomplish our goal: we make the compiler to understand that
@@ -181,13 +198,13 @@ that was voted into C++26 in Hagenberg in February despite
 [loud technical objections from the userbase](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3236r1.html)
 about problems which [remain unaddressed](https://quuxplusone.github.io/draft/d1144-object-relocation.html#intro).
 
-Here's the same `Optional` written in P2786's syntax: [Godbolt.](https://godbolt.org/z/W7M83ceTr)
+Here's the same `Optional` written in P2786's syntax: [Godbolt.](https://godbolt.org/z/PW3dq7YW8)
 It's almost exactly the same; the only _syntactic_ difference is in the class-head,
 where instead of an attribute with an explicit condition, P2786 asks us to use
 a pair of keywords:
 
     template<class T>
-    class optional trivially_relocatable_if_eligible
+    class Optional trivially_relocatable_if_eligible
                    replaceable_if_eligible {
         ~~~~
 
@@ -222,7 +239,8 @@ for correctness), but we can't turn them *on* if the compiler decides suboptimal
 This means that our `Optional<tuple<int&>>` cannot with P2786 get the optimizations
 for `vector::erase`, `rotate`, and the like, which it can get with P1144.
 
-Tomorrow we'll see how we can gain "replaceability" for `Optional`, even under P2786,
+[In tomorrow's post](/blog/2025/05/09/siren-song-3-optional/)
+we'll see how we can gain "replaceability" for `Optional`, even under P2786,
 by sacrificing our `constexpr` support.
 
 ----
@@ -230,3 +248,4 @@ by sacrificing our `constexpr` support.
 See also:
 
 * ["Type-erasure, trivial relocation, and lethal sirens"](/blog/2025/05/01/siren-song-of-p2786-keywords/) (2025-05-01)
+* ["Non-constexpr `Optional` and trivial relocation"](/blog/2025/05/09/siren-song-3-optional/) (2025-05-09)

@@ -7,6 +7,7 @@ tags:
   exception-handling
   nodiscard
   proposal
+  sum-types
 excerpt: |
   A correspondent writes to me that he's switched from `throw/catch` exceptions to C++23's `std::expected`
   in all new code. That is, where a traditional C++ program would have:

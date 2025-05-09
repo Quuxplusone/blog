@@ -282,7 +282,7 @@ been merged into the Working Draft, this new version of P1144 will (for the firs
 be expressed as
 [a diff against](https://quuxplusone.github.io/draft/d1144-object-relocation.html#scope)
 what is now P2786-in-the-Working-Draft, showing exactly what parts of the C++26 wording
-must change in order to make what remains both correct and performant.
+should change in order to make what remains both correct and performant.
 
 If you'd like to be listed among the supporters of P1144R13, please
 [send me an email](mailto:arthur.j.odwyer@gmail.com).
@@ -292,3 +292,4 @@ If you'd like to be listed among the supporters of P1144R13, please
 See also:
 
 * ["Constexpr `Optional` and trivial relocation"](/blog/2025/05/08/siren-song-2-optional/) (2025-05-08)
+* ["Non-constexpr `Optional` and trivial relocation"](/blog/2025/05/09/siren-song-3-optional/) (2025-05-09)
