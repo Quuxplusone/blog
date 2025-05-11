@@ -4,6 +4,7 @@ title: '_A Night of Serious Drinking_ and operationalism'
 date: 2021-06-04 00:01:00 +0000
 tags:
   concepts
+  dante
   litclub
   science
 ---

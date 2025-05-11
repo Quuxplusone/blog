@@ -3,6 +3,7 @@ layout: post
 title: "Dante's hypersphere in THREE.js"
 date: 2025-02-02 00:01:00 +0000
 tags:
+  dante
   help-wanted
   litclub
   math

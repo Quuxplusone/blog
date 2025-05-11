@@ -3,6 +3,7 @@ layout: post
 title: "Make things simpler than possible"
 date: 2024-08-04 00:01:00 +0000
 tags:
+  dante
   knuth
   old-shit
   poetry
