@@ -43,7 +43,7 @@ Here, for the record, are all the languages I've found that support labeled loop
 [Ada](#ada) — [Cpp2](#cpp2-cppfront) — [D](#d) — [Dart](#dart) — [Fortran](#fortran) — [Go](#go) —
 [Groovy](#groovy) — [Java](#java) — [JavaScript](#javascript) – [Kotlin](#kotlin) — [Odin](#odin) —
 [Perl](#perl) — [PHP](#php) — [PL/I](#pli) — [PL/pgSQL](#plpgsql-postgresql) — [PowerShell](#powershell) —
-[Rust](#rust) — [Swift](#swift)
+[Rust](#rust) — [Swift](#swift) — [V](#v)
 
 > If you know any more languages, using <b>any</b> syntax — especially if you can find any language
 > using syntax similar to N3377's! — please email me and let me know. Also please email me
@@ -328,6 +328,21 @@ Here, for the record, are all the languages I've found that support labeled loop
       }
     }
     print("Exited the outer loop")
+
+## V
+
+([play.vlang.io.](https://play.vlang.io/p/cddf4acf2b))
+
+    OUTER:
+    for x in 0..4 {
+      for y in 0..4 {
+        println("x=${x} y=${y}")
+        if a[x][y] != 0 {
+          break OUTER
+        }
+      }
+    }
+    println("Exited the outer loop")
 
 ## Languages without labeled loops
 
