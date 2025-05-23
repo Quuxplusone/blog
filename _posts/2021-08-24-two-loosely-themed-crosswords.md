@@ -3,8 +3,8 @@ layout: post
 title: 'Two old crosswords of mine'
 date: 2021-08-24 00:01:00 +0000
 tags:
+  crosswords
   knuth
-  puzzles
   typography
   word-ways
 ---

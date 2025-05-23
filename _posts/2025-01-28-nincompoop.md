@@ -3,6 +3,7 @@ layout: post
 title: "The crossword from _Bored to Death_ S2E5"
 date: 2025-01-28 00:01:00 +0000
 tags:
+  crosswords
   jokes
   puzzles
   transcription
