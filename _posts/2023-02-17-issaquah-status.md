@@ -13,9 +13,9 @@ excerpt: |
   The ISO C++ Committee met in Issaquah, Washington, last week.
   I currently have three papers in the pipeline:
 
-  - [P2752 "Static storage for braced initializers"](https://quuxplusone.github.io/draft/d2752-static-storage-for-braced-initializers.html)
-  - [P2596 "Improve `std::hive::reshape`"](https://quuxplusone.github.io/draft/d2596-improve-hive-reshape.html)
-  - [P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+  - [P2752 "Static storage for braced initializers"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2752r3.html)
+  - [P2596 "Improve `std::hive::reshape`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2596r0.html)
+  - [P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
 
   How did they fare?
 ---
@@ -23,15 +23,15 @@ excerpt: |
 The ISO C++ Committee met in Issaquah, Washington, last week.
 I currently have three papers in the pipeline:
 
-- [P2752 "Static storage for braced initializers"](https://quuxplusone.github.io/draft/d2752-static-storage-for-braced-initializers.html)
-- [P2596 "Improve `std::hive::reshape`"](https://quuxplusone.github.io/draft/d2596-improve-hive-reshape.html)
-- [P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+- [P2752 "Static storage for braced initializers"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2752r3.html)
+- [P2596 "Improve `std::hive::reshape`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2596r0.html)
+- [P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
 
 How did they fare?
 
 ## Static storage for braced initializers
 
-[P2752 "Static storage for braced initializers"](https://quuxplusone.github.io/draft/d2752-static-storage-for-braced-initializers.html)
+[P2752 "Static storage for braced initializers"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2752r3.html)
 was seen by the EWG Incubator on Friday night, and passed on to EWG uneventfully, as expected.
 Since then, its proposed wording has been slightly wordsmithed (thanks, Jens Maurer!) so that hopefully
 it'll be ready for C++26 at the next meeting. If it is accepted, you'll be able to write ([Godbolt](https://godbolt.org/z/19cs5ob9j))
@@ -90,7 +90,7 @@ it was in when it was turned off. Clang has nothing like GCC's full-strength beh
 
 ## Improving `std::hive`
 
-[P2596 "Improve `std::hive::reshape`"](https://quuxplusone.github.io/draft/d2596-improve-hive-reshape.html)
+[P2596 "Improve `std::hive::reshape`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2596r0.html)
 proposes simplifications to [P0447R21 `std::hive`](https://isocpp.org/files/papers/P0447R21.html) that
 would give vendors more freedom to optimize, shrink its memory footprint, and make the `hive::splice` member
 function `noexcept`. P2596 was seen by LEWG on Tuesday, with the following straw-poll results:
@@ -114,7 +114,7 @@ under the macro `-D_LIBCPP_P2596`.
 
 ## Trivial relocatability
 
-[P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+[P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
 has a new name! I've decided that its former name, "Object relocation in terms of move plus destroy,"
 was a little too much of a mouthful; and everyone knows the paper as "Trivially Relocatable" anyway.
 
@@ -122,7 +122,7 @@ There was big news on the trivial-relocation front at Issaquah: Bloomberg has en
 a paper coauthored by Mungo Gill and Alisdair Meredith, [P2786R0 "Trivial relocatability options."](https://isocpp.org/files/papers/P2786R0.pdf)
 This paper wasn't finished in time for the pre-Issaquah mailing and was continually revised all week leading up
 to Friday night's discussion; it [obeys Pascal's dictum](https://quoteinvestigator.com/2012/04/28/shorter-letter/),
-weighing in at 30 pages. By comparison, P1144R6 is 17 pages; my [draft of P1144R7](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+weighing in at 30 pages. By comparison, P1144R6 is 17 pages; my [draft of P1144R7](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
 is down to 15 pages so far, and I'm trying hard to shorten it.
 
 The major places where P2786R0 disagreed with P1144 are:

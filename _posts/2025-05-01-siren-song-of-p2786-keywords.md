@@ -129,7 +129,7 @@ Unfortunately for C++ users, there are two competing models of "trivial relocati
 There's the "P1144" model everyone uses in practice, and then there's the "P2786" model
 that was voted into C++26 in Hagenberg in February despite
 [loud technical objections from the userbase](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3236r1.html)
-about problems which [remain unaddressed](https://quuxplusone.github.io/draft/d1144-object-relocation.html#intro).
+about problems which [remain unaddressed](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p1144r13.html#intro).
 
 `MoveOnlyCallable` hits one or two of those interrelated technical objections:
 
@@ -276,16 +276,12 @@ and being wrecked on dangerous rocks.
 
 ## Now that you've read this far...
 
-I intend to bring a revision of P1144 in the May mailing with (for the first time)
-a number of coauthors, including some of the signatories of P3236. Since P2786 has
-been merged into the Working Draft, this new version of P1144 will (for the first time)
-be expressed as
-[a diff against](https://quuxplusone.github.io/draft/d1144-object-relocation.html#scope)
+I intend to bring [EDIT: [have brought](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p1144r13.html)]
+a revision of P1144 in the May mailing with (for the first time) a number of coauthors,
+including some of the signatories of P3236. Since P2786 has been merged into the Working
+Draft, this new version of P1144 is (for the first time) expressed as a diff against
 what is now P2786-in-the-Working-Draft, showing exactly what parts of the C++26 wording
 should change in order to make what remains both correct and performant.
-
-If you'd like to be listed among the supporters of P1144R13, please
-[send me an email](mailto:arthur.j.odwyer@gmail.com).
 
 ----
 

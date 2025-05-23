@@ -9,7 +9,7 @@ tags:
   wg21
 excerpt: |
   This is the first in a series of at least three weekly blog posts. Each post will explain
-  one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+  one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
   and [P2786R0 "Trivial relocatability options"](https://isocpp.org/files/papers/P2786R0.pdf) as
   we try to (1) resolve their technical differences and (2) convince the rest of the C++ Committee
   that these resolutions are actually okay to ship.
@@ -23,7 +23,7 @@ This is the first in a series of at least three weekly blog posts. Each post
 [III](/blog/2023/03/10/sharp-knife-dull-knife/),
 [IV](/blog/2023/06/03/p1144-pmr-koans/))
 will explain
-one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
 and [P2786R0 "Trivial relocatability options"](https://isocpp.org/files/papers/P2786R0.pdf) as
 we try to (1) resolve their technical differences and (2) convince the rest of the C++ Committee
 that these resolutions are actually okay to ship.
@@ -211,9 +211,8 @@ objects. So `swap` isn't as easy to fix as `copy`.
 
 ## If `std::swap` can't `memcpy`, then how _do_ we trivially swap?
 
-My current draft of [D1144R7](https://quuxplusone.github.io/draft/d1144-object-relocation.html#overlap-concerns)
-([git](https://github.com/Quuxplusone/draft/blob/gh-pages/d1144-object-relocation.bs)) suggests
-five possible ways forward:
+[P1144R7](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html#overlap-concerns)
+suggests five possible ways forward:
 
 <b>#1.</b> Per [Dana Jansens](https://danakj.github.io/2023/01/15/trivially-relocatable.html),
 bring the ABI notion of "data size" into standard C++. `Lesser`'s "data size" is less than its `sizeof`,

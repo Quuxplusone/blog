@@ -9,7 +9,7 @@ tags:
   triviality
   wg21
 excerpt: |
-  Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/zavvzhKWY))
+  Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/q4zbPnE86))
 
       template<class T>
       class [[trivially_relocatable(std::is_trivially_relocatable_v<T>)]] Optional {
@@ -25,7 +25,7 @@ Previously on this blog:
 
 ---
 
-Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/zavvzhKWY))
+Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/q4zbPnE86))
 
     template<class T>
     class [[trivially_relocatable(std::is_trivially_relocatable_v<T>)]] Optional {
@@ -67,7 +67,7 @@ Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godb
       }
 
       void swap(Optional& rhs)
-        noexcept(std::is_nothrow_move_constructible_v<T> && std::is_nothrow_swappable_v<T>)
+        noexcept(std::is_nothrow_move_constructible_v<T>)
       {
         using std::swap;
         if (engaged_ && rhs.engaged_) {
@@ -91,7 +91,7 @@ Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godb
       Optional& operator=(Optional&&)
         requires std::movable<T> && std::is_trivially_copyable_v<T> = default;
       Optional& operator=(Optional&& rhs)
-        noexcept(std::is_nothrow_move_constructible_v<T> && std::is_nothrow_move_assignable_v<T>)
+        noexcept(std::is_nothrow_move_constructible_v<T>)
         requires std::movable<T>
       {
         auto copy = std::move(rhs);
@@ -102,7 +102,7 @@ Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godb
       Optional& operator=(const Optional&)
         requires std::copyable<T> && std::is_trivially_copyable_v<T> = default;
       Optional& operator=(const Optional& rhs)
-        noexcept(std::is_nothrow_move_constructible_v<T> && std::is_nothrow_move_assignable_v<T>)
+        noexcept(std::is_nothrow_copy_constructible_v<T> && std::is_nothrow_move_constructible_v<T>)
         requires std::copyable<T>
       {
         auto copy = rhs;
@@ -131,7 +131,7 @@ Here's a simple non-constexpr-friendly `Optional` type. ([Godbolt.](https://godb
 As in [yesterday's post](/blog/2025/05/08/siren-song-2-optional/), this `Optional`
 differs from `std::optional` in doing copy-and-swap instead of delegating to `T::operator=`;
 this makes it what P2786 calls "replaceable."
-This behavioral difference is easily observable ([Godbolt](https://godbolt.org/z/4Y1zdnv1E)),
+This behavioral difference is easily observable ([Godbolt](https://godbolt.org/z/4Pqz5qjM5)),
 but defensible in a third-party `Optional` type.
 
 As written above, it is invariably true
@@ -180,7 +180,7 @@ Unfortunately for C++ users, there are two competing models of "trivial relocati
 There's the "P1144" model everyone uses in practice, and then there's the "P2786" model
 that was voted into C++26 in Hagenberg in February despite
 [loud technical objections from the userbase](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3236r1.html)
-about problems which [remain unaddressed](https://quuxplusone.github.io/draft/d1144-object-relocation.html#intro).
+about problems which [remain unaddressed](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p1144r13.html#intro).
 
 One of the deficiencies of P2786 is that it asks us to juggle two traits (each with an associated
 keyword), neither of which expresses _quite_ the property we care about in practice. In yesterday's
@@ -298,16 +298,12 @@ trivial relocation for certain `Optional<T>`, without also affecting its ABI in 
 
 ## Now that you've read this far...
 
-I intend to bring a revision of P1144 in the May mailing with (for the first time)
-a number of coauthors, including some of the signatories of P3236. Since P2786 has
-been merged into the Working Draft, this new version of P1144 will (for the first time)
-be expressed as
-[a diff against](https://quuxplusone.github.io/draft/d1144-object-relocation.html#scope)
+I intend to bring [EDIT: [have brought](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p1144r13.html)]
+a revision of P1144 in the May mailing with (for the first time) a number of coauthors,
+including some of the signatories of P3236. Since P2786 has been merged into the Working
+Draft, this new version of P1144 is (for the first time) expressed as a diff against
 what is now P2786-in-the-Working-Draft, showing exactly what parts of the C++26 wording
 should change in order to make what remains both correct and performant.
-
-If you'd like to be listed among the supporters of P1144R13, please
-[send me an email](mailto:arthur.j.odwyer@gmail.com).
 
 ---
 

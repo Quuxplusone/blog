@@ -9,7 +9,7 @@ tags:
   triviality
   wg21
 excerpt: |
-  Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/crac1vrcv))
+  Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/qY1cfeWcY))
 
       template<class T>
       class [[trivially_relocatable(std::is_trivially_relocatable_v<T>)]] Optional {
@@ -22,7 +22,7 @@ excerpt: |
       };
 ---
 
-Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/crac1vrcv))
+Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://godbolt.org/z/qY1cfeWcY))
 
     template<class T>
     class [[trivially_relocatable(std::is_trivially_relocatable_v<T>)]] Optional {
@@ -64,7 +64,7 @@ Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://go
       }
 
       constexpr void swap(Optional& rhs)
-        noexcept(std::is_nothrow_move_constructible_v<T> && std::is_nothrow_swappable_v<T>)
+        noexcept(std::is_nothrow_move_constructible_v<T>)
       {
         using std::swap;
         if (engaged_ && rhs.engaged_) {
@@ -88,7 +88,7 @@ Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://go
       Optional& operator=(Optional&&)
         requires std::movable<T> && std::is_trivially_copyable_v<T> = default;
       constexpr Optional& operator=(Optional&& rhs)
-        noexcept(std::is_nothrow_move_constructible_v<T> && std::is_nothrow_move_assignable_v<T>)
+        noexcept(std::is_nothrow_move_constructible_v<T>)
         requires std::movable<T>
       {
         auto copy = std::move(rhs);
@@ -99,7 +99,7 @@ Here's a simple C++20 constexpr-friendly `Optional` type. ([Godbolt.](https://go
       Optional& operator=(const Optional&)
         requires std::copyable<T> && std::is_trivially_copyable_v<T> = default;
       constexpr Optional& operator=(const Optional& rhs)
-        noexcept(std::is_nothrow_move_constructible_v<T> && std::is_nothrow_move_assignable_v<T>)
+        noexcept(std::is_nothrow_copy_constructible_v<T> && std::is_nothrow_move_constructible_v<T>)
         requires std::copyable<T>
       {
         auto copy = rhs;
@@ -147,7 +147,7 @@ That simply means that instead of `std::optional`’s case-wise assignment opera
 ours does copy-and-swap, and swaps via relocation rather than via assignment.
 Thus we never call `T::operator=`, which means we don't care
 if `T`'s assignment operator is wonky (for example, if `T` is `std::tuple<int&>`).
-This behavioral difference is easily observable ([Godbolt](https://godbolt.org/z/df3b43asf)),
+This behavioral difference is easily observable ([Godbolt](https://godbolt.org/z/cobPfhbWe)),
 but defensible in a third-party `Optional` type.
 
 As written above, it is invariably true
@@ -196,9 +196,9 @@ Unfortunately for C++ users, there are two competing models of "trivial relocati
 There's the "P1144" model everyone uses in practice, and then there's the "P2786" model
 that was voted into C++26 in Hagenberg in February despite
 [loud technical objections from the userbase](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3236r1.html)
-about problems which [remain unaddressed](https://quuxplusone.github.io/draft/d1144-object-relocation.html#intro).
+about problems which [remain unaddressed](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p1144r13.html#intro).
 
-Here's the same `Optional` written in P2786's syntax: [Godbolt.](https://godbolt.org/z/PW3dq7YW8)
+Here's the same `Optional` written in P2786's syntax: [Godbolt.](https://godbolt.org/z/6K853a9xe)
 It's almost exactly the same; the only _syntactic_ difference is in the class-head,
 where instead of an attribute with an explicit condition, P2786 asks us to use
 a pair of keywords:

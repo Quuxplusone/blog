@@ -9,7 +9,7 @@ tags:
   wg21
 excerpt: |
   This is the third in a series of at least three weekly blog posts. Each post will explain
-  one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+  one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
   and [P2786R0 "Trivial relocatability options"](https://isocpp.org/files/papers/P2786R0.pdf) as
   we try to (1) resolve their technical differences and (2) convince the rest of the C++ Committee
   that these resolutions are actually okay to ship.
@@ -24,7 +24,7 @@ This is the third in a series of at least three weekly blog posts. Each post
 [III](/blog/2023/03/10/sharp-knife-dull-knife/),
 [IV](/blog/2023/06/03/p1144-pmr-koans/))
 will explain
-one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://quuxplusone.github.io/draft/d1144-object-relocation.html)
+one of the problems facing [P1144 "`std::is_trivially_relocatable`"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1144r7.html)
 and [P2786R0 "Trivial relocatability options"](https://isocpp.org/files/papers/P2786R0.pdf) as
 we try to (1) resolve their technical differences and (2) convince the rest of the C++ Committee
 that these resolutions are actually okay to ship.

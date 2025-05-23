@@ -13,7 +13,7 @@ I recently updated my Clang fork on [p1144.godbolt.org](https://p1144.godbolt.or
 to reflect the changes in R6.
 
 One of those changes is that R0's algorithm `std::relocate_at(T* source, T* dest)` is joined
-by [`T std::relocate(T* source)`](https://quuxplusone.github.io/draft/d1144-object-relocation.html#wording-relocate).
+by [`T std::relocate(T* source)`](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p1144r6.html#wording-relocate).
 This new algorithm `std::relocate` takes the object pointed to by `source` and relocates it into
 the return slot, giving you a prvalue. You can use this prvalue in combination with the
 [superconstructing super elider (2018-05-17)](/blog/2018/05/17/super-elider-round-2/)
