@@ -5,6 +5,7 @@ date: 2024-04-02 00:01:00 +0000
 tags:
   cppcon
   language-design
+  triviality
   value-semantics
 excerpt: |
   I just watched Jason Turner's CppCon 2023 talk ["Great C++ `is_trivial`."](https://www.youtube.com/watch?v=bpF1LKQBgBQ)

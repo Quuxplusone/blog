@@ -5,6 +5,7 @@ date: 2025-01-10 00:01:00 +0000
 tags:
   library-design
   relocatability
+  triviality
   type-traits
 excerpt: |
   Recently I discovered that besides the various libraries using P1144-style
