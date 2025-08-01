@@ -157,3 +157,9 @@ If `vector<int>::iterator` is a class type, then this code is valid C++;
 `it` is initialized with the result of `v.end().operator--()`.
 But if it's `int*`, then `--v.end()` is ill-formed: the built-in `--`
 operator requires a modifiable lvalue, and `v.end()` would be a prvalue!
+
+---
+
+See also:
+
+* ["True names matter in C++"](/blog/2025/08/01/true-names/) (2025-08-01)
