@@ -4,6 +4,7 @@ title: "Fully Schrödinger crosswords"
 date: 2025-01-03 00:01:00 +0000
 tags:
   crosswords
+  hofstadter
   puzzles
   word-ways
 excerpt: |

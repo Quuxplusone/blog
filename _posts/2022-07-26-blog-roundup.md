@@ -96,7 +96,7 @@ On page 159 Popper (writing in 1958) footnotes:
 > at first reading. It may even be advisable to turn from here [page 159],
 > or from the end of section 55, direct to chapter X [page 251].
 
-[And I am two-and-twenty, and oh, 'tis true, 'tis true.](https://www.poetryfoundation.org/poems/52706/when-i-was-one-and-twenty-56d2316642304)
+[And I am two-and-twenty, and oh, ’tis true, ’tis true.](https://www.poetryfoundation.org/poems/52706/when-i-was-one-and-twenty-56d2316642304)
 
 ----
 

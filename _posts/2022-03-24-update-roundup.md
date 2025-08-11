@@ -4,6 +4,7 @@ title: 'Kafka, math jokes, triangle dissection'
 date: 2022-03-24 00:01:00 +0000
 tags:
   celebration-of-mind
+  hofstadter
   jokes
   litclub
   math

@@ -4,6 +4,7 @@ title: 'Hat-game strategies in Hanabi'
 date: 2018-03-29 00:02:00 +0000
 tags:
   board-games
+  hofstadter
 ---
 
 This past week or two, I've been once again playing around with my

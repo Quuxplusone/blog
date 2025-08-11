@@ -16,12 +16,12 @@ With apologies to William Wordsworth and Mel Tormé.
 > Maids at their wheels, those who weave with their looms,  
 > And students in their citadels  
 > Happiness indwells. A blithe and humble little bee  
-> Will sit and murmur by the hour;  
+> Will sit and murmur by the hour  
 > High on a peak overlooking the sea  
 > But nestled deep within a flower.  
 >
 > They know in scanty plots of ground  
-> In sundry moods, 'tis pastime to be bound;  
+> In sundry moods, ’tis pastime to be bound;  
 > And to shed the weight of liberty  
 > Can sometimes really make you more free.  
 >
