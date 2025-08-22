@@ -99,4 +99,4 @@ codified in <a href="https://eel.is/c++draft/dcl.init.list#3.5">[dcl.init.list]<
 only to initialization. The assignment-expression `a = {}`, like any other function call such as `f({})`,
 prefers to bind `{}` to a parameter of type `initializer_list`, rather than to a parameter of type `A`.
 ([Godbolt.](https://godbolt.org/z/sPfxh4or8)) So `a = {}` means something different from — and
-generally less efficient than — `a = A()`.
+generally less memory-efficient than — `a = A()`.
