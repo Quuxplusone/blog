@@ -136,6 +136,6 @@ but where's the fun in that? Instead, I'll sit on my poem for another nine days 
 hoping that some gentle reader might take up the idea from this post and create something
 of their own, too.
 
-This will also give me plenty of time to post part 2, in which I'll explain what Cervantes'
-poet actually meant by "_todo esdrújulamente, digo en esdrújulos de nombres sustantivos,
-sin admitir verbo alguno._"
+This series continues with ["A poem all in dactylic noun substantives, part 2,"](/blog/2025/08/30/sin-admitir-verbo-alguno-part-2/)
+in which I explain what Cervantes' poet actually meant by "_todo esdrújulamente,
+digo en esdrújulos de nombres sustantivos, sin admitir verbo alguno._"
