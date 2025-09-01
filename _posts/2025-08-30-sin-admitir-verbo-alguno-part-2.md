@@ -6,7 +6,7 @@ tags:
   poetry
   word-ways
 excerpt: |
-  Previously: ["A poem all in dactylic noun substantives, part 1"](/blog/2025/08/28/sin-admitir-verbo-alguno-part-1/) (2025-08-28).
+  Previously: ["A poem all in dactylic noun substantives, part 1"](/blog/2025/08/28/sin-admitir-verbo-alguno/) (2025-08-28).
   Cervantes [wrote](https://people.duke.edu/%7Egarci/garcitextos/bilingues/CERVANTES-MD/NOVELAS-EJEMPLARES/COLOQUIO-PERROS.HTM) satirically of a poet who had written—
 
   > "that part of the history of King Arthur of England which
@@ -90,7 +90,7 @@ By our solicitous Senators<br>
 That the sacred poetry, in the vox populi<br>
 Of the Iberian continent,<br>
 Of Saint Damasus be sung, whose architect<br>
-Was of earth pontifex maximus.<br><br>
+Was of earth pontifex maximus.<span class="pskip"></span><br>
 (trans. Arthur O'Dwyer, 2025)
 </td></tr>
 </table>
@@ -108,7 +108,7 @@ has venido tan tempránigo?
 </td><td>
 —Welcome, Alonso my frienigand.<br>
 —Señor Beltrán, good morniging.<br>
-How is it, friend, you've comigome<br>
+How is it, friend, you’ve comigome<br>
 so early this morning to schooligool?
 </td></tr>
 </table>
@@ -139,23 +139,23 @@ meant by "past tenses of verbs," but my guess is that he meant things like _aper
 <tr><td>
 Sireno, en qué pensabas, que mirándote<br>
 estaba desde el soto, y condoliéndome<br>
-de ver con el dolor qu'estás quejándote? [...]<br>
+de ver con el dolor qu'estás quejándote? [...]<span class="pskip"></span><br>
 La vida a mi pesar veo alargárseme,<br>
 mi triste corazón no hay consolármele,<br>
-y un desusado mal veo acercárseme. [...]<br>
+y un desusado mal veo acercárseme. [...]<span class="pskip"></span><br>
 Después la flecha y arco apercebíamos<br>
 y otras veces la red, y ella siguiéndome<br>
 jamás sin caza a nuestra aldea volvíamos.
 </td><td>
 Sireno, what were you thinking, when I saw you<br>
 from that grove and sympathized<br>
-with the pains you were complaining of? [...]<br>
+with the pains you were complaining of? [...]<span class="pskip"></span><br>
 I see life lengthening my sorrow,<br>
 my sad heart cannot console me,<br>
-and I see a worn-out grief approaching me. [...]<br>
-Afterward we'd get our bows and arrows,<br>
+and I see a worn-out grief approaching me. [...]<span class="pskip"></span><br>
+Afterward we’d get our bows and arrows,<br>
 other times a net, she following me;<br>
-we never returned to the village without game.<br><br>
+we never returned to the village without game.<span class="pskip"></span><br>
 (trans. <a href="https://academicworks.cuny.edu/gc_etds/3934/">RoseAnna M. Mueller, 1977</a>)
 </td></tr>
 </table>

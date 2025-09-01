@@ -59,21 +59,21 @@ _Inferno_, along with
 [some quite interesting notes on its design process](https://www.muppetlabs.com/~breadbox/txt/infirni-notes.html):
 
 > Virgil finds Pilgrim drifting in midnight,  
-> Bids Pilgrim visit sin's finishing pit:  
+> bids Pilgrim visit sin's finishing pit:  
 > Insists glimpsing spirits sinking in shit,  
-> Sizzling in pitch, will gift him with insight.
+> sizzling in pitch, will gift him with insight.
 >
 > Circling in with diminishing windings,  
-> Visiting kith, slinging witticisms,  
-> Indicting kings with biting criticisms,  
-> Inscribing in ringing tristichs his findings.
+> visiting kith, slinging witticisms,  
+> indicting kings with biting criticisms,  
+> inscribing in ringing tristichs his findings.
 >
 > Drinking in sights, drinking his fill,  
-> Skirting grim imps with childish tricks,  
-> Sighing, “ ’Tis right: it is His will.”  
+> skirting grim imps with childish tricks,  
+> sighing, “ ’Tis right: it is His will.”  
 > Pilgrim clings tight whilst Virgil climbs Nick's  
 > bristling thigh: flipping, climbs still,  
-> Till sighting night's shining, inspiring pinpricks.
+> till sighting night's shining, inspiring pinpricks.
 
 (This is also a good place to mention that within the present decade (the 2020s),
 "Kinton Ford" (a pseudonym) composed a lipogrammatic English translation of all 136 lines
@@ -88,43 +88,41 @@ Luckily, Hofstadter's _Le ton beau de Marot_ (1997) is easy either to
 [buy](https://amzn.to/45IAyqJ) or to read online.
 Varaldo's _All'alba Shahrazad andrà ammazzata_ (1993), on the other hand, is tragically
 difficult. I have not yet managed to find a copy. The title poem, at least, is reproduced
-[here](https://archive.org/details/la-fortuna-delle-mille-e-una-notte-nella-letteratura-italiana/page/209):
+[here](https://archive.org/details/la-fortuna-delle-mille-e-una-notte-nella-letteratura-italiana/page/209),
+from which I've created my own (very rough, and polyvocalic) gloss:
 
-> All'alba Shahrazad andrà ammazzata.  
-> Ma narra, narra, narra al gran bassà  
-> da Qamar az-Zaman ch'amar saprà,  
-> dalla bramata lampada fatata,
->
-> da Lab la maga, dall'alfana alata,  
-> da Shahzamàn ch'a Samarcanda sta  
-> la vasta saga araba s'avrà,  
-> alla parlata franca traslata
->
-> (tanta sarà la fama!) da Galland.  
-> Tra casa, strada, casba, bab, bazar,  
-> tra ramadan, baccan, banal tran tran,  
-> rara cara ad Allàh, Bagdàd v'appar;  
-> là s'affanna, s'ammalan, fan cancan  
-> al-Kawz, Bàba-Abdallà, Shams an-Nahàr.
-
-My own polyvocalic gloss (very rough) is:
-
-> Shahrazad shall hang at dawn.  
-> But till that fall she'll tell, tell, of—  
-> [Kamar Zaman](https://archive.org/details/in.gov.ignca.36146/page/212) who learned to love;  
-> that coveted brass [lamp](https://archive.org/details/plainliteraltransup03burt/page/52), Fate's pawn;
->
-> the witch-queen [Lab](https://archive.org/details/in.gov.ignca.36150/page/296); the [horse](https://archive.org/details/in.gov.ignca.36148/page/1) that flew...  
-> At Samarkand for Shah Zaman  
-> that Arab saga stretches on  
-> which [A. Galland](https://en.wikipedia.org/wiki/Antoine_Galland) massaged into  
->
-> his (justly famed) _version française_.  
-> In house, street, casbah, bab, bazaar —  
-> at Ramadan and banal days —  
-> Allah's own Baghdad's the star.  
-> There labor, revelry, malaise;  
-> there [Kuz](https://archive.org/details/in.gov.ignca.36144/page/306), [Abdalla](https://archive.org/details/plainliteraltransup04burt/page/310), [Shams Nahar](https://archive.org/details/in.gov.ignca.36146/page/162).
+<table class="smaller">
+<tr><td>All’alba Shahrazad andrà ammazzata.<br>
+Ma narra, narra, narra al gran bassà<br>
+da Qamar az-Zaman ch’amar saprà,<br>
+dalla bramata lampada fatata,<span class="pskip"></span><br>
+da Lab la maga, dall’alfana alata,<br>
+da Shahzamàn ch’a Samarcanda sta<br>
+la vasta saga araba s’avrà,<br>
+alla parlata franca traslata<span class="pskip"></span><br>
+(tanta sarà la fama!) da Galland.<br>
+Tra casa, strada, casba, bab, bazar,<br>
+tra ramadan, baccan, banal tran tran,<br>
+rara cara ad Allàh, Bagdàd v’appar;<br>
+là s’affanna, s’ammalan, fan cancan<br>
+al-Kawz, Bàba-Abdallà, Shams an-Nahàr.
+</td><td>Shahrazad shall hang at dawn.<br>
+But till that fall she’ll tell, tell, of—<br>
+<a href="https://archive.org/details/in.gov.ignca.36146/page/212">Kamar Zaman</a> who learned to love;<br>
+that coveted <a href="https://archive.org/details/plainliteraltransup03burt/page/52">brass lamp</a>, Fate’s pawn;<span class="pskip"></span><br>
+the witch-queen <a href="https://archive.org/details/in.gov.ignca.36150/page/296">Lab</a>, the <a href="https://archive.org/details/in.gov.ignca.36148/page/1">horse</a> that flew...<br>
+At Samarkand for Shah Zaman<br>
+that Arab saga stretches on<br>
+which <a href="https://en.wikipedia.org/wiki/Antoine_Galland">A. Galland</a> massaged into<span class="pskip"></span><br>
+his (justly famed) <i>version française</i>.<br>
+In house, street, casbah, bab, bazaar —<br>
+at Ramadan and banal days —<br>
+Allah’s own Baghdad’s the star.<br>
+There labor, revelry, malaise;<br>
+there <a href="https://archive.org/details/in.gov.ignca.36144/page/306">Kuz</a>, <a href="https://archive.org/details/plainliteraltransup04burt/page/310">Abdalla</a>, <a href="https://archive.org/details/in.gov.ignca.36146/page/162">Shams Nahar</a>.<span class="pskip"></span><br>
+(trans. Arthur O’Dwyer, 2025)
+</td></tr>
+</table>
 
 Varaldo's _Odyssey_, _Quixote_, and _Decameron_ are
 [here](https://web.archive.org/web/20210122070947/https://ciltsite.wordpress.com/2017/04/17/poesie-monovocaliche/);

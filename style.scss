@@ -68,6 +68,12 @@ p {
   margin: 15px 0;
 }
 
+span.pskip::after {
+  display: inline-block;
+  margin-bottom: 8px;
+  content: '\2060';
+}
+
 a {
   color: $blue;
   text-decoration: none;

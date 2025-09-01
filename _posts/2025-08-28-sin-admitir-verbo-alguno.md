@@ -74,13 +74,11 @@ with an equally verbless English translation by
 Шепот, робкое дыханье,<br>
 Трели соловья,<br>
 Серебро и колыханье<br>
-Сонного ручья,<br>
-<br>
+Сонного ручья,<span class="pskip"></span><br>
 Свет ночной, ночные тени,<br>
 Тени без конца,<br>
 Ряд волшебных изменений<br>
-Милого лица,<br>
-<br>
+Милого лица,<span class="pskip"></span><br>
 В дымных тучках пурпур розы,<br>
 Отблеск янтаря,<br>
 И лобзания, и слезы,<br>
@@ -89,13 +87,11 @@ with an equally verbless English translation by
 Whispers, timid breathing,<br>
 trills of a nightingale,<br>
 the silver and the shiver<br>
-of a sleepy rill.<br>
-<br>
+of a sleepy rill.<span class="pskip"></span><br>
 Pale light and nighttime shadows,<br>
 shadows without end,<br>
 all the magic transformations<br>
-of eyes and lips and brows.<br>
-<br>
+of eyes and lips and brows.<span class="pskip"></span><br>
 In smoky clouds, a rose’s purple,<br>
 the shine of amber beads,<br>
 and the kisses, and the tears,<br>
