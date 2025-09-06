@@ -206,3 +206,8 @@ on a pig" or "polishing a turd."  A very rough analogy might be how a lot of lim
 So our poet boasts that he is retelling the Matter of Britain as a series of limericks, without ever using
 that hackneyed phrase. Adding constraints doesn't change the fact that you're writing a faintly ridiculous
 genre of poetry to begin with. At the end of the day, it's still limericks.
+
+---
+
+This series continues with ["A poem all in dactylic noun substantives, part 3,"](/blog/2025/09/06/sin-admitir-verbo-alguno-part-3/)
+in which I display a chivalric romance composed _strictly_ of dactylic nouns.
