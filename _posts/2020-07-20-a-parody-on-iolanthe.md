@@ -7,6 +7,7 @@ tags:
   litclub
   old-shit
   today-i-learned
+  theater
 ---
 
 In 1880s Chicago, one [Davison Dalziel](https://books.google.com/books?id=Pw1FAQAAMAAJ&pg=PA672&dq=dalziel)

@@ -7,6 +7,7 @@ tags:
   gilbert-and-sullivan
   music
   old-shit
+  theater
 ---
 
 Today I learned that the New York Public Library has a blog, on which, many years ago, curator Douglas Reside

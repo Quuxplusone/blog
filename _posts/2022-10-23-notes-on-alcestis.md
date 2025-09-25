@@ -7,6 +7,7 @@ tags:
   gilbert-and-sullivan
   litclub
   old-shit
+  theater
   weird-fiction
 ---
 
