@@ -375,8 +375,12 @@ in various ways:
 | **Total**            | 322 |
 
 I also audited another, proprietary, C++17 codebase — very roughly 1.2 million lines of code.
-Its base rate of `T*`-to-`bool` conversions per line is only 30% of LLVM/Clang's. The audit
+Its base rate of `T*`-to-`bool` conversions per line was only 30% of LLVM/Clang's. The audit
 turned up one non-`explicit` `operator bool`, and zero bugs.
+(EDIT: Actually that `operator bool` was responsible for a bug, albeit not involving
+`T*`-to-`bool` conversion. See
+["Implicit `operator bool` participates in comparison"](/blog/2025/10/10/implicit-operator-bool-considered-harmful/)
+(2025-10-10).)
 
 | Pattern         | Count |
 |-----------------|-------|
