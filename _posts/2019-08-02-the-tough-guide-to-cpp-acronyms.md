@@ -314,7 +314,7 @@ a compiler extension supported by GCC 8.x and Clang 5–11 (but no longer by eit
 ## CWG, EWG, EWGI, LEWG, LEWGI, LWG
 
 These are the main working groups of the [ISO C++ Committee](https://isocpp.org/std/the-committee)
-(a.k.a. WG21). At least in theory, their responsibilities are as follows:
+(a.k.a. [WG21](#wg21-cd-dis-is-nb-wd)). At least in theory, their responsibilities are as follows:
 
 - The Evolution Working Group Incubator (EWGI, pronounced "oogie"; a.k.a. SG17) evaluates proposals for core-language features.
 
@@ -328,12 +328,9 @@ These are the main working groups of the [ISO C++ Committee](https://isocpp.org/
 
 - The Library Working Group (LWG) reviews standard library wording.
 
-EWGI and LEWGI are very new in the grand scheme of things; they met for the first time
-at the San Diego meeting (November 2018).
-
-By the way, "ISO WG21" stands for Working Group 21 of the
-[International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization);
-and "SG17" means "Study Group 17." For a list of study groups, see [isocpp.org](https://isocpp.org/std/the-committee).
+EWGI and LEWGI are relatively new, in the grand scheme of things; they met for the first time
+at the San Diego meeting (November 2018). The "SG" in "SG17" and "SG18" stands for "Study Group."
+For a list of active study groups, see [isocpp.org](https://isocpp.org/std/the-committee).
 
 When you see "CWG" or "LWG" followed by a number, as in "[CWG1430](https://cplusplus.github.io/CWG/issues/1430.html)"
 or "[LWG3237](https://cplusplus.github.io/LWG/issue3237)," it's referring to an _issue_ on CWG's
@@ -1427,3 +1424,19 @@ compilers which don't support VLAs are supposed to define `__STDC_NO_VLA__` to `
 "Virtual table table." In the Itanium ABI, this data structure sits alongside
 the more familiar "vtable" and is used during construction and destruction of classes with virtual bases.
 See ["What is the virtual table table?"](/blog/2019/09/30/what-is-the-vtt/) (2019-09-30).
+
+## WG21, CD, DIS, IS, NB, WD
+
+The [International Organization for Standardization's](https://en.wikipedia.org/wiki/International_Organization_for_Standardization).
+Working Group 21, concerned with the C++ programming language. In the big ISO org chart it's located under JTC 1/SC22
+("Joint Technical Committee 1/Subcommittee 22"), where JTC 1 is information technology and SC22 is programming languages.
+
+WG21's job is to produce an IS ("International Standard") document. The actual IS is published by the ISO and you can't
+get a copy without paying ISO; but WG21 publishes the same text in the DIS ("Draft International Standard") for free.
+In between releases (which since C++11 have happened every three years), WG21 maintains a working draft ("WD") of the next
+release. About a year before the scheduled publication of C++XY, this working draft is forked to become the official
+"Committee Draft" ("CD") and the CD is circulated to all the national bodies ("NBs") who participate in WG21. These NBs
+find flaws in the CD and return official comments about those flaws and their preferred fixes (these are the "NB comments");
+WG21 then considers and resolves the NB comments and produces a DIS to be voted on. As of 2025, the DIS has never been
+voted down; the intent and general expectation is that major flaws get ironed out by the usual process, or at least
+by the eleventh-hour resolution of NB comments.
