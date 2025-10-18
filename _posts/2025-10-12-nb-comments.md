@@ -53,7 +53,7 @@ remove novel feature X." By my count:
 - RO134=US135 objects to P2786 `trivially_relocate` as "insufficient."
 - CA133 asks to remove P2786 `relocate`.
 - US131 asks to remove P2786 `relocate`.
-- US130 and US266 ask to add P3631 `uninitialized_relocate`.
+- US130 and US266 ask to add P3516 `uninitialized_relocate`.
 
 ### Miscellaneous new features
 
