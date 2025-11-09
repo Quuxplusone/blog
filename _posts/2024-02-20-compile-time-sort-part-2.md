@@ -36,21 +36,20 @@ Alert reader "Chlorie" writes in to tell me the proper approach. We just need ou
 a `std::array` of all the elements at once, and then — still — use a pack-expansion to unpack
 the elements out of that constexpr `std::array` and into `Vector`'s template argument list.
 (Here we use `std::array`, not `int[]`, [despite my usual advice](/blog/2022/10/16/prefer-core-over-library/#prefer-core-language-arrays-over-stdarray),
-because we need something that can be returned from a function.) [Godbolt](https://godbolt.org/z/zqx5s9js7):
-
-    template<int N> struct Array { int data[N]; };
+because we need something that can be returned from a function, and which remains a valid range
+even when it has zero elements.) [Godbolt](https://godbolt.org/z/TovebEj5W):
 
     template<class> struct Sort;
     template<int... Is> struct Sort<Vector<Is...>> {
       static constexpr auto sorted = []() {
-        Array<sizeof...(Is)> arr = {Is...};
-        std::ranges::sort(arr.data);
+        std::array<int, sizeof...(Is)> arr = {Is...};
+        std::ranges::sort(arr);
         return arr;
       }();
 
       template<class> struct Helper;
       template<int... Indices> struct Helper<Vector<Indices...>> {
-        using type = Vector<sorted.data[Indices]...>;
+        using type = Vector<sorted[Indices]...>;
       };
       using type = Helper<Iota<sizeof...(Is)>>::type;
     };
