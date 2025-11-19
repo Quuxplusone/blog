@@ -72,16 +72,16 @@ taken from actual published textbooks! — such as:
 
 <table style="font-size:80%;">
 <tr><td>Original</td><td>Improved</td></tr>
-<tr><td><pre><code>IF A>B THEN DO;
+<tr><td><pre>IF A>B THEN DO;
 LARGE=A;
 GO TO CHECK;
 END;
 LARGE=B;
 CHECK: IF LARGE>C THEN GO TO OUTPUT;
 LARGE=C;
-OUTPUT: ...</code></pre></td><td><pre><code>LARGE = A;
+OUTPUT: ...</pre></td><td><pre>LARGE = A;
 IF B>LARGE THEN LARGE = B;
-IF C>LARGE THEN LARGE = C;</code></pre></td></tr>
+IF C>LARGE THEN LARGE = C;</pre></td></tr>
 </table>
 
 and only then derive a general principle, such as:
@@ -132,7 +132,7 @@ considerable, he must never omit one comma and leave the other" — that's talki
 about the proper division of responsibilities, about RAII.
 
 <table>
-<tr><td><b>Fully inlined</b><br><br>Marjorie's husband Colonel Nelson paid us a visit yesterday.</td><td style="font-size:80%;"><pre><code>std::pair&lt;int, int> get_dims() {
+<tr><td><b>Fully inlined</b><br><br>Marjorie's husband Colonel Nelson paid us a visit yesterday.</td><td style="font-size:80%;"><pre>std::pair&lt;int, int> get_dims() {
   int i, j;
   FILE *fp = fopen("input.txt", "r");
   if (fscanf(fp, "%d%d", &i, &j) != 2) {
@@ -140,8 +140,8 @@ about the proper division of responsibilities, about RAII.
   }
   fclose(fp);
   return {i, j};
-}</code></pre></td></tr>
-<tr><td><b>Consigned to a parenthetical clause/function</b><br><br>Marjorie's husband, Colonel Nelson, paid us a visit yesterday.</td><td style="font-size:80%;"><pre><code>void read_dims(FILE *fp, int *i, int *j) {
+}</pre></td></tr>
+<tr><td><b>Consigned to a parenthetical clause/function</b><br><br>Marjorie's husband, Colonel Nelson, paid us a visit yesterday.</td><td style="font-size:80%;"><pre>void read_dims(FILE *fp, int *i, int *j) {
   if (fscanf(fp, "%d%d", i, j) != 2) {
     abort();
   }
@@ -152,8 +152,8 @@ std::pair&lt;int, int> get_dims() {
   read_dims(fp, &i, &j);
   fclose(fp);
   return {i, j};
-}</code></pre></td></tr>
-<tr><td><b>Improperly divided</b><br><br>Marjorie's husband, Colonel Nelson paid us a visit yesterday.</td><td style="font-size:80%;"><pre><code>void read_dims(FILE *fp, int *i, int *j) {
+}</pre></td></tr>
+<tr><td><b>Improperly divided</b><br><br>Marjorie's husband, Colonel Nelson paid us a visit yesterday.</td><td style="font-size:80%;"><pre>void read_dims(FILE *fp, int *i, int *j) {
   if (fscanf(fp, "%d%d", i, j) != 2) {
     abort();
   }
@@ -164,7 +164,7 @@ std::pair&lt;int, int> get_dims() {
   FILE *fp = fopen("input.txt", "r");
   read_dims(fp, &i, &j);
   return {i, j};
-}</code></pre></td></tr>
+}</pre></td></tr>
 </table>
 
 The third of these snippets is still _intelligible_, in the sense that it has the same semantics

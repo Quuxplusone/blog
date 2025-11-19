@@ -18,7 +18,7 @@ Look at N3377's own example:
 
 <table>
 <tr><th>N3355 (adopted)</th><th>N3377 (proposed)</th></tr>
-<tr><td style="font-size: 70%;"><pre><code>
+<tr><td style="font-size: 70%;"><pre>
 #define UPDATE_MAP(MAP, ELEM, NEWVAL)\
   do { \
     MapGroup *BucketItr = MAP.Lists;\
@@ -36,7 +36,7 @@ Look at N3377's own example:
       }\
     }\
   } while(0)
-</code></pre></td><td style="font-size: 70%;"><pre><code>
+</pre></td><td style="font-size: 70%;"><pre>
 #define UPDATE_MAP(MAP, ELEM, NEWVAL)\
   do { \
     MapGroup *BucketItr = MAP.Lists;\
@@ -54,7 +54,7 @@ Look at N3377's own example:
       }\
     }\
   } while(0)
-</code></pre></td></tr>
+</pre></td></tr>
 </table>
 
 AFAIK this isn't taken directly from any real codebase, but it's representative of a genre

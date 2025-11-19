@@ -335,7 +335,7 @@ span.headline {
 
 .meme {
   display: block;
-  max-width: 450px;
+  max-width: min(450px, 95vw);
   text-align: center;
 }
 

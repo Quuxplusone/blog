@@ -25,11 +25,11 @@ mistake with `std::min` and `std::max`. The STL invariably prefers to return the
 Unfortunately, on x86-64, these conventions fight with each other:
 
 <table>
-<tr><td><pre><code>double std::max(double a, double b) {
+<tr><td><pre>double std::max(double a, double b) {
   return (b > a) ? b : a;
-}</code></pre></td><td><pre><code>maxsd %xmm0, %xmm1
+}</pre></td><td><pre>maxsd %xmm0, %xmm1
 movapd %xmm1, %xmm0
-retq</code></pre></td></tr>
+retq</pre></td></tr>
 </table>
 
 `std::max`'s semantics require that we invoke `maxsd` with `a` in the _non-destination_ position, so that
@@ -38,10 +38,10 @@ so we have to move it back into the return register `%xmm0`. From a codegen poin
 `max` had Walter Brown's semantics:
 
 <table>
-<tr><td><pre><code>double au_max(double a, double b) {
+<tr><td><pre>double au_max(double a, double b) {
   return (a > b) ? a : b;
-}</code></pre></td><td><pre><code>maxsd %xmm1, %xmm0
-retq</code></pre></td></tr>
+}</pre></td><td><pre>maxsd %xmm1, %xmm0
+retq</pre></td></tr>
 </table>
 
 We have the same problem with `std::clamp`, which wants to return the value of its _semantically middle_
@@ -50,23 +50,23 @@ operand in case of equality. E.g., when clamping `+0.0` between `-0.0` and `-0.0
 in _first position_, so we have this:
 
 <table>
-<tr><td><pre><code>double std::clamp(double b, double a, double c) {
+<tr><td><pre>double std::clamp(double b, double a, double c) {
   return std::min(std::max(b, c), a);
-}</code></pre></td><td><pre><code>maxsd %xmm0, %xmm2
+}</pre></td><td><pre>maxsd %xmm0, %xmm2
 minsd %xmm2, %xmm1
 movapd %xmm1, %xmm0
-retq</code></pre></td></tr>
+retq</pre></td></tr>
 </table>
 
 Whereas if it had been specified to take its semantically middle operand in the _middle position_,
 we'd have had this:
 
 <table>
-<tr><td><pre><code>double au_clamp(double a, double b, double c) {
+<tr><td><pre>double au_clamp(double a, double b, double c) {
   return std::min(std::max(b, c), a);
-}</code></pre></td><td><pre><code>maxsd %xmm1, %xmm2
+}</pre></td><td><pre>maxsd %xmm1, %xmm2
 minsd %xmm2, %xmm0
-retq</code></pre></td></tr>
+retq</pre></td></tr>
 </table>
 
 However, all of this is contingent on SSE2's objectively strange choice to
