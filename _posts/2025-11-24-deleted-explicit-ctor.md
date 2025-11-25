@@ -42,7 +42,7 @@ But there's something interesting about this constructor: it is the Standard's f
 I wondered: If we're `=delete`’ing it anyway, does it really matter whether it's marked `explicit` or not?
 
 > That is, I wondered if deleted functions end up in a similar situation to CTAD deduction guides.
-> C++'s grammar permits `explicit` on CTAD deduction guides, but the keyword has no normative effect there.
+> C++'s grammar permits `explicit` on CTAD deduction guides, but the keyword has no useful effect there.
 > You should omit `explicit` from deduction guides.
 > But then, [you shouldn't use CTAD](/blog/2018/12/09/wctad/), either.
 
