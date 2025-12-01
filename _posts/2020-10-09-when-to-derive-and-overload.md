@@ -211,3 +211,8 @@ which of them is being called! If you're not in that situation, don't overload.
     to solve problems. If you apply the tool in a situation where
     there is no problem to be solved, you're implicitly lying to your reader,
     and may confuse them.
+
+----
+
+UPDATE: I gave a talk at C++Now 2021 expanding on this blog post;
+watch it [here](https://www.youtube.com/watch?v=OQgFEkgKx2s).

@@ -226,7 +226,7 @@ which means it's new in C++20.
 
 > A customization point object is a function object with a literal class type
 > that interacts with program-defined types while enforcing semantic requirements on that interaction.
-> —N4810 [[customization.point.object]/1](http://eel.is/c++draft/customization.point.object#1)
+> —C++20 [[customization.point.object]/1](http://eel.is/c++draft/customization.point.object#1)
 
 That is, a CPO is an _object_ (not a function); it's callable; it's constexpr-constructible
 (that's what "literal" means in this context); it's customizable (that's what it means to
@@ -253,10 +253,6 @@ In practice, this looks more or less like
         {
             return detail::swap_helper(a, b);
         };
-
-(The C++20 standard has a lot of wording inherited from Eric's Ranges-v3 to deal with
-something colloquially known as the "poison pill"; but I observed, and Eric confirmed,
-that the poison pill hasn't been necessary ever since C++17 introduced a SFINAE-friendly `std::swap`.)
 
 The benefit of a CPO over a named function is that it separates [the two pieces of the customization
 point](/blog/2018/03/19/customization-points-for-functions/):
@@ -583,7 +579,7 @@ Sadly for clarity of communication, "ICE" is also the initialism for "integral c
 > implicitly converted to a prvalue, where the converted expression is a core constant expression.
 > [Note: Such expressions may be used as bit-field lengths, as enumerator initializers if the
 > underlying type is not fixed, and as alignments. —end note]
-> —[N4810 [expr.const]/5](http://eel.is/c++draft/expr.const#7)
+> —C++20 [[expr.const]/5](http://eel.is/c++draft/expr.const#7)
 
 ## IFNDR
 
@@ -592,7 +588,7 @@ same thing as "undefined behavior" (UB). Specifically,
 
 > If a program contains a violation of a rule for which no diagnostic is required,
 > this document places no requirement on implementations with respect to that program.
-> —N4810 [[intro.compliance]/2.3](http://eel.is/c++draft/intro.compliance#2.3)
+> —C++20 [[intro.compliance]/2.3](http://eel.is/c++draft/intro.compliance#2.3)
 
 The standard sometimes uses the phrase exactly
 (e.g. [[dcl.attr.noreturn]/1](http://eel.is/c++draft/dcl.attr.noreturn#1)), and
@@ -860,7 +856,7 @@ the important points are:
 
 > Every program shall contain exactly one definition of every non-inline function or variable that
 > is *odr-used* in that program outside of a discarded statement; no diagnostic required.
-> —N4810 [[basic.def.odr]/10](http://eel.is/c++draft/basic.def.odr#10)
+> —C++20 [[basic.def.odr]/10](http://eel.is/c++draft/basic.def.odr#10)
 
 An *odr-use*, to a first approximation, is any use that requires the used entity to be defined somewhere.
 (This excludes things like asking for the `sizeof` or `decltype` of a variable.)
@@ -874,7 +870,7 @@ By "discarded statement," they mean the untaken branch of an `if constexpr`.
 >
 > - each definition of D shall consist of the same sequence of tokens
 >
-> —N4810 [[basic.def.odr]/12](http://eel.is/c++draft/basic.def.odr#12)
+> —C++20 [[basic.def.odr]/12](http://eel.is/c++draft/basic.def.odr#12)
 
 The first quote above disallows programs like
 
@@ -1376,10 +1372,10 @@ _kind_ of translation unit: it is translated in a separate step.
 "Undefined behavior." C++ shares this notion with C, and it means the same thing to both languages:
 
 > behavior for which this document imposes no requirements
-> —N4810 [ [defns.undefined]](http://eel.is/c++draft/intro.defs#defns.undefined)
+> —C++20 [ [defns.undefined]](http://eel.is/c++draft/intro.defs#defns.undefined)
 
 > This document imposes no requirements on the behavior of programs that contain undefined behavior.
-> —N4810 [[intro.abstract]/4](http://eel.is/c++draft/intro.abstract#4)
+> —C++20 [[intro.abstract]/4](http://eel.is/c++draft/intro.abstract#4)
 
 Notably, in contrast to "[IFNDR](#ifndr)," the standard acknowledges that a program containing UB is still a
 well-formed program (even if its runtime _behavior_ is undefined).
