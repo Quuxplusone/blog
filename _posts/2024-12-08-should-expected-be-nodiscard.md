@@ -216,14 +216,16 @@ and should always be done explicitly!
 Probably yes! Given `std::error_code f()`, it is _probably_ a bug to call `f` and then
 drop its return value on the floor.
 
-Again, gold-standard Microsoft fails to mark their `error_code` as nodiscard.
-They don't even mark their exception types, such as `runtime_error` and `system_error`,
-as nodiscard, which seems odd in hindsight. When would you ever want to implicitly discard
-an exception object instead of, say, `throw`'ing it?
+Prior to this post, gold-standard Microsoft failed to mark their `error_code` as nodiscard;
+likewise their exception types, such as `runtime_error` and `system_error`. But when
+would you ever want to implicitly discard an exception object instead of, say, `throw`’ing it?
+Thus, a few days after this post was written, Microsoft STL went and
+[marked all their exception types](https://github.com/microsoft/STL/pull/5174).
+However, they have not (yet?) marked their `error_code`.
 
 It would be interesting to see a major STL vendor (libc++, libstdc++, or Microsoft)
-mark their exception types and `error_code` as nodiscard. Would it in fact cause
-false positives, or would it simply catch a lot of bugs? Or neither? My bet is on "neither."
+mark their `error_code` as nodiscard. Would it in fact cause false positives, or would it
+simply catch a lot of bugs? Or neither? My bet is on "neither."
 
-But marking `expected` as nodiscard, I suspect, is just a plain good idea and _would_
+But marking `expected` as nodiscard, I suspect, is just a plain good idea and _will_
 catch a lot of bugs in the long run.
