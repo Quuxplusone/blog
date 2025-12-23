@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Should `std::expected` be `[[nodiscard]]`?"
+title: "`std::expected` should be nodiscard"
 date: 2024-12-08 00:01:00 +0000
 tags:
   attributes
@@ -38,6 +38,12 @@ excerpt: |
   we do with the (non-exceptional, non-error) return value. This ensures that the
   error is never swallowed except on purpose.
 ---
+
+> This post has been updated several times since its original publication.
+> See the section titled ["Adoption (since this post)"](#adoption-since-this-post)
+> below: as more libraries implement this proposal, I've progressively replaced
+> callouts with plaudits. Until December 2025, the title of this post was
+> "Should `expected` be nodiscard?" By now I'm thoroughly comfortable with its new title.
 
 A correspondent writes to me that he's switched from `throw/catch` exceptions to C++23's `std::expected`
 in all new code. That is, where a traditional C++ program would have:
@@ -110,11 +116,6 @@ of a class type marked `[[nodiscard]]` in the library!
     class [[nodiscard]] expected { ~~~~ };
 
 Yet, for some reason, no STL vendor in 2024 marks `expected` as `[[nodiscard]]`.
-Even the library that inspired `std::expected`, Sy Brand's [`tl::expected`](https://github.com/TartanLlama/expected/blob/292eff8/include/tl/expected.hpp#L1247),
-fails to mark itself as `[[nodiscard]]`. ([Godbolt.](https://godbolt.org/z/789oY8deT))
-On the other hand, Niall Douglas's `boost::outcome::result` does mark itself as `[[nodiscard]]`.
-(This is briefly noted in [P0762 "Concerns about `expected<T,E>` from the Boost.Outcome peer review"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0762r0.pdf)
-(October 2017), but I don't know if that paper was ever discussed in committee.)
 
 ## Patterns for error-handling
 
@@ -149,6 +150,10 @@ See ["Two musings on the design of compiler warnings"](/blog/2020/09/02/wparenth
 
 LLVM/Clang's own `llvm::Expected` and `llvm::Error` have been marked `[[nodiscard]]` [since October 2016](https://github.com/llvm/llvm-project/commit/8659d16631fdd1ff519a25d6867ddd9dbda8aea9).
 
+Niall Douglas's `boost::outcome::result` has used `[[nodiscard]]` since at least May 2017.
+This is briefly noted in [P0762 "Concerns about `expected<T,E>` from the Boost.Outcome peer review"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0762r0.pdf)
+(October 2017), although I don't know if that paper was ever discussed by WG21.
+
 I added `[[nodiscard]]` to [martinmoene/expected-lite](https://github.com/martinmoene/expected-lite), and found that
 its test suite is still green after that patch.
 
@@ -182,11 +187,13 @@ so this was not surprising.
 
 - Stephan T. Lavavej added `[[nodiscard]]` to [Microsoft/STL](https://github.com/microsoft/STL/pull/5174) on 2024-12-13.
 
+- Sy Brand added `[[nodiscard]]` to [tl/expected](https://github.com/TartanLlama/expected/pull/165) on 2025-07-12.
+
 ## Should STL vendors add `[[nodiscard]]` to `expected`?
 
 Yes.
 
-Microsoft STL has proven themselves remarkably agile here! When I wrote this post
+Microsoft STL proved themselves remarkably agile here! When I wrote this post
 on 2024-12-08, Microsoft STL — who are the gold standard for "aggressively marking nodiscard"
 in general — had not yet marked their `expected` as nodiscard. However, as a direct result of this post,
 [Stephan T. Lavavej marked `expected` as nodiscard](https://github.com/microsoft/STL/commit/7643c270e5bfb1cfad62f8b5ff4045c662bdaf81)
@@ -194,8 +201,6 @@ on 2024-12-13! So `expected` will indeed be nodiscard in the next release of Vis
 
 I encourage libstdc++ and libc++ to follow suit. For libstdc++,
 [bug #109941](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=109941) seems related.
-
-[`tl::expected`](https://github.com/tartanllama/expected) should mark theirs, too.
 
 ## What about other sum types, like `optional` and `variant`?
 
@@ -229,3 +234,9 @@ simply catch a lot of bugs? Or neither? My bet is on "neither."
 
 But marking `expected` as nodiscard, I suspect, is just a plain good idea and _will_
 catch a lot of bugs in the long run.
+
+---
+
+See also:
+
+* ["`map::operator[]` should be nodiscard"](/blog/2025/12/18/nodiscard-operator-bracket/) (2025-12-18)

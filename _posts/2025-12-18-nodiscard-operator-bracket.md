@@ -17,7 +17,7 @@ for some old compiler such that all their supported compilers now permit the att
 even in C++11 mode.) libc++ is following the trail that Microsoft STL has blazed
 [since VS 15.6 in late 2017](https://devblogs.microsoft.com/cppblog/c17-progress-in-vs-2017-15-5-and-15-6/).
 
-Some functions, like `std::min`, always make sense to mark `[[nodiscard]]`.
+Some functions, like `malloc`, always make sense to mark `[[nodiscard]]`.
 Others, like [`unique_ptr::release`](https://en.cppreference.com/w/cpp/memory/unique_ptr/release),
 are deliberately left unmarked because even though it is _usually_ a bug to write
 
@@ -124,4 +124,4 @@ implemented and used as a building block for their `operator[]`.
 
 See also:
 
-* ["Should `std::expected` be nodiscard?"](/blog/2024/12/08/should-expected-be-nodiscard/) (2024-12-08) — Yes, it should.
+* ["`std::expected` should be nodiscard"](/blog/2024/12/08/should-expected-be-nodiscard/) (2024-12-08)
