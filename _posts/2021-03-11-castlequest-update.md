@@ -83,7 +83,7 @@ turns into a declaration plus an assignment statement:
 
 The other trick that still works in modern Fortran (although I'm sure it'll be
 on its way to the scrap heap in another couple of decades) is to use a
-[Hollerith constant](http://www.lahey.com/docs/lgf13help/gfortran/Hollerith-constants-support.html).
+[Hollerith constant](http://web.archive.org/web/20220524011436/http://www.lahey.com/docs/lgf13help/gfortran/Hollerith-constants-support.html).
 This code from _Castlequest_'s `SUBROUTINE INPUT` doesn't compile anymore:
 
      INTEGER VERBS(2,80)
