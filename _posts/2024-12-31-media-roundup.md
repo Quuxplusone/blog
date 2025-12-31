@@ -319,3 +319,9 @@ On the other hand, _Hundreds of Beavers_ (2022) earned its star on the small scr
 | ![](/blog/images/2024-12-31-be-slalom.png) | ![](/blog/images/2024-12-31-f-slalom.png) |
 
 My complete 507-element list is [here](/blog/code/2024-12-31-media-roundup.html).
+
+---
+
+Subsequently:
+
+* ["What I watched and read this year"](/blog/2025/12/31/media-roundup/) (2025-12-31)

@@ -12,7 +12,7 @@ permalink: /about/
 </div>
 
 Arthur O'Dwyer lives and works in Westchester, New York, with his lovely wife Sam
-and their ball python, two cats, and Welsh terrier.
+and their two cats and ball python.
 
 I started this blog in March 2018 so that I'd have a place to dump short essays on C++ topics.
 I might occasionally say things that aren't about C++, too.
@@ -31,6 +31,7 @@ I might occasionally say things that aren't about C++, too.
 * 2019–2020: Chaired CppCon's "Back to Basics" Track
 * 2021: Exhumed [_Castlequest_](https://quuxplusone.github.io/blog/2021/03/09/castlequest/) (1980)
 * 2025: Published [_Essays on Modern C++_](https://leanpub.com/essays-on-modern-cpp) (Leanpub)
+* 2025: Exhumed [_Adventure 6_](/blog/2025/12/29/long0751/)
 
 ### Contact Me
 
