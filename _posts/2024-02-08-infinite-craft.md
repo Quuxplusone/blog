@@ -3,6 +3,7 @@ layout: post
 title: '_Infinite Craft_'
 date: 2024-02-08 00:01:00 +0000
 tags:
+  ai
   hyperrogue
   playable-games
   web
