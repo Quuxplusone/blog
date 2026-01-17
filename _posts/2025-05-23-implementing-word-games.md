@@ -61,8 +61,8 @@ take it _off_ your target-word list. This avoids the following failure modes:
     which (depending on your player's level of dirty-mindedness) might just seem
     like a bug. For example, Huewords' valid word list originally lacked the
     word TRAMP — to Huewords' author primarily a breakfast-test-failing
-    synonym for "skank," but to this player merely an innocuous word for "hobo"
-    blessed by Sinatra and Disney.
+    synonym for "skank," but to this player merely an innocuous synonym for "hobo"
+    blessed by Frank Sinatra and Walt Disney.
 
 * Suppose you have a questionable word absent from _both_ lists.
     When you generate a new puzzle using words from the _target_ word list,
