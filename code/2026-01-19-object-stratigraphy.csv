@@ -1,0 +1,219 @@
+Number,CROW0005,WOOD0350,LONG0501,LONG0751
+1,keys,keys,,boulder
+2,lamp,lamp,lamp,lamp
+3,grate,grate,grate,grate
+4,cage,cage,cage,vines
+5,rod,rod,rod,vines2
+6,steps,rod2,rod2,drawbridge
+7,little bird,steps,steps,steps
+8,,little bird,,black (sham) rock
+9,,rusty door,pole,pole
+10,gold nugget,pillow,pillow,rope
+11,snake,snake,snake,snake
+12,fissure,fissure,fissure,fissure
+13,diamonds,tablet,tablet,drainpipe
+14,silver bars,clam,clam,clam
+15,jewelry,oyster,oyster,oyster
+16,coins,magazines,magazines,letter of transit
+17,dwarf,dwarf,dwarf,dwarf
+18,knife,knife,knife,helicopter
+19,tasty food,tasty food,tasty food,parachute
+20,bottle,bottle,bottle,pumps
+21,axe,water in bottle,troll bridge,troll bridge
+22,knife2,oil in bottle,clay bridge,clay bridge
+23,chest,mirror,mirror,mirror
+24,,plant,plant,plant
+25,,plant2,plant2,plant2
+26,,stalactite,stalactite,stalactite
+27,,shadowy figure,shadowy figure,shadowy figure
+28,,axe,axe,axe
+29,,drawings,drawings,drawings
+30,,pirate,pirate,pirate
+31,,dragon,dragon,dragon
+32,,rickety bridge,,briar pipe
+33,,troll,troll,troll
+34,,troll2,troll2,troll2
+35,,bear,bear,
+36,,message in dust,message,
+37,,volcano,volcano,
+38,,vending machine,vending machine,
+39,,batteries,batteries,
+40,,moss,moss,
+41,,,rusty door,rusty door
+42,,,tiny door,tiny door
+43,,,tiny door2,tiny door2
+44,,,phone door,phone door
+45,,,phone door2,oaken door
+46,,,flowers,vault door
+47,,,cloak,wooden door
+48,,,boat,boat
+49,,,sticks,sticks
+50,,gold nugget,gold nugget,gold nugget
+51,,diamonds,diamonds,diamonds
+52,,silver bars,silver horn,silver horn
+53,,jewelry,jewelry,jewelry
+54,,coins,coins,coins
+55,,chest,chest,chest
+56,,eggs,eggs,eggs
+57,,trident,trident,trident
+58,,Ming vase,Ming vase,Ming vase
+59,,emerald,emerald,emerald
+60,,pyramid,pyramid,pyramid
+61,,pearl,pearl,pearl
+62,,rug,rug,rug
+63,,spices,spices,spice
+64,,golden chain,golden chain,buzzing sound
+65,,,sword,sword
+66,,,crown,crown
+67,,,slippers,slippers
+68,,,lyre,lyre
+69,,,sapphire,sapphire
+70,,,grail,grail
+71,,,cask,cask
+72,,,ring,ring
+73,,,clover,clover
+74,,,,boat2
+75,,,,brambles
+76,,,,cloak
+77,,,,quicksand
+78,,,,
+79,,,,
+80,,,,
+81,,,water in bottle,water in bottle
+82,,,water in cask,water in cask
+83,,,oil in bottle,oil in bottle
+84,,,oil in cask,oil in cask
+85,,,wine in bottle,wine in bottle
+86,,,wine in cask,wine in cask
+87,,,bees,bees
+88,,,hollow wall,hollow wall
+89,,,wall with safe,wall with safe
+90,,,tiny brass key,tiny brass key
+91,,,anvil,anvil
+92,,,rocks on cloak,rocks on cloak
+93,,,phone booth,phone booth
+94,,,phone,phone
+95,,,lead slugs,lead slugs
+96,,,honeycomb,honeycomb
+97,,,hive,hive
+98,,,black dog,black dog
+99,,,Wumpus,Wumpus
+100,,,,sign by quicksand
+101,,,little bird,little bird
+102,,,set of keys,black bird
+103,,,fountain,fountain
+104,,,guano,guano
+105,,,gnome,gnome
+106,,,mushrooms,mushrooms
+107,,,cakes,cakes
+108,,,sack,sack
+109,,,all,all
+110,,,book,book
+111,,,book2,book2
+112,,,safe,safe
+113,,,poster,poster
+114,,,broom,broom
+115,,,carving,carving
+116,,,billboard,billboard
+117,,,,smoke rings
+118,,,cannister,cannister
+119,,,radium,radium
+120,,,opal sphere,opal sphere
+121,,,,cloth bag
+122,,,,powder
+123,,,,concrete
+124,,,,shovel
+125,,,,statue
+126,,,,sand on beach
+127,,,,matchbox
+128,,,,match 1
+129,,,,match 2
+130,,,,match 3
+131,,,,match 4
+132,,,,match 5
+133,,,,match 6
+134,,,,candle
+135,,,,perfect rose
+136,,,,wilted rose
+137,,,,moat
+138,,,,plastic card
+139,,,,slot
+140,,,,ivory tusk
+141,,,,golden apple
+142,,,,painting*
+143,,,,tapestry
+144,,,,golden fleece
+145,,,,perfume
+146,,,,leprechaun
+147,,,,dusty rocks
+148,,,,suede pouch
+149,,,,tobacco
+150,,,,tarnhelm*
+151,,,,light over door
+152,,,,Maltese falcon
+153,,,,cage
+154,,,,pillow
+155,,,,flute
+156,,,,dry well
+157,,,,skeletons
+158,,,,conch
+159,,,,spicey food
+160,,,,rod
+161,,,,rod2
+162,,,,rare stamp*
+163,,,,necklace*
+164,,,,furs*
+165,,,,shield
+166,,,,yellow pill
+167,,,,magazines
+168,,,,winch
+169,,,,leaflet
+170,,,,footprint
+171,,,,centipede
+172,,,,torches
+173,,,,flowers
+174,,,,set of keys
+175,,,,piano
+176,,,,iron handle
+177,,,,wooden bar
+178,,,,Orcan guard
+179,,,,worthless pebble
+180,,,,other tiles
+181,,,,fuschia tile
+182,,,,nacre tile
+183,,,,orange tile
+184,,,,red tile
+185,,,,dun tile
+186,,,,knife
+187,,,,tablet
+188,,,,tasty food
+189,,,,sheeting
+190,,,,worthless deed
+191,,,,valuable deed
+192,,,,wooden box
+193,,,,bottle
+194,,,,silver button
+195,,,,red button
+196,,,,yellow button
+197,,,,green button
+198,,,,brown button
+199,,,,worthless button
+200,,,,meter
+201,,,,silver ingots
+202,,,,golden chain
+203,,,,iron chain
+204,,,,
+205,,,,cabinet
+206,,,,worthless mug
+207,,,,dumbwaiter
+208,,,,numbers
+209,,,,mosquitos
+210,,,,rat
+211,,,,amulet
+212,,,,bear
+213,,,,message
+214,,,,volcano
+215,,,,vending machine
+216,,,,batteries
+217,,,,moss
+218,,,,treasures

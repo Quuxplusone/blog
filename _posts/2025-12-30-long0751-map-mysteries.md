@@ -79,3 +79,9 @@ I weren't now looking specifically for them:
 * The Cloakroom is charming.
 * The details at the Breathtaking View are painstakingly accurate!
 * The lyre is clearly depicted as a lute. Oops.
+
+---
+
+See major-spoiler answers in my followup post:
+
+* ["Mysteries of the map, partly answered"](/blog/2026/01/19/long0751-map-mysteries-2/)
