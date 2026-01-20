@@ -107,7 +107,7 @@ might have said something like
 
 > GUIL.&nbsp; A function can't not-return an `int`.
 >
-> ROS.&nbsp; I frequently write functions that don't-return an `int`.
+> STR.&nbsp; I frequently write functions that don't-return an `int`.
 >
 > GUIL.&nbsp; No, no, no. What you've written are functions that return not-an-`int`.
 
