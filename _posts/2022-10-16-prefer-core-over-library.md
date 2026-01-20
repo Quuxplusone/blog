@@ -70,16 +70,19 @@ overaligned and thus [bigger than expected](https://gcc.gnu.org/bugzilla/show_bu
 
 The core-language `alignas(T)` attribute has none of these problems. It Just Works.
 
+Even WG21 agrees `std::aligned_storage` is bad: C++23 deprecated it
+([P1413](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2021/p1413r3.pdf)).
+
 
 ## Prefer `char` over `std::byte`
 
-This is a controversial one, but I stick to it dogmatically. [`std::byte`](https://en.cppreference.com/w/cpp/types/byte)
+This is a controversial one, but I stand firmly by it. [`std::byte`](https://en.cppreference.com/w/cpp/types/byte)
 is a library facility that arrived in C++17 specifically as an enumeration type for talking about octets.
 To use it, you must include `<cstddef>`. It's not an integral type (good?), but on the other hand it
 still supports all the integral bitwise operations such as `&`, `|`, `<<`, which (because it is an enum type
 instead of an integral type) it must provide via overloaded operators in `namespace std`. It's just
 [so heavyweight](https://vittorioromeo.info/index/blog/debug_performance_cpp.html#it-gets-worse-much-worse)
-for what it is... which, again, is a verbose reinvention of the built-in primitive type `char`.
+for what it is... which, again, is nothing but a verbose reinvention of the built-in primitive type `char`.
 
     std::byte data[100];  // worse
     char data[100];  // better
@@ -474,6 +477,46 @@ for a nice simple compiler error:
     note:   initializing argument 2 of 'void worker(int, int&)'
         4 | void worker(int x, int& y) {
           |                    ~~~~~^
+
+
+## Prefer `(void)expr` over `std::ignore = expr`
+
+[Added in January 2026.]
+This should have gone without saying, but now I've really seen people debating this in the wild:
+
+    std::ignore = f();  // worse
+    (void)f();  // better
+
+The latter is better partly because it can be done without a superfluous `#include`, but also because
+_it is the idiomatic way you discard a value._ Compilers have understood cast-to-void's
+semantics for decades, dating back to C89.
+[It's literally mentioned in the Standard.](https://eel.is/c++draft/dcl.attr.nodiscard#4.sentence-1)
+
+I think the logic here is, "The compiler complains when I discard this expression, so, I'll trick the
+compiler into _thinking_ that I wrote a nice safe assignment instead." Don't try to trick the compiler!
+Compilers generally evolve over time to avoid being tricked. So while something like
+
+    std::ignore = f();
+    std::ignore = g();
+
+might compile silently today, tomorrow's compiler might complain about a dead write on
+the first line, or even inline the whole thing and point out that the assignments are superfluous.
+If you use the core-language syntax, `(void)`, you know the compiler will understand: you're
+_talking its language_, using the idioms that are built into it, rather than trying to invent your own.
+
+I've seen an even wilder suggestion that you could "discard" a value by using it to initialize a
+variable named `_` — what C++26 now calls a
+["name-independent declaration."](https://eel.is/c++draft/basic.scope.scope#def:declaration,name-independent)
+(A C++26 compiler must permit multiple definitions of this name even within the same scope, and is
+not supposed to warn if such a variable goes unused.)
+
+    auto _ = f();  // much worse
+
+This doesn't require a library header, but it's certainly much worse than either alternative above —
+for human readability, for the compiler's internals (which must now track a declaration rather than
+a relatively simpler expression statement), for runtime performance (variable `_` lasts to
+the end of the scope, whereas `(void)f()` destroys the temporary result right away),
+and for correctness (`auto` will Do The Wrong Thing here if `f` returns a reference type).
 
 
 ## Finally, some near misses
