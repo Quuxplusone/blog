@@ -5,7 +5,9 @@ date: 2019-10-09 00:01:00 +0000
 tags:
   concurrency
   library-design
-  wg21
+  mailing-list-quotes
+  networking
+  wg21-folkloristics
 ---
 
 Recently, in a discussion of the Networking TS on one of WG21's internal "reflector" mailing lists,

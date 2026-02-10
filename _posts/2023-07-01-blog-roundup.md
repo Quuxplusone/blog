@@ -7,6 +7,7 @@ tags:
   clement-wood
   litclub
   paradigm-shift
+  poetry
 ---
 
 It's been a while since I did one of these roundups. Back in April, I read both
