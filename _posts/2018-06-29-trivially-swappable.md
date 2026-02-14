@@ -7,6 +7,7 @@ tags:
   proposal
   relocatability
   triviality
+  type-traits
   value-semantics
 ---
 
