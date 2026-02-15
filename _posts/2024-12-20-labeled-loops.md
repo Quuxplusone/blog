@@ -376,4 +376,4 @@ unprecedented and cumbersome syntax.
 
 See also:
 
-* [“‘Cumbersome’ labeled loops and the C preprocessor”](/blog/2024/12/22/labeled-loops-in-uthash/) (2024-12-22)
+* [“&thinsp;‘Cumbersome’ labeled loops and the C preprocessor”](/blog/2024/12/22/labeled-loops-in-uthash/) (2024-12-22)

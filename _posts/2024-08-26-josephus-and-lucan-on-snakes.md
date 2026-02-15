@@ -113,5 +113,5 @@ in his circa-1930 translation for the Loeb Classical Library,
 > [Hal. ii. 289](https://archive.org/details/in.ernet.dli.2015.12696/page/308/mode/2up).
 
 In other words (if my computer-assisted Ancient Greek is anything to go on),
-the Homeric scholiast is claiming that _elaphus_ “deer”’s full name is _elein tas opheis_ "grasper of snakes."
+the Homeric scholiast is claiming that _elaphus_ “deer”&thinsp;’s full name is _elein tas opheis_ "grasper of snakes."
 (For more contrived etymologies, see [_Cratylus_](/blog/2021/07/15/cratylus/).)

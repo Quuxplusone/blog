@@ -111,5 +111,5 @@ to the right physical behavior in all cases. In those situations, I avoid `forwa
 
 See also:
 
-* [“‘Universal reference’ or ‘forwarding reference’?”](/blog/2022/02/02/look-what-they-need/) (2022-02-02)
+* [“&thinsp;‘Universal reference’ or ‘forwarding reference’?”](/blog/2022/02/02/look-what-they-need/) (2022-02-02)
 * ["Benchmarking Clang's `-fbuiltin-std-forward`"](/blog/2022/12/24/builtin-std-forward/) (2022-12-24)

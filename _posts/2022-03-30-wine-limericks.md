@@ -4,6 +4,7 @@ title: 'Larson wine limericks'
 date: 2022-03-30 00:01:00 +0000
 tags:
   jokes
+  poetry
 ---
 
 Last month I and some family members entered the

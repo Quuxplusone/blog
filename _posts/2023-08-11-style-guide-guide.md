@@ -212,7 +212,7 @@ compliance with the _second_ rule — just `grep reinterpret_cast`.
 
 The syntactic part of the guide might say: "Mark virtual functions as `=0` in the base class,
 `final` in the leaf class, and `override` in between." The behavioral part of the
-guide says: “There should never be an ‘in between.’” (To be fair, I still mark leaf classes'
+guide says: “There should never be an ‘in between.’&thinsp;” (To be fair, I still mark leaf classes'
 functions as `override`, although I do mark leaf classes themselves as `final`.)
 
 I run out of clear-cut two-part examples pretty quick, but a lot of my style mantras have
