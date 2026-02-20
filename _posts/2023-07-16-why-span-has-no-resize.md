@@ -5,6 +5,7 @@ date: 2023-07-16 00:01:00 +0000
 tags:
   library-design
   parameter-only-types
+  socrates
 ---
 
 _With apologies to Plato; but not to Socrates, who's already got one._

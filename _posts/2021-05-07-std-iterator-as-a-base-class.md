@@ -3,6 +3,7 @@ layout: post
 title: "Removing an empty base class can break ABI"
 date: 2021-05-07 00:01:00 +0000
 tags:
+  abi
   cppnow
   llvm
   standard-library-trivia
