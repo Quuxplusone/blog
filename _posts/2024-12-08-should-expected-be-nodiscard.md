@@ -154,20 +154,8 @@ Niall Douglas's `boost::outcome::result` has used `[[nodiscard]]` since at least
 This is briefly noted in [P0762 "Concerns about `expected<T,E>` from the Boost.Outcome peer review"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0762r0.pdf)
 (October 2017), although I don't know if that paper was ever discussed by WG21.
 
-I added `[[nodiscard]]` to [martinmoene/expected-lite](https://github.com/martinmoene/expected-lite), and found that
-its test suite is still green after that patch.
-
-I added `[[nodiscard]]` to libc++'s `std::expected`, and found that 9 of its own test cases fail after that patch.
-All 9 of the failures are due to `.and_then`, `.or_else`, `.transform`, and `.transform_error`, and
-all of them are "compile-only" tests — just checking that a certain construct compiles (or doesn't), rather than
-verifying its runtime behavior.
-
-I added `[[nodiscard]]` to a copy of `tl::expected`, and found that 7 of its own test cases fail after that patch,
-for similar reasons as the libc++ test failures.
-
-I added `[[nodiscard]]` to the copy of `tl::expected` vendored into [rspamd](https://github.com/rspamd/rspamd/tree/eecb96c/contrib/expected),
-and found that its GitHub preflight suite is still green after that patch. Either rspamd's codebase never
-quietly ignores an `expected` return, or I don't understand how to build and test it. :)
+Google Abseil's `absl::StatusOr<T>` has used `warn_unused_result` since at least 2020, and
+`[[nodiscard]]` [since January 2022](https://github.com/abseil/abseil-cpp/blob/master/absl/status/statusor.h#L113-L121).
 
 > Food for thought: Is it ever reasonable to have a function `f` that returns a nodiscard class type,
 > where `f` wants to "opt out" of the class's nodiscard-ness? "This class is nodiscard except when used
