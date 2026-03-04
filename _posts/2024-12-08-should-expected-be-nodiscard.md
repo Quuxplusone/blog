@@ -187,8 +187,12 @@ in general — had not yet marked their `expected` as nodiscard. However, as a d
 [Stephan T. Lavavej marked `expected` as nodiscard](https://github.com/microsoft/STL/commit/7643c270e5bfb1cfad62f8b5ff4045c662bdaf81)
 on 2024-12-13! So `expected` will indeed be nodiscard in the next release of Visual Studio.
 
-I encourage libstdc++ and libc++ to follow suit. For libstdc++,
-[bug #109941](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=109941) seems related.
+I filed [libstdc++ bug #119197](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=119197) on 2025-03-10,
+and it was finally fixed (by myself submitting the patch) on 2026-03-03.
+
+libc++ straggles behind: [bug #130656](https://github.com/llvm/llvm-project/issues/130656)
+was filed 2025-03-10, and a couple of attempts to fix it ([#130820](https://github.com/llvm/llvm-project/pull/130820),
+[#139651](https://github.com/llvm/llvm-project/pull/139651)) remain unmerged as of March 2026.
 
 ## What about other sum types, like `optional` and `variant`?
 

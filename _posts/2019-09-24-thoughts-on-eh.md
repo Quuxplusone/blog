@@ -3,6 +3,7 @@ layout: post
 title: "Thoughts on Herb Sutter's CppCon keynote"
 date: 2019-09-24 00:01:00 +0000
 tags:
+  contracts
   cppcon
   exception-handling
 ---

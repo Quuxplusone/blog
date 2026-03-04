@@ -5,6 +5,7 @@ date: 2018-03-13 00:03:00 +0000
 tags:
   c++-style
   concurrency
+  contracts
   exception-handling
 excerpt: |
   `logic_error` is itself a logic error... or is it?
@@ -17,7 +18,8 @@ excerpt: |
 > If used for spotting a true logic error, then you just detected bad logic by the programmer
 > or memory corruption, in which case this situation is **not** recoverable and you really ought to fatal exit.
 
-In a draft proposal, someone whom I respect wrote, along the same lines:
+In a draft of [P0709](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0709r0.pdf) Herb Sutter wrote,
+along the same lines:
 
 > A precondition (e.g., `[[expects...]]`) violation is never a reportable error;
 > it is always a bug in the caller (the caller shouldn’t be making the call).
@@ -54,3 +56,9 @@ Consider how you'd implement `when_either` if the behavior of `std::promise::set
 had *not* been defined to use exceptions for control flow.
 
 I don't know where I'm going with this, really.  Just some food for thought.
+
+---
+
+See also:
+
+* ["Thoughts on Herb Sutter's CppCon keynote"](/blog/2019/09/24/thoughts-on-eh/) (2019-09-24)
