@@ -185,7 +185,7 @@ also known as "content-addressable memory" (CAM) or "associative storage."
 "Class non-type template parameter" (see [NTTP](#nttp)). Since C++20 (specifically since
 [P0732](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0732r2.pdf) and
 [P1907](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1907r1.html)), NTTPs are allowed
-to be of class type, as long as that type is [structural](https://eel.is/c++draft/temp.param#7).
+to be of class type, as long as that type is [structural](https://eel.is/c++draft/temp.param#def:type,structural).
 A structural type is simply a class type all of whose non-static data members are public
 and (recursively) structural — basically, any C-style struct. Thus:
 
@@ -222,7 +222,7 @@ CNTTPs from C++20. WG21 didn't buy it.
 ## CPO
 
 "Customization point object." This is a notion introduced by Eric Niebler's Ranges library,
-which means it's new in C++20.
+which means it was new in C++20.
 
 > A customization point object is a function object with a literal class type
 > that interacts with program-defined types while enforcing semantic requirements on that interaction.
@@ -240,18 +240,18 @@ The compiler can ensure that some `T` provides syntax for both `==` and `!=`, bu
 In practice, this looks more or less like
 
     namespace detail {
-        template<class A, class B>
-        void swap_helper(A& a, B& b) {
+        template<class T, class U>
+        void swap_helper(T& t, U& u) {
             using std::swap;
-            swap(a, b);
+            swap(t, u);
         }
     }
 
     inline constexpr auto swap =
-        []<A, B>(A& a, B& b)
-            requires Swappable<A> && Swappable<B>
+        []<T, U>(T& t, U& u)
+            requires Swappable<T> && Swappable<U>
         {
-            return detail::swap_helper(a, b);
+            return detail::swap_helper(t, u);
         };
 
 The benefit of a CPO over a named function is that it separates [the two pieces of the customization
@@ -271,10 +271,17 @@ Maybe it should have been called a "C<sup>6</sup>O" instead!
 
 If you remove the adjectives "customizable, concept-constrained" from the above, then you have a
 function object that turns off ADL — but is not necessarily a customization point.
-The C++20 Ranges algorithms, such as `std::ranges::find`,
-[are like this](http://eel.is/c++draft/algorithms.requirements#2). Any callable, constexpr-constructible
-object is colloquially known as a "niebloid," in honor of Eric Niebler.
-A CPO is simply a niebloid that wraps a user-definable customization point.
+The C++20 Ranges algorithms, such as `std::ranges::distance`, are specified like this. They used to be
+specified differently, as if they were real functions that magically didn't respect ADL (and, being non-objects,
+weren't necessarily `semiregular`); but this confusing quirk was removed in C++26 by
+[P3136 "Retiring Niebloids."](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3136r1.html).
+A "niebloid," named in honor of Eric Niebler, is one of these magic object-like functions; or,
+colloquially, any callable, constexpr-constructible object such as `std::ranges::distance`. The
+paper standard's name for things like `std::ranges::distance` is
+["algorithm function object."](https://eel.is/c++draft/library#def:algorithm_function_object)
+Then a CPO is simply an algorithm function object that wraps a user-definable customization point
+(although in fact the paper standard defines these terms the other way around: an algorithm function object
+is formally a kind of customization point object that, paradoxically, isn't a customization point).
 
 ## CRTP
 
