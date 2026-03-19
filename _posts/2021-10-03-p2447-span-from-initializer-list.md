@@ -274,7 +274,8 @@ the paper was abandoned without ever getting `il.data()` working.
 
 ----
 
-See also Federico's own blog post:
+See also:
 
 * ["`std::span`, the missing constructor"](https://fekir.info/post/span-the-missing-constructor/) (Federico Kircheis, June 2021)
+* ["Chromium's `span`-over-initializer-list success story"](/blog/2026/03/19/p2447-success-story/) (2026-03-19)
 {% endraw %}
