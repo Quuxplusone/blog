@@ -152,4 +152,7 @@ at the same time by simply removing the curly braces:
     hosts[DnsHostsKey("localhost", ADDRESS_FAMILY_IPV4)] =
         IPAddress(192, 168, 1, 1);
 
+UPDATE, 2026-03-27: After reading this blog post, Peter improved both of these "failure cases"
+in the suggested ways; see [commit 7107d5e857](https://github.com/chromium/chromium/commit/7107d5e85797db9ddc5382b90c6d0d3f0dde5509)!
+
 {% endraw %}
