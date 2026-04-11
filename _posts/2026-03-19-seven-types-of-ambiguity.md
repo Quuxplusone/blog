@@ -26,8 +26,9 @@ and so on.
 
 2. "Two or more meanings are fully resolved into one."
 Shakespeare's [81st sonnet](https://en.wikipedia.org/wiki/Sonnet_81) is like
-one of those poems that says something different when you read from bottom up,
-or read only every other line: in Sonnet 81 each line could pertain to the one
+one of those poems that says something different when you read [from bottom up](https://en.wikipedia.org/wiki/Reversible_poem),
+or read only [every other line](https://archive.org/details/odditiescuriosit0000char/page/65):
+in Sonnet 81 each line could pertain to the one
 after or the one before. Is it "Tongues to be your being shall rehearse /
 When all the breathers of this world are dead," or "When all the breathers
 of this world are dead / You still shall live"?
