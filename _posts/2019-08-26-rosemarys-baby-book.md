@@ -175,7 +175,7 @@ I have no idea who's in the photograph on the verso page.
 The caption under it seems
 to say "[Mary Butters](https://en.wikipedia.org/wiki/Carnmoney#Mary_Butters),"
 but that's probably not right, as the famous Mary Butters pre-dated
-photography. ([FilmDope](http://filmdope.com/forums/101050-books-films-3.html)
+photography. ([FilmDope](https://web.archive.org/web/20190826160524/https://filmdope.com/forums/101050-books-films-3.html)
 has a screencap including the caption.) The text comes from
 [Tindall page 43](https://archive.org/details/lccn_66012995/page/43)
 (with four lines chopped out between "...god/Devil" and "reports...")
