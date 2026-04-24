@@ -114,47 +114,7 @@ but it cannot make an array of pointers to literals:
 On the other hand, the "constexpr two-step" has no problem with string literals
 ([Godbolt](https://godbolt.org/z/7Tfo9Krb3)).
 
-### 3. Combine backing arrays, or make them mutable
-
-<b>3a.</b> `define_static_array` allocates its array in rodata and gives you a `span<const T>`
-over it. This allows the compiler to do cool things, like point multiple invocations of
-`define_static_array` at the same backing array ([Godbolt](https://godbolt.org/z/zKTMs8bd4)).
-In fact, as I understand it, the compiler is actually _required_ to do that, because
-`reflect_constant` is defined in terms of a [template parameter object](https://eel.is/c++draft/temp.param#13)
-which for all intents and purposes behaves like an inline variable: there is guaranteed
-to be only one template parameter object with a given type and value in the whole program
-([Godbolt](https://godbolt.org/z/KnzT1qhae)).
-
-Treating template parameter objects as inline variables means the compiler _must_ combine
-such objects when they have the same type and value (optimization! hooray!) but sadly also
-_forbids_ an otherwise sufficiently smart compiler from combining such objects when their
-types are merely similar. Thus ([Godbolt](https://godbolt.org/z/o6r73rP3W)):
-
-    const void *p1 = std::define_static_array(std::vector<signed char>{1,2,3}).data();
-    const void *p2 = std::define_static_array(std::list<signed char>{1,2,3}).data();
-    const void *p3 = std::define_static_array(std::vector<unsigned char>{1,2,3}).data();
-    const void *p4 = std::define_static_array(std::vector<char>{1,2,3}).data();
-
-All four of these pointers point to arrays of the three bytes `01 02 03`. `p1` and `p2`
-are required to point to the same byte; `p3` and `p4` are required to point to different
-arrays. The compiler isn't allowed to coalesce them, the way it's allowed to coalesce
-the backing arrays of differently typed `initializer_list`s ([Godbolt](https://godbolt.org/z/8EPae4cPo)).
-
-<b>3b.</b> Most importantly, template parameter objects are const! Therefore, you cannot use
-`define_static_array` to produce a `constinit`-but-mutable array, the way you can
-with the "constexpr two-step." It seems to me perfectly reasonable to want a magic consteval
-function that says, "Please generate me a mutable array in static storage with these
-contents" — specified as a constexpr-time `vector<int>` — "and give me a `span` over it":
-
-    template<class R>
-    consteval auto define_mutable_static_storage_array(R&& r)
-        -> std::span<std::ranges::range_value_t<R>>;
-
-Perfectly reasonable to _want_ such an API; but C++26 `define_static_array` fundamentally
-isn't that API. It can't produce mutable data: it can't produce _anything_ except pointers
-into template parameter objects, which behave like const inline variables.
-
-### 4. Move-only types
+### 3. Move-only types
 
 In order to create a template parameter object representing `e`, we must make
 a copy of `e` ([[temp.arg.nontype]/4](https://eel.is/c++draft/temp.arg.nontype#4)).
@@ -176,20 +136,76 @@ not use default-construction ([Godbolt](https://godbolt.org/z/Wbn73MaGM)).
 Can we rework the two-step to eliminate the default-constructibility requirement?
 I imagine we can, but at the moment I don't see how.
 
+### 4. Make the array mutable
+
+`define_static_array` allocates its array in rodata and gives you a `span<const T>`
+over it. This allows the compiler to do cool things, like point multiple invocations of
+`define_static_array` at the same backing array ([Godbolt](https://godbolt.org/z/zKTMs8bd4)).
+In fact, the compiler is actually _required_ to do that, because
+`reflect_constant` is defined in terms of a [template parameter object](https://eel.is/c++draft/temp.param#13)
+which for all intents and purposes behaves like an inline variable: there is guaranteed
+to be only one template parameter object with a given type and value in the whole program
+([Godbolt](https://godbolt.org/z/KnzT1qhae)).
+
+Treating template parameter objects as inline variables means the compiler _must_ combine
+such objects when they have the same type and value (optimization! hooray!) but sadly also
+_forbids_ an otherwise sufficiently smart compiler from combining such objects when their
+types are merely similar. [Godbolt](https://godbolt.org/z/ea9f943rK):
+
+    template<auto V> auto tpo() { return std::span(V); }
+    template<auto V> auto tpo2() { return std::span(V); }
+
+    const void *p1 = tpo<std::array<signed char,3>{1,2,3}>().data();
+    const void *p2 = tpo2<std::array<signed char,3>{1,2,3}>().data();
+    const void *p3 = tpo<std::array<unsigned char,3>{1,2,3}>().data();
+    const void *p4 = tpo<std::array<char,3>{1,2,3}>().data();
+
+All four of these pointers point to arrays of the three bytes `01 02 03`. `p1` and `p2`
+are required to point to the same byte; `p3` and `p4`, since they point to `std::array`
+objects of different types, are required to point to different arrays. The compiler
+isn't allowed to coalesce `p3` and `p4`, the way it's allowed to coalesce
+the backing arrays of differently typed `initializer_list`s ([Godbolt](https://godbolt.org/z/8EPae4cPo)).
+
+But (hooray! and thanks to Tim Song for correcting me on this!) there is a special case
+specifically for the "template parameter objects of array type" created by `reflect_constant_array`
+and `define_static_array`. _These_ objects _are_ permitted
+([[intro.object]/9.3](https://eel.is/c++draft/intro.object#def:object,potentially_non-unique))
+to overlap or be coalesced, just like `initializer_list`s and string literals. Clang trunk
+isn't smart enough to coalesce potentially non-unique objects; therefore the Clang reference
+implementation of C++26 Reflection doesn't coalesce these array objects either; but it's
+not the paper standard's fault. [Godbolt](https://godbolt.org/z/o6r73rP3W):
+
+    const void *p1 = std::define_static_array(std::vector<signed char>{1,2,3}).data();
+    const void *p2 = std::define_static_array(std::list<signed char>{1,2,3}).data();
+    const void *p3 = std::define_static_array(std::vector<unsigned char>{1,2,3}).data();
+    const void *p4 = std::define_static_array(std::vector<char>{1,2,3}).data();
+
+All four of these pointers point to arrays of the three bytes `01 02 03`. `p1` and `p2`
+are required to point to the same byte; `p3` and `p4` are permitted, but not required,
+to point to different arrays. In practice Clang makes them different; GCC, once it implements
+`define_static_array`, will presumably make them the same.
+
+However, template parameter objects are invariably const! Therefore, you cannot use
+`define_static_array` to produce a `constinit`-but-mutable array, the way you can
+with the "constexpr two-step." It seems to me perfectly reasonable to want a magic consteval
+function that says, "Please generate me a mutable array in static storage with these
+contents" — specified as a constexpr-time `vector<int>` — "and give me a `span` over it":
+
+    template<class R>
+    consteval auto define_mutable_static_storage_array(R&& r)
+        -> std::span<std::ranges::range_value_t<R>>;
+
+Perfectly reasonable to _want_ such an API; but C++26 `define_static_array` fundamentally
+isn't that API. It can't produce mutable data: it can't produce _anything_ except pointers
+into (potentially non-unique) template parameter objects, which behave like const inline variables.
+
 ## Conclusion
 
 In short, `define_static_array` is constitutionally unsuited for some conspicuous use-cases.
 I'm not sure what this means for the future. I'm sure we don't want to require people to
 use the "constexpr two-step" forever; but `define_static_array` doesn't seem suited to
 replace _all_ of its uses — certainly not in C++26, and I don't see how it could be extended
-in the future to solve any of the problems I outlined above, except (3a) and maybe (4).
-
-> We're about to ship a guarantee that `define_static_array({1,2,3})` and
-> `define_static_array({1u,2u,3u})` don't overlap. Guarantees, once granted, are
-> hard to claw back. On the other hand, we did successfully claw back exactly that
-> guarantee for `initializer_list`, in the C++26 cycle, via my own
-> [P2752](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2752r3.html).
-> So maybe it wouldn't be hard to fix (3a) in the future.
+in the future to solve any of the problems I outlined above.
 
 I imagine the answer is not "`define_static_array` will solve all your problems today,"
 nor "a new and improved `define_static_array` will solve all your problems in C++XY,"
@@ -199,7 +215,7 @@ and we'll use that new facility to solve some (but perhaps not all) of the above
 
 ----
 
-UPDATE: Actually, problems (1), (2), and (4) all stem from `define_static_array`’s
+UPDATE: Actually, problems (1), (2), and (3) all stem from `define_static_array`’s
 requirement that each element be usable as an NTTP. Barry Revzin's
 [P3380R1 "Extending support for class types as NTTPs"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3380r1.html)
 (December 2024) lays out a plan that would permit the programmer to mark their own types
