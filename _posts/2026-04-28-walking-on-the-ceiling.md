@@ -37,13 +37,13 @@ Don Woods wrote back the same day:
 > Yes, I vaguely recall finding that at some point.  It was wrong in my
 > version 1 but got fixed somewhere between there and my version 2.5.
 
-Indeed, where WOOD0350 [has](https://github.com/Quuxplusone/Advent/blob/master/WOOD0350/advent.dat#L447-L454):
+Indeed, where WOOD0350 (circa 1977) [has](https://github.com/Quuxplusone/Advent/blob/master/WOOD0350/advent.dat#L447-L454):
 
     19    311028  45  36   # 45=N 36=LEFT
     19    311029  46  37   # 46=S 37=RIGHT
     19    311030  44  7    # 44=W  7=FORWA
 
-WOOD0430 (his expanded _Adventure 2.5_) [has](https://github.com/Quuxplusone/Advent/blob/master/WOOD0430/adventure.text#L526-L533):
+WOOD0430 (his expanded _Adventure 2.5_, circa 1995) [has](https://github.com/Quuxplusone/Advent/blob/master/WOOD0430/adventure.text#L526-L533):
 
     19    311028  45  37   # 45=N 37=RIGHT
     19    311029  46  36   # 46=S 36=LEFT
@@ -72,11 +72,11 @@ ROBE0665 has a superficially similar slip-up at Three-Opening Arch:
     265     0 34   RIGHT SE DOWN
     265     0 273  EAST
 
-Here `LEFT` correctly matches `NE`, but goes `UP` where the room description says "plunges down";
-and `RIGHT` correctly matches `SE`, but goes `DOWN` where the room description says "climbs up."
+Here LEFT correctly matches NE, but goes UP where the room description says "plunges down";
+and RIGHT correctly matches SE, but goes DOWN where the room description says "climbs up."
 I reported that bug to Eric Roberts on 2025-04-23, although at that time I don't think I'd noticed
-that `LEFT` and `RIGHT` actually worked correctly in that location, and that it was only the `UP`
-and `DOWN` directions that were wrong.
+that LEFT and RIGHT actually worked correctly in that location, and that it was only the UP
+and DOWN directions that were wrong.
 
 ---
 

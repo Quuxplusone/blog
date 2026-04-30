@@ -97,10 +97,11 @@ However, both of the following copy-initializations are legal and silly:
 
 The latter is a historical accident which is supported these days, as far as I know, _only_ so that we can specify the behavior
 of `for (int i : {1,2,3})` without having to write a special case into [[stmt.ranged]](https://eel.is/c++draft/stmt.ranged).
-([N3922 "New rules for auto deduction from braced-init-list"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
+
+[N3922 "New rules for auto deduction from braced-init-list"](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
 is the paper that removed `auto a{1,2,3}` from the language. N3922 came in 2014, at the height of the "Almost Always Auto" and "Uniform Initialization"
 fads; it was widely assumed that newbies would write `auto a{1,2}` and shoot themselves in the foot, but writing `auto a = {1,2}`
 wasn't so attractive to newbies and thus wasn't treated so urgently as a footgun. At the same time, N3922 changed both
 `auto a{1}` and `auto a = {1}` to deduce `int` rather than `initializer_list<int>`. Only `auto a = {1,2}` remains as a special case
 inconsistent with the rest of the language. [N3912 §1](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3912.html) says
-this special case will be useful to "advanced users," which I think in hindsight was a bad justification for keeping it.)
+this special case will be useful to "advanced users," which I think in hindsight was a bad justification for keeping it.
