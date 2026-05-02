@@ -209,7 +209,7 @@ looks like this.
 > Why `3f800000` and `4048f5c3`? See ["Bit patterns of `float`"](/blog/2021/09/05/float-format/) (2021-09-05).
 
 Inside a function taking a CNTTP, the value of the template parameter is accessible
-as a [template parameter object](https://eel.is/c++draft/temp.param#8.sentence-1),
+as a [template parameter object](https://eel.is/c++draft/temp.param#13),
 which is more or less an `inline constexpr` variable shared by everyone in the program.
 ([Godbolt.](https://godbolt.org/z/WczM7PW5q))
 
@@ -809,15 +809,28 @@ i.e., a sequence of `wchar_t`s ending with `wchar_t(0)`).
 
 ## NTTP
 
-"Non-type template parameter." This is a weird one, because you'd think by symmetry it ought to
-be spelled "TNTP" — template type parameter, template template parameter, template non-type parameter,
-right? But no: C++ has "template type parameters" and "non-type template parameters."
+"Non-type template parameter." In C++98 through C++23, there were only three kinds of template
+parameters: template _type_ parameters, template _template_ parameters, and constants (such as the
+second template parameter of `std::array`); this last kind were known simply as _non-type_ template
+parameters.
 
-A template type parameter is like `template<class C>`.
+    template<class C>                  // template type parameter [sic]
+    template<template<class> class TC> // template template parameter
+    template<int V>                    // non-type template parameter
+    template<auto V>                   // also a non-type template parameter
 
-A template template parameter is like `template<template<class> class TC>`.
+C++26 introduced (via [P2841](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2841r7.pdf))
+_concept template parameters_ and _variable-template template parameters_. Since neither of these
+are "types," either, it was considered prudent to rename NTTPs to "constant template parameters";
+and they took the opportunity to rename "template type parameters" to "type template parameters"
+too, for consistency. Thus:
 
-A non-type template parameter is like `template<int V>` or `template<auto V>`.
+    template<class C>                  // type template parameter
+    template<template<class> class TC> // template template parameter
+    template<int V>                    // constant template parameter
+    template<auto V>                   // also a constant template parameter
+    template<template<class> concept C> // concept template parameter
+    template<template<class> auto VT>   // variable-template template parameter
 
 Until C++20, NTTPs were allowed to be of only certain primitive types: integers, enums, pointers, and references.
 Starting in C++20, NTTPs are allowed to be of floating-point types (as in `MyTemplate<3.14>`) or
