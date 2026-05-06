@@ -3,6 +3,7 @@ layout: post
 title: "Prefer core-language features over library facilities"
 date: 2022-10-16 00:01:00 +0000
 tags:
+  alignment
   c++-learner-track
   c++-style
   concepts

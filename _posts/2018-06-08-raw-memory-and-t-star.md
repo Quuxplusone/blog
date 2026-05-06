@@ -3,6 +3,7 @@ layout: post
 title: 'Pointer to raw memory? `T*`.'
 date: 2018-06-08 00:01:00 +0000
 tags:
+  alignment
   allocators
   c++-style
   library-design
