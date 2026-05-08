@@ -1,0 +1,448 @@
+# https://www.youtube.com/watch?v=DLYSZN2IqeU
+# https://www.misosoup.com/connie/TwoMin/Iolanthe.html
+
+PREFIX="-y"
+SUFFIX="-i input.mkv -c:v libx264 -preset veryfast -crf 20 -c:a aac"
+rm part*.mkv
+
+#CHORUS: Tripping hither, tripping thither!
+ffmpeg $PREFIX -ss 00:07:07.2 -to 00:07:10.5 $SUFFIX part001.mkv
+
+#ELIA: We are dainty little fairies!
+ffmpeg $PREFIX -ss 00:07:45 -to 00:07:48.6 $SUFFIX part002.mkv
+
+#LEILA: Lovers' sighs, eyes, tears, fears, darts, hearts.
+# ffmpeg $PREFIX -ss 00:08:46.52 -to 00:08:47.97 $SUFFIX part003.mkv
+# ffmpeg $PREFIX -ss 00:08:50.58 -to 00:08:51.05 $SUFFIX part004.mkv
+# ffmpeg $PREFIX -ss 00:08:53.75 -to 00:08:54.23 $SUFFIX part005.mkv
+# ffmpeg $PREFIX -ss 00:08:56.9 -to 00:08:57.45 $SUFFIX part006.mkv
+# ffmpeg $PREFIX -ss 00:09:00.1 -to 00:09:00.6 $SUFFIX part007.mkv
+# ffmpeg $PREFIX -ss 00:09:03.2 -to 00:09:03.76 $SUFFIX part008.mkv
+
+#CELIA: Our Queen banished Iolanthe!
+ffmpeg $PREFIX -ss 00:10:16.5 -to 00:10:18.7 $SUFFIX part009.mkv
+
+#FLETA: Oh, give her back!
+ffmpeg $PREFIX -ss 00:12:45.0 -to 00:12:46.1 $SUFFIX part010.mkv
+
+#QUEEN: It shall be as you wish! Iolanthe! Thou art summoned!
+# ffmpeg $PREFIX -ss 00:13:18.0 -to 00:13:20.4 $SUFFIX part011.mkv
+# or:
+# ffmpeg $PREFIX -ss 00:13:20.6 -to 00:13:24.0 $SUFFIX part011.mkv
+ffmpeg $PREFIX -ss 00:13:42.5 -to 00:13:46.1 $SUFFIX part012.mkv
+ffmpeg $PREFIX -ss 00:13:51.0 -to 00:13:55.6 $SUFFIX part013.mkv
+
+#QUEEN: Thou art pardoned!
+#IOLANTHE: Pardoned!
+#CHORUS: Pardoned!
+# ffmpeg $PREFIX -ss 00:16:06.2 -to 00:16:18.8 $SUFFIX part014.mkv
+# or just Iolanthe's line:
+# ffmpeg $PREFIX -ss 00:16:10.8 -to 00:16:13.3 $SUFFIX part014.mkv
+# or Iol and chorus:
+ffmpeg $PREFIX -ss 00:16:10.8 -to 00:16:18.8 $SUFFIX part014.mkv
+
+#QUEEN: I didn't know you had a son.
+ffmpeg $PREFIX -ss 00:17:11.4 -to 00:17:14.0 $SUFFIX part015.mkv
+
+#IOLANTHE: He's inclined to be stout. He's an Arcadian shepherd. He loves Phyllis. His legs are mortal. Here he comes!
+# ffmpeg $PREFIX -ss 00:17:46.4 -to 00:17:47.8 $SUFFIX part016.mkv
+ffmpeg $PREFIX -ss 00:17:57.4 -to 00:17:59.7 $SUFFIX part017.mkv
+ffmpeg $PREFIX -ss 00:18:00.7 -to 00:18:02.2 $SUFFIX part018.mkv
+ffmpeg $PREFIX -ss 00:18:10.4 -to 00:18:12.5 $SUFFIX part019.mkv
+
+ffmpeg $PREFIX -ss 00:18:25.2 -to 00:18:27.8 $SUFFIX part020.mkv
+ffmpeg $PREFIX -ss 00:18:30.1 -to 00:18:31.1 $SUFFIX part021.mkv
+# or:
+# ffmpeg $PREFIX -ss 00:18:32.8 -to 00:18:35.2 $SUFFIX part021.mkv
+
+#STREPHON: Good morrow! I'm to be married today! [Who are these?]
+ffmpeg $PREFIX -ss 00:18:38.1 -to 00:18:38.9 $SUFFIX part022.mkv
+ffmpeg $PREFIX -ss 00:18:58.8 -to 00:19:00.9 $SUFFIX part023.mkv
+ffmpeg $PREFIX -ss 00:19:58.9 -to 00:19:59.3 $SUFFIX part026.mkv
+
+#IOLANTHE: Rejoice! Pardoned! My sisters.
+ffmpeg $PREFIX -ss 00:20:00.4 -to 00:20:01.1 $SUFFIX part024.mkv
+ffmpeg $PREFIX -ss 00:20:03.2 -to 00:20:03.95 $SUFFIX part025.mkv
+ffmpeg $PREFIX -ss 00:20:08.4 -to 00:20:09.9 $SUFFIX part027.mkv
+
+#STREPHON: My aunts! My bride knows nothing of my fairyhood. Curse of my existence! Keyhole, invisible, gibbering idiot.
+ffmpeg $PREFIX -ss 00:20:13.2 -to 00:20:14.4 $SUFFIX part028.mkv
+ffmpeg $PREFIX -ss 00:20:19.5 -to 00:20:21.8 $SUFFIX part029.mkv
+ffmpeg $PREFIX -ss 00:20:33.8 -to 00:20:35.6 $SUFFIX part030.mkv
+ffmpeg $PREFIX -ss 00:20:44.9 -to 00:20:45.4 $SUFFIX part031.mkv
+ffmpeg $PREFIX -ss 00:20:49.9 -to 00:20:50.4 $SUFFIX part032.mkv
+ffmpeg $PREFIX -ss 00:20:58.5 -to 00:20:59.5 $SUFFIX part033.mkv
+
+#QUEEN: I see. Parliament? Peculiar legs.
+ffmpeg $PREFIX -ss 00:21:16.4 -to 00:21:16.9 $SUFFIX part034.mkv
+ffmpeg $PREFIX -ss 00:21:30.7 -to 00:21:31.5 $SUFFIX part035.mkv
+ffmpeg $PREFIX -ss 00:22:07.5 -to 00:22:08.5 $SUFFIX part036.mkv
+ffmpeg $PREFIX -ss 00:22:04.8 -to 00:22:06.0 $SUFFIX part037.mkv
+
+#FAIRIES: Call us, and we'll come to thee!
+ffmpeg $PREFIX -ss 00:22:44.5 -to 00:22:48.0 $SUFFIX part038.mkv
+
+#PHYLLIS: We're to be married. I tremble! Penal servitude.
+ffmpeg $PREFIX -ss 00:23:48.9 -to 00:23:50.1 $SUFFIX part039.mkv
+ffmpeg $PREFIX -ss 00:24:14.0 -to 00:24:14.8 $SUFFIX part040.mkv
+# ffmpeg $PREFIX -ss 00:24:17.8 -to 00:24:18.8 $SUFFIX part041.mkv
+
+#STREPH. Look in the glass! Lord Chancellor! House of Lords. Delays are dangerous.
+# ffmpeg $PREFIX -ss 00:24:31.1 -to 00:24:32.1 $SUFFIX part042.mkv
+ffmpeg $PREFIX -ss 00:24:54.8 -to 00:24:55.8 $SUFFIX part043.mkv
+ffmpeg $PREFIX -ss 00:25:02.2 -to 00:25:02.9 $SUFFIX part044.mkv
+ffmpeg $PREFIX -ss 00:25:25.7 -to 00:25:27.1 $SUFFIX part045.mkv
+
+#STREPHON and PHYLLIS: None shall part us!
+ffmpeg $PREFIX -ss 00:25:44.2 -to 00:25:46.9 $SUFFIX part046.mkv
+
+#PEERS: Tantantara!
+ffmpeg $PREFIX -ss 00:30:52.1 -to 00:30:53.3 $SUFFIX part047.mkv
+
+#LORD CHANCELLOR: I embody the Law. I am singularly attracted. I was a stout man.
+ffmpeg $PREFIX -ss 00:34:58.8 -to 00:34:59.0 $SUFFIX part048.mkv
+ffmpeg $PREFIX -ss 00:34:59.8 -to 00:35:01.5 $SUFFIX part049.mkv
+ffmpeg $PREFIX -ss 00:37:26.2 -to 00:37:27.5 $SUFFIX part050.mkv
+ffmpeg $PREFIX -ss 00:37:36.4 -to 00:37:38.0 $SUFFIX part051.mkv
+
+# “Sye no more. Sye no more.” I should award her to myself. [I waive my claim.] [pause] I thank your Lordships.
+ffmpeg $PREFIX -ss 00:37:40.5 -to 00:37:41.3 $SUFFIX part052.mkv
+# ffmpeg $PREFIX -ss 00:37:40.5 -to 00:37:41.3 $SUFFIX part053.mkv
+ffmpeg $PREFIX -ss 00:37:44.6 -to 00:37:44.9 $SUFFIX part054.mkv
+ffmpeg $PREFIX -ss 00:37:46.0 -to 00:37:47.0 $SUFFIX part055.mkv
+ffmpeg $PREFIX -ss 00:37:48.7 -to 00:37:49.5 $SUFFIX part056.mkv
+# ffmpeg $PREFIX -ss 00:38:04.8 -to 00:38:06.8 $SUFFIX part057.mkv
+ffmpeg $PREFIX -ss 00:38:15.4 -to 00:38:18.0 $SUFFIX part058.mkv
+
+# Give his own consent? Marry without consent? Commit himself for contempt?
+ffmpeg $PREFIX -ss 00:38:24.8 -to 00:38:25.6 $SUFFIX part059.mkv
+ffmpeg $PREFIX -ss 00:38:27.8 -to 00:38:28.0 $SUFFIX part060.mkv
+ffmpeg $PREFIX -ss 00:38:28.8 -to 00:38:29.1 $SUFFIX part061.mkv
+ffmpeg $PREFIX -ss 00:38:29.5 -to 00:38:30.2 $SUFFIX part062.mkv
+ffmpeg $PREFIX -ss 00:38:35.55 -to 00:38:36.55 $SUFFIX part063.mkv
+# or: ffmpeg $PREFIX -ss 00:38:36.2 -to 00:38:37.5 $SUFFIX part063.mkv
+
+# Appear before himself? Woolsack!
+ffmpeg $PREFIX -ss 00:38:37.8 -to 00:38:38.0 $SUFFIX part064.mkv
+ffmpeg $PREFIX -ss 00:38:38.7 -to 00:38:39.5 $SUFFIX part065.mkv
+ffmpeg $PREFIX -ss 00:38:48.0 -to 00:38:48.6 $SUFFIX part066.mkv
+
+#LORD MOUNTARARAT: Succeeded in inducing.
+# ffmpeg $PREFIX -ss 00:38:56.2 -to 00:38:57.9 $SUFFIX part067.mkv
+
+#PHYLLIS: I am here!
+ffmpeg $PREFIX -ss 00:39:18.5 -to 00:39:22.3 $SUFFIX part068.mkv
+
+#PEERS: Rapture, beautiful, gentle, dutiful!
+ffmpeg $PREFIX -ss 00:39:23.2 -to 00:39:24.7 $SUFFIX part069.mkv
+ffmpeg $PREFIX -ss 00:39:25.0 -to 00:39:26.6 $SUFFIX part070.mkv
+ffmpeg $PREFIX -ss 00:39:28.1 -to 00:39:29.3 $SUFFIX part071.mkv
+ffmpeg $PREFIX -ss 00:39:30.0 -to 00:39:33.2 $SUFFIX part072.mkv
+
+#TOLLOLLER: Birth and position. Grammar and spelling. Blood and behaviour!
+ffmpeg $PREFIX -ss 00:39:52.0 -to 00:39:53.2 $SUFFIX part073.mkv
+# ffmpeg $PREFIX -ss 00:39:55.0 -to 00:39:56.3 $SUFFIX part074.mkv
+ffmpeg $PREFIX -ss 00:39:57.4 -to 00:39:59.2 $SUFFIX part075.mkv
+
+#MOUNTARARAT: Party. Party. Party!
+ffmpeg $PREFIX -ss 00:40:48.9 -to 00:40:49.5 $SUFFIX part076.mkv
+ffmpeg $PREFIX -ss 00:40:55.4 -to 00:40:55.9 $SUFFIX part077.mkv
+# ffmpeg $PREFIX -ss 00:41:16.4 -to 00:41:17.0 $SUFFIX part078.mkv
+# or:
+ffmpeg $PREFIX -ss 00:42:10.4 -to 00:42:11.8 $SUFFIX part078.mkv
+
+#PHYLLIS: I refuse. My heart is given!
+#ALL: Given!
+#PHYL. Given!
+# ffmpeg $PREFIX -ss 00:45:31.6 -to 00:45:36.6 $SUFFIX part079.mkv
+# or:
+ffmpeg $PREFIX -ss 00:45:31.6 -to 00:45:35.1 $SUFFIX part079.mkv
+
+#STREPH. 'Tis I.
+ffmpeg $PREFIX -ss 00:45:49.5 -to 00:45:50.9 $SUFFIX part080.mkv
+
+#MOUNTARARAT and TOLLOLLER: We stagger.
+ffmpeg $PREFIX -ss 00:46:33.5 -to 00:46:33.7 $SUFFIX part081.mkv
+ffmpeg $PREFIX -ss 00:46:35.1 -to 00:46:35.9 $SUFFIX part082.mkv
+
+#PEERS. Let's depart. Bwa-ha-ha. Tantara.
+ffmpeg $PREFIX -ss 00:46:41.6 -to 00:46:43.0 $SUFFIX part083.mkv
+ffmpeg $PREFIX -ss 00:47:25.4 -to 00:47:27.0 $SUFFIX part084.mkv
+# ffmpeg $PREFIX -ss 00:47:30.2 -to 00:47:31.1 $SUFFIX part085.mkv
+
+#LORD CH. What excuse?
+ffmpeg $PREFIX -ss 00:48:04.0 -to 00:48:04.8 $SUFFIX part086.mkv
+
+#STREPH. The bees the breeze the seas the rooks the brooks the gales the vales the fountains--the mountains. Bright barbed dart, lurid light, sad and sodden sympathy!
+ffmpeg $PREFIX -ss 00:48:15.1 -to 00:48:18.7 $SUFFIX part087.mkv
+ffmpeg $PREFIX -ss 00:48:18.9 -to 00:48:19.4 $SUFFIX part088.mkv
+ffmpeg $PREFIX -ss 00:48:25.9 -to 00:48:27.1 $SUFFIX part089.mkv
+ffmpeg $PREFIX -ss 00:48:28.4 -to 00:48:29.1 $SUFFIX part090.mkv
+ffmpeg $PREFIX -ss 00:48:32.7 -to 00:48:34.5 $SUFFIX part091.mkv
+
+#LORD CH. Distinctly. I went to the Bar.
+ffmpeg $PREFIX -ss 00:49:31.8 -to 00:49:32.5 $SUFFIX part092.mkv
+ffmpeg $PREFIX -ss 00:49:47.2 -to 00:49:48.1 $SUFFIX part093.mkv
+
+#STREPH. Oh, Phyllis, Phyllis! To be taken from you just as I was on the point of making you my own! Oh, it's too much it's too much!
+# ffmpeg $PREFIX -ss 00:51:38.0 -to 00:51:44.5 $SUFFIX part094.mkv
+# or:
+ffmpeg $PREFIX -ss 00:51:38.0 -to 00:51:42.8 $SUFFIX part094.mkv
+
+#IOL. (to STREPHON, who is in tears). My son in tears and on his wedding day!
+ffmpeg $PREFIX -ss 00:51:45.8 -to 00:51:47.8 $SUFFIX part095.mkv
+# ffmpeg $PREFIX -ss 00:51:48.1 -to 00:51:51.3 $SUFFIX part096.mkv
+# or:
+ffmpeg $PREFIX -ss 00:51:48.1 -to 00:51:49.6 $SUFFIX part096.mkv
+
+#STREPH. [My wedding day!] The Lord Chancellor!
+ffmpeg $PREFIX -ss 00:51:54.9 -to 00:51:55.8 $SUFFIX part097.mkv
+
+#IOL. If he did but know! No power over you. Half a fairy. Defy him. Take heart. Special protection. Peculiar case.
+ffmpeg $PREFIX -ss 00:51:59.7 -to 00:52:01.3 $SUFFIX part098.mkv
+ffmpeg $PREFIX -ss 00:52:06.7 -to 00:52:07.8 $SUFFIX part099.mkv
+ffmpeg $PREFIX -ss 00:52:08.9 -to 00:52:09.7 $SUFFIX part100.mkv
+ffmpeg $PREFIX -ss 00:52:10.2 -to 00:52:11.0 $SUFFIX part101.mkv
+ffmpeg $PREFIX -ss 00:52:27.1 -to 00:52:27.8 $SUFFIX part102.mkv
+ffmpeg $PREFIX -ss 00:52:30.0 -to 00:52:31.1 $SUFFIX part103.mkv
+# ffmpeg $PREFIX -ss 00:52:33.0 -to 00:52:34.0 $SUFFIX part104.mkv
+
+#STREPH. On thee I'll call!
+ffmpeg $PREFIX -ss 00:53:16.2 -to 00:53:19.1 $SUFFIX part105.mkv
+
+#IOL. If thou needst an Ark!
+ffmpeg $PREFIX -ss 00:53:54.0 -to 00:53:56.22 $SUFFIX part106.mkv
+
+#LORD TOLL. St James's Park!
+ffmpeg $PREFIX -ss 00:54:07.5 -to 00:54:08.6 $SUFFIX part107.mkv
+
+#PHYL. We part.
+ffmpeg $PREFIX -ss 00:55:03.65 -to 00:55:04.15 $SUFFIX part108.mkv
+
+#STREPH. This lady's my mother!
+ffmpeg $PREFIX -ss 00:55:15.7 -to 00:55:17.2 $SUFFIX part109.mkv
+
+#LORD MOUNT. Stylish Italian phrase!
+#LORD CH. Another styish Italian phrase!
+# [omitted]
+
+#PEERS. Ha! ha! ha! ha! ha!
+ffmpeg $PREFIX -ss 00:55:22.9 -to 00:55:23.8 $SUFFIX part112.mkv
+
+#STREPH. She moistenèd my clay!
+ffmpeg $PREFIX -ss 00:56:37.3 -to 00:56:39.9 $SUFFIX part113.mkv
+
+#PEERS Refreshment.
+ffmpeg $PREFIX -ss 00:56:55.1 -to 00:56:56.15 $SUFFIX part114.mkv
+
+#LORD MOUNT. Pipe our eye.
+ffmpeg $PREFIX -ss 00:57:41.7 -to 00:57:43.6 $SUFFIX part115.mkv
+
+#PHYL. Achy, quaky, breaky heart! I don't care which!
+ffmpeg $PREFIX -ss 00:58:56.8 -to 00:59:00.15 $SUFFIX part116.mkv
+ffmpeg $PREFIX -ss 00:59:30.8 -to 00:59:31.8 $SUFFIX part117.mkv
+ffmpeg $PREFIX -ss 00:59:40.9 -to 00:59:44.7 $SUFFIX part122.mkv
+
+#PEERS Which? Whom? Whose? What?
+# ffmpeg $PREFIX -ss 00:59:48.2 -to 00:59:48.6 $SUFFIX part119.mkv
+# ffmpeg $PREFIX -ss 00:59:54.2 -to 00:59:54.65 $SUFFIX part120.mkv
+ffmpeg $PREFIX -ss 01:00:00.2 -to 01:00:00.7 $SUFFIX part121.mkv
+# ffmpeg $PREFIX -ss 01:00:06.3 -to 01:00:06.6 $SUFFIX part122.mkv
+
+#STREPH. Mighty protectress!
+ffmpeg $PREFIX -ss 01:00:40.9 -to 01:00:43.0 $SUFFIX part123.mkv
+
+#FAIRIES You've summoned us.
+ffmpeg $PREFIX -ss 01:01:05.1 -to 01:01:06.6 $SUFFIX part124.mkv
+
+#PEERS Strephon is a rogue!
+#FAIRIES. Strephon's not a rogue!
+ffmpeg $PREFIX -ss 01:01:32.3 -to 01:01:33.25 $SUFFIX part125.mkv
+ffmpeg $PREFIX -ss 01:01:50.5 -to 01:01:51.5 $SUFFIX part126.mkv
+
+#LORD CH. Fondled!
+ffmpeg $PREFIX -ss 01:01:59.87 -to 01:02:00.28 $SUFFIX part127.mkv
+
+#ALL. Bit of folly! Melancholy! Injurious, curious, spurious. Taradiddle!
+ffmpeg $PREFIX -ss 01:02:39.0 -to 01:02:39.7 $SUFFIX part128.mkv
+# ffmpeg $PREFIX -ss 01:02:43.8 -to 01:02:44.4 $SUFFIX part129.mkv
+# ffmpeg $PREFIX -ss 01:02:48.5 -to 01:02:48.95 $SUFFIX part130.mkv
+# ffmpeg $PREFIX -ss 01:02:50.9 -to 01:02:51.4 $SUFFIX part131.mkv
+# ffmpeg $PREFIX -ss 01:02:53.15 -to 01:02:54.4 $SUFFIX part132.mkv
+
+#LORD CH. Go away!
+ffmpeg $PREFIX -ss 01:03:00.4 -to 01:03:00.9 $SUFFIX part133.mkv
+
+#QUEEN. Bearded! I will launch!
+ffmpeg $PREFIX -ss 01:03:29.0 -to 01:03:29.8 $SUFFIX part134.mkv
+ffmpeg $PREFIX -ss 01:03:32.7 -to 01:03:33.9 $SUFFIX part135.mkv
+
+#LORD CH. I'm in a quandary!
+ffmpeg $PREFIX -ss 01:05:10.8 -to 01:05:11.9 $SUFFIX part136.mkv
+ffmpeg $PREFIX -ss 01:05:12.5 -to 01:05:13.6 $SUFFIX part137.mkv
+
+#CELIA Wrath tremendous!
+ffmpeg $PREFIX -ss 01:06:04.1 -to 01:06:05.2 $SUFFIX part138.mkv
+ffmpeg $PREFIX -ss 01:06:09.8 -to 01:06:13.2 $SUFFIX part139.mkv
+
+#LEILA. Doom appalling!
+ffmpeg $PREFIX -ss 01:06:25.9 -to 01:06:29.2 $SUFFIX part140.mkv
+
+#QUEEN. Into Parliament you shall go!
+#ALL. Into Parliament he shall go!
+ffmpeg $PREFIX -ss 01:07:00.9 -to 01:07:02.9 $SUFFIX part141.mkv
+ffmpeg $PREFIX -ss 01:07:19.5 -to 01:07:21.3 $SUFFIX part142.mkv
+
+#QUEEN. Every bill shall be passed! You shall sit, he shall end, he shall prick, titles shall ennoble, peers shall teem. Competitive Examination!
+ffmpeg $PREFIX -ss 01:08:00.2 -to 01:08:01.2 $SUFFIX part143.mkv
+ffmpeg $PREFIX -ss 01:08:08.0 -to 01:08:09.0 $SUFFIX part144.mkv
+ffmpeg $PREFIX -ss 01:08:13.0 -to 01:08:13.8 $SUFFIX part145.mkv
+# ffmpeg $PREFIX -ss 01:08:20.8 -to 01:08:21.65 $SUFFIX part146.mkv
+# ffmpeg $PREFIX -ss 01:08:27.1 -to 01:08:28.2 $SUFFIX part147.mkv
+ffmpeg $PREFIX -ss 01:08:35.9 -to 01:08:37.3 $SUFFIX part148.mkv
+ffmpeg $PREFIX -ss 01:08:42.3 -to 01:08:43.45 $SUFFIX part149.mkv
+ffmpeg $PREFIX -ss 01:08:49.25 -to 01:08:51.5 $SUFFIX part150.mkv
+
+#ALL. [Painful wrench.] More stylish foreign phrases!
+# ffmpeg $PREFIX -ss 01:09:28.6 -to 01:09:29.8 $SUFFIX part151.mkv
+ffmpeg $PREFIX -ss 01:09:52.65 -to 01:09:53.42 $SUFFIX part152.mkv
+ffmpeg $PREFIX -ss 01:10:00.15 -to 01:10:00.95 $SUFFIX part153.mkv
+
+#PEERS and FAIRIES. Defy!
+ffmpeg $PREFIX -ss 01:10:48.0 -to 01:10:49.0 $SUFFIX part154.mkv
+
+#ACT II
+ffmpeg $PREFIX -ss 01:11:26.0 -to 01:11:26.5 $SUFFIX part155.mkv
+
+#PRIVATE WILLIS. A little Liberal. A little Conservative!
+# ffmpeg $PREFIX -ss 01:13:22.9 -to 01:13:25.6 $SUFFIX part156.mkv
+# ffmpeg $PREFIX -ss 01:13:27.5 -to 01:13:32.0 $SUFFIX part157.mkv
+# or just:
+ffmpeg $PREFIX -ss 01:13:32.3 -to 01:13:35.2 $SUFFIX part158.mkv
+
+#FAIRIES/PEERS. Strephon's a Member of Parliament!
+ffmpeg $PREFIX -ss 01:16:58.1 -to 01:17:00.1 $SUFFIX part157.mkv
+
+#LORD MOUNTARARAT. Britain really ruled the waves!
+ffmpeg $PREFIX -ss 01:18:48.0 -to 01:18:51.75 $SUFFIX part159.mkv
+
+#LEILA. Charming persons, are they not?
+ffmpeg $PREFIX -ss 01:21:48.8 -to 01:21:51.0 $SUFFIX part160.mkv
+
+#CELIA. For self-contained dignity, airy condescension!
+# ffmpeg $PREFIX -ss 01:21:53.0 -to 01:21:54.5 $SUFFIX part161.mkv
+# ffmpeg $PREFIX -ss 01:21:55.5 -to 01:21:57.2 $SUFFIX part162.mkv
+
+#FAIRIES. Don't go!
+#PEERS. We'll go!
+ffmpeg $PREFIX -ss 01:23:06.0 -to 01:23:06.9 $SUFFIX part163.mkv
+ffmpeg $PREFIX -ss 01:24:05.3 -to 01:24:06.4 $SUFFIX part164.mkv
+
+#QUEEN. Oh shame! Oh, foolish fay. Oh, amorous dove! Oh, Captain Shaw!
+ffmpeg $PREFIX -ss 01:24:13.0 -to 01:24:13.6 $SUFFIX part165.mkv
+ffmpeg $PREFIX -ss 01:26:12.1 -to 01:26:14.2 $SUFFIX part166.mkv
+ffmpeg $PREFIX -ss 01:26:39.6 -to 01:26:42.7 $SUFFIX part167.mkv
+# ffmpeg $PREFIX -ss 01:28:31.6 -to 01:28:35.0 $SUFFIX part168.mkv
+
+#PHYL. I'm engaged to two noblemen at once.
+ffmpeg $PREFIX -ss 01:29:49.8 -to 01:29:52.8 $SUFFIX part169.mkv
+
+#LORD TOLL. We must fight, one must die.
+ffmpeg $PREFIX -ss 01:31:48.8 -to 01:31:51.5 $SUFFIX part170.mkv
+
+#LORD MOUNT. Thomas!
+ffmpeg $PREFIX -ss 01:32:05.7 -to 01:32:06.2 $SUFFIX part171.mkv
+
+#LORD TOLL. George.
+ffmpeg $PREFIX -ss 01:32:08.3 -to 01:32:08.9 $SUFFIX part172.mkv
+
+#LORD MOUNT. You lead the House of Lords! I shall take your place!
+# ffmpeg $PREFIX -ss 01:33:23.2 -to 01:33:24.5 $SUFFIX part173.mkv
+# ffmpeg $PREFIX -ss 01:33:25.8 -to 01:33:27.3 $SUFFIX part174.mkv
+
+#PHYL. It's really not worth while.
+ffmpeg $PREFIX -ss 01:33:33.5 -to 01:33:35.7 $SUFFIX part175.mkv
+
+#MOUNTARARAT, TOLLOLLER, PHYLLIS, and PRIVATE WILLIS. Friendship's name!
+ffmpeg $PREFIX -ss 01:34:32.5 -to 01:34:34.0 $SUFFIX part176.mkv
+
+#LORD CHANCELLOR. Love, unrequited! My song is over!
+ffmpeg $PREFIX -ss 01:36:05.6 -to 01:36:08.1 $SUFFIX part177.mkv
+ffmpeg $PREFIX -ss 01:39:14.3 -to 01:39:15.3 $SUFFIX part178.mkv
+ffmpeg $PREFIX -ss 01:39:20.2 -to 01:39:22.8 $SUFFIX part179.mkv
+
+#LORD MOUNT. Judgements in F sharp minor, given al dente.
+ffmpeg $PREFIX -ss 01:40:21.15 -to 01:40:24.05 $SUFFIX part180.mkv
+
+#LORD CH. Two capacities!
+ffmpeg $PREFIX -ss 01:40:48.35 -to 01:40:49.3 $SUFFIX part181.mkv
+
+#LORD TOLL. No capacities!
+ffmpeg $PREFIX -ss 01:41:15.3 -to 01:41:16.1 $SUFFIX part182.mkv
+
+#CHANCELLOR, MOUNTARARAT, and TOLLOLLER. Faint heart never won fair lady!
+ffmpeg $PREFIX -ss 01:42:02.5 -to 01:42:05.5 $SUFFIX part183.mkv
+
+#STREPH. I'm miserable.
+ffmpeg $PREFIX -ss 01:48:07.5 -to 01:48:08.6 $SUFFIX part184.mkv
+
+#PHYL. I'd rather have half a mortal I love!
+ffmpeg $PREFIX -ss 01:49:36.4 -to 01:49:38.8 $SUFFIX part185.mkv
+
+#STREPH. We'll get married.
+ffmpeg $PREFIX -ss 01:50:14.75 -to 01:50:15.45 $SUFFIX part187.mkv
+
+#PHYL. Your mother kisses just like other people!
+ffmpeg $PREFIX -ss 01:51:48.7 -to 01:51:49.1 $SUFFIX part188.mkv
+ffmpeg $PREFIX -ss 01:52:00.05 -to 01:52:01.5 $SUFFIX part189.mkv
+
+#IOL. The Lord Chancellor is my husband and your father!
+ffmpeg $PREFIX -ss 01:52:24.0 -to 01:52:25.5 $SUFFIX part190.mkv
+ffmpeg $PREFIX -ss 01:52:26.7 -to 01:52:27.8 $SUFFIX part191.mkv
+ffmpeg $PREFIX -ss 01:52:32.0 -to 01:52:33.2 $SUFFIX part192.mkv
+
+#LORD CH. Victory! Victory!
+ffmpeg $PREFIX -ss 01:53:00.6 -to 01:53:01.3 $SUFFIX part193.mkv
+
+#IOLANTHE A suppliant at your feet I kneel.
+ffmpeg $PREFIX -ss 01:54:02.4 -to 01:54:06.4 $SUFFIX part194.mkv
+
+#LORD CH. Phyllis is my promised bride.
+ffmpeg $PREFIX -ss 01:56:42.9 -to 01:56:45.4 $SUFFIX part195.mkv
+
+#IOL. I plead in vain!
+#FAIRIES. Forbear!
+ffmpeg $PREFIX -ss 01:57:04.5 -to 01:57:10.2 $SUFFIX part196.mkv
+
+#IOL. I am thy wife.
+ffmpeg $PREFIX -ss 01:57:43.5 -to 01:57:46.3 $SUFFIX part197.mkv
+ffmpeg $PREFIX -ss 01:57:47.5 -to 01:57:49.4 $SUFFIX part197a.mkv
+
+#LORD CH. Thou livest?
+ffmpeg $PREFIX -ss 01:58:21.4 -to 01:58:22.5 $SUFFIX part198.mkv
+
+#QUEEN. Thou shalt die!
+ffmpeg $PREFIX -ss 01:59:31.1 -to 01:59:38.4 $SUFFIX part199.mkv
+
+#LEILA. So must we all.
+ffmpeg $PREFIX -ss 02:00:14.9 -to 02:00:16.3 $SUFFIX part200.mkv
+
+#QUEEN. I can't slaughter the whole company!
+#LORD CH. Insert a single word.
+# [unfortunately garbled in the Sydney Opera Company video, so we substitute "You're a fairy from this moment"]
+ffmpeg $PREFIX -ss 02:00:26.0 -to 02:00:29.9 $SUFFIX part202.mkv
+
+#QUEEN. We go to Fairyland.
+# ffmpeg $PREFIX -ss 02:00:59.86 -to 02:01:02.55 $SUFFIX part203.mkv
+# or:
+ffmpeg $PREFIX -ss 02:01:01.0 -to 02:01:02.55 $SUFFIX part203.mkv
+
+# [Curtain.]
+ffmpeg $PREFIX -ss 02:02:50.0 -to 02:02:52.7 $SUFFIX part204.mkv
+
+rm list.txt
+for i in part*.mkv ; do echo "file $i" >>list.txt ; done
+# ffmpeg -y -f concat -safe 0 -i list.txt -c copy output.mkv
+
+ffmpeg -y -f concat -safe 0 -i list.txt \
+  -c:v libx264 -crf 20 -preset veryfast -c:a aac -ar 48000 -movflags +faststart output.mp4

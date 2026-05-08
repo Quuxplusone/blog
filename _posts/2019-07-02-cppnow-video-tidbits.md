@@ -3,8 +3,8 @@ layout: post
 title: "C++Now video tidbits"
 date: 2019-07-02 00:01:00 +0000
 tags:
-    blog-roundup
-    cppnow
+  blog-roundup
+  cppnow
 ---
 
 You know [that post on hidden friends that I was going to write back in April](/blog/2019/04/26/what-is-adl/)?
