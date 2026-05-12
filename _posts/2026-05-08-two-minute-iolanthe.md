@@ -4,6 +4,7 @@ title: "Two-Minute _Iolanthe_"
 date: 2026-05-08 00:01:00 +0000
 tags:
   gilbert-and-sullivan
+  how-to
   jokes
   memes
   television
