@@ -23,8 +23,8 @@ number of corner-case bugs in libc++'s `string::append` member function.
 > noexceptness is _tested_, because it ends up also finding all the places noexceptness is
 > _applied_. Sifting out the false positives is an Augean task, and it's only getting worse.
 >
-> libc++ could solve this by consistently using a macro such as<br>
-> `-D_IFNOEXCEPT_(...)=noexcept(__VA_ARGS__)`
+> libc++ could solve this by consistently using a macro such
+> as <nobr><code>-D_IFNOEXCEPT_(...)=<wbr>noexcept(__VA_ARGS__)</code></nobr>
 > everywhere it _tests_ noexceptness, but it might be hard to train maintainers to use this
 > macro properly, since libc++ already provides a syntactically indistinguishable macro
 > `_NOEXCEPT_` for _applying_ conditional noexceptness. If you used the wrong macro,

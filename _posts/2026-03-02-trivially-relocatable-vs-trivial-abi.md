@@ -273,8 +273,7 @@ but not trivial-abi; `unique_ptr` is such a type.
 — libc++ has an extension to make `unique_ptr` trivial-abi, doesn't it?
 
 — Yes, it does. ([Godbolt.](https://godbolt.org/z/vhMnzs89q)) The convention by which `unique_ptr`
-is passed and returned is controlled by
-<span style="white-space: nowrap;">`-D_LIBCPP_ABI_ENABLE_UNIQUE_PTR_TRIVIAL_ABI`.</span>
+is passed and returned is controlled by <nobr><code>-D_LIBCPP_ABI_ENABLE_UNIQUE_PTR_TRIVIAL_ABI</code>.</nobr>
 This is completely orthogonal to the mechanism by which libc++ recognizes `unique_ptr`
 as one of those trivially relocatable types for which e.g. `vector` reallocation ought
 to use `memcpy` instead of move-and-destroy. Notice, in that Godbolt, how the compilations
@@ -308,7 +307,7 @@ I'll just put it on every class type that I want Clang to recognize as `__is_tri
 _has ABI implications._ Remember, the libc++ maintainers know that `unique_ptr` is trivially relocatable,
 but they didn't just unilaterally mark it as `[[clang::trivial_abi]]`, because that changes the calling convention
 for all of its users. If you try to link one TU compiled with
-<span style="white-space: nowrap;">`-D_LIBCPP_ABI_ENABLE_UNIQUE_PTR_TRIVIAL_ABI`</span> against
+<nobr><code>-D_LIBCPP_ABI_ENABLE_UNIQUE_PTR_TRIVIAL_ABI</code></nobr> against
 another TU compiled without it, you'll get linker errors at best and runtime UB at worst: one side will pass
 `unique_ptr` arguments on the stack when the other expects them in registers, and vice versa.
 Contrariwise, annotating a type with the "real" `[[trivially_relocatable]]` attribute doesn't change its ABI at all.

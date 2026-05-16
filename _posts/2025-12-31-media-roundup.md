@@ -29,8 +29,8 @@ as worthless.
 That last notation allows me to see that I've been in the middle of
 (well, near the start of) the _Morgante Maggiore_ for a whole year now.
 
-I stuck with last year's meaningless distinction between `e`-books and
-and `b`-ooks, and added `a`-udiobooks too, though the only audiobooks
+I stuck with last year's meaningless distinction between <nobr><code>e</code>-books</nobr> and
+and <nobr><code>b</code>-ooks,</nobr> and added <nobr><code>a</code>-udiobooks</nobr> too, though the only audiobooks
 I listened to (in company with my lovely wife) were Dante's _Divine Comedy_
 (in Herbert Kenny's somewhat newbie-friendly but annoyingly alliterative translation,
 via [Audible](https://amzn.to/4bcGwTW))
@@ -39,8 +39,8 @@ re-read; [Audible](https://amzn.to/4slOIaM)).
 
 Last year I haphazardly recorded some significant long-form essays
 or magazine articles under the `o` tag. This year I did the same; although now
-it's abundantly clear that the `o` doesn't stand for `o`-nline so much as
-l-`o`-ngform, or maybe "junk tax-`o`-n."
+it's abundantly clear that the `o` doesn't stand for <nobr><code>o</code>-nline</nobr> so much
+as <nobr>l-<code>o</code>-ngform,</nobr> or maybe “junk <nobr>tax-<code>o</code>-n.”</nobr>
 The five pieces I recorded this year are from <a href="https://books.google.com/books?id=6zRMAQAAMAAJ&pg=PA359">1900</a>,
 <a href="https://www.nlm.nih.gov/exhibition/theliteratureofprescription/education/materials/WhyIWroteYellowWallPaper.pdf">1913</a>,
 <a href="https://www.newyorker.com/magazine/1990/02/26/coyote-v-acme">1990</a>,
@@ -56,16 +56,16 @@ through JSTOR, mostly in literary criticism — is legitimately high and rising.
 that almost all Wikipedia editors are entitled to free JSTOR access via their existing Wikipedia login?
 
 All in all, I bothered to record my consumption of
-2 <nobr>`a`-udiobooks,</nobr>
-5 <nobr>l-`o`-ngform</nobr> pieces,
-11 <nobr>`p`-oems,</nobr>
-15 live <nobr>`s`-tage</nobr> shows and 9 <nobr>`r`-ecordings</nobr> of stage shows,
-28 seasons of <nobr>`t`-elevision,</nobr>
-39 dead-tree <nobr>`b`-ooks,</nobr>
-43 <nobr>`m`-agazines,</nobr>
-102 <nobr>`j`-ournal</nobr> articles,
-152 <nobr>`e`-books,</nobr>
-and 229 <nobr>`f`-ilms,</nobr> for a total of 635 items. (Wow!)
+2 <nobr><code>a</code>-udiobooks,</nobr>
+5 <nobr>l-<code>o</code>-ngform</nobr> pieces,
+11 <nobr><code>p</code>-oems,</nobr>
+15 live <nobr><code>s</code>-tage</nobr> shows and 9 <nobr><code>r</code>-ecordings</nobr> of stage shows,
+28 seasons of <nobr><code>t</code>-elevision,</nobr>
+39 dead-tree <nobr><code>b</code>-ooks,</nobr>
+43 <nobr><code>m</code>-agazines,</nobr>
+102 <nobr><code>j</code>-ournal</nobr> articles,
+152 <nobr><code>e</code>-books,</nobr>
+and 229 <nobr><code>f</code>-ilms,</nobr> for a total of 635 items. (Wow!)
 
 ## Book clubs
 
@@ -189,7 +189,9 @@ Samuel Beckett's _Waiting for Godot_ (1952) is excellent; only Jamie Lloyd's 202
 2025-11-17 e Henry Norman Hudson, <a href="https://archive.org/details/juliuscaesar00georgoog">footnotes on Julius Caesar</a> (1599) &#x2B50;
 </div>
 
-The rest comprise `j`-ournal articles, `m`-agazine issues, `r`-ecorded stage shows, live `s`-tage shows, and `t`-elevision series.
+The rest comprise <nobr><code>j</code>-ournal</nobr> articles, <nobr><code>m</code>-agazine</nobr>
+issues, <nobr><code>r</code>-ecorded</nobr> stage shows, live <nobr><code>s</code>-tage</nobr> shows,
+and <nobr><code>t</code>-elevision</nobr> series.
 
 As of this writing I am about three months behind on my _Atlantic_ and _New York_ subscriptions.
 I forget completely how the _Atlantic_'s December 2024 and May 2025 issues earned their stars,
