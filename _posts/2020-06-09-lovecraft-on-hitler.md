@@ -4,6 +4,7 @@ title: "Lovecraft on Hitler"
 date: 2020-06-09 00:01:00 +0000
 tags:
   litclub
+  transcription
   us-politics
   weird-fiction
 ---
