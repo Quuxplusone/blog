@@ -3,6 +3,7 @@ layout: post
 title: "Bubblesort, rocksort, and cocktail-shaker sort"
 date: 2020-12-13 00:01:00 +0000
 tags:
+  algorithms
   knuth
   math
 ---

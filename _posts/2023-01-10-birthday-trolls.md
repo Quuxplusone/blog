@@ -3,6 +3,7 @@ layout: post
 title: "Happy birthday, Donald Knuth! and lamp-trolls"
 date: 2023-01-10 00:01:00 +0000
 tags:
+  algorithms
   coroutines
   knuth
 ---

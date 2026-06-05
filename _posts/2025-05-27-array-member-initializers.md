@@ -153,3 +153,9 @@ because `T{}` does [list-initialization](https://eel.is/c++draft/dcl.init#genera
 instead of value-initialization.)
 [CWG914](https://cplusplus.github.io/CWG/issues/914.html) asks for a paper to fix
 this defect; no such paper has materialized yet.
+
+---
+
+See also:
+
+* ["`auto{x} != auto(x)`"](/blog/2026/04/11/auto-x-with-curly-braces/) (2026-04-11)
