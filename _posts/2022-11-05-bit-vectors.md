@@ -6,6 +6,7 @@ tags:
   benchmarks
   implementation-divergence
   llvm
+  proxy-references
   standard-library-trivia
   stl-classic
 ---

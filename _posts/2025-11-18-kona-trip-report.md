@@ -4,6 +4,7 @@ title: "How my papers did at Kona"
 date: 2025-11-18 00:01:00 +0000
 tags:
   memes
+  proxy-references
   relocatability
   sg14
   triviality

@@ -77,7 +77,7 @@ and Richard Adams' _Watership Down_.
 
 I also attended a discussion on Walter Scott's _The Antiquary_ (1816), a book
 I came not even remotely close to finishing. I can handle a three-volume
-novel like [_The Mummy!_](https://quuxplusone.github.io/blog/2024/04/08/the-mummy/)
+novel like [_The Mummy!_](/blog/2024/04/08/the-mummy/)
 all right, but only because it's got mummies and robots. Replace them with
 impenetrably accented Scottish peasants and it becomes a slog, relieved only
 inadequately by the occasional [seal-fight](https://archive.org/details/in.ernet.dli.2015.272686/page/n305/mode/1up).

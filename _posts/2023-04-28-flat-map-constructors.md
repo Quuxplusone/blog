@@ -104,7 +104,8 @@ with silly things like `{}` being a valid `pair` and `{ ks, vs }` being a valid 
 > constructors. I wouldn't fight you on that one. Still, each of the constructors seems useful
 > enough in isolation.
 
-If the STL followed our guidelines — which, to be crystal clear, it _does not now_ and
+If the STL followed [our guidelines](/blog/2023/04/08/most-ctors-should-be-explicit/#a-stab-at-a-complete-guideline) —
+which, to be crystal clear, it _does not now_ and
 _will never_, because backwards compatibility; but _if it did_ — then we'd see the following
 behavior instead:
 

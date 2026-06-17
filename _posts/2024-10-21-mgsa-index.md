@@ -60,5 +60,5 @@ and I'll happily credit you here!
 ----
 
 For various Gardner-related topics and souvenirs of Octobers past,
-check out the [#celebration-of-mind tag](https://quuxplusone.github.io/blog/tags/#celebration-of-mind)
+check out the [#celebration-of-mind tag](/blog/tags/#celebration-of-mind)
 on this blog.

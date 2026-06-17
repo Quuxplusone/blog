@@ -7,6 +7,7 @@ tags:
   llvm
   nodiscard
   proposal
+  proxy-references
 excerpt: |
   Perennially it is noticed that C++ forbids assignment to scalar rvalues, while
   permitting assignment to class rvalues. That is:

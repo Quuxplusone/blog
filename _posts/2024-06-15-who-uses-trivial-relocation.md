@@ -51,7 +51,7 @@ There are several aspects to "trivial relocation" as a proposed C++ feature:
 
 * New library algorithms. P1144 proposes the gamut you'd expect by treating the verb `relocate` analogously to `construct`:
     `uninitialized_relocate`, `uninitialized_relocate_n`, `uninitialized_relocate_backward`, `relocate_at`,
-    and a prvalue-producing [`relocate`](https://quuxplusone.github.io/blog/2022/05/18/std-relocate/).
+    and a prvalue-producing [`relocate`](/blog/2022/05/18/std-relocate/).
     P2786 proposes only `std::trivially_relocate`. These, again, are significantly different approaches.
 
 * Invisible-to-the-user library optimizations that are compatible with either P1144 or P2786; e.g. vector reallocation,

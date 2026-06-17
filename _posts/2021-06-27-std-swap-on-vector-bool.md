@@ -6,6 +6,7 @@ tags:
   argument-dependent-lookup
   hidden-friend-idiom
   implementation-divergence
+  proxy-references
   stl-classic
   templates
 excerpt: |

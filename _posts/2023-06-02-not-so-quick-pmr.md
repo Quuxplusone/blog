@@ -212,7 +212,7 @@ Finally, C++ allocators can propagate not only downward but sideways — from
 one container object to another — as if the allocator were part of the container's
 value. This applies to all the value-semantic operations that take two arguments:
 copy-assignment, move-assignment, and swap. For historical reasons, each of these
-three operations is controlled by [its own individual trait](https://quuxplusone.github.io/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#pocca-pocma-pocs-soccc);
+three operations is controlled by [its own individual trait](/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#pocca-pocma-pocs-soccc);
 but really they come as a package deal.
 
 If your allocator propagates on container copy-assignment, move-assignment, and swap,
