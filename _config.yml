@@ -40,9 +40,6 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
-# Enter your Mixpanel project token to activate tracking
-mixpanel: f8050bba65fe16fa9054e8656aebef3d
-
 # Set to true if anchorjs should be used to generate "deep anchor links"
 anchorjs: true
 
