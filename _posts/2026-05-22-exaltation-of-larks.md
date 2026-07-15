@@ -33,9 +33,9 @@ This led me to wonder exactly what other changes Lipton might have snuck in, and
 original orthography of the _Book of St Albans_. That orthography is visible today both
 [in Blades' facsimile](https://archive.org/details/bokeofsaintalban00bernuoft/page/115/mode/1up)
 and [in Unicode transliteration](https://www.gutenberg.org/files/71266/71266-h/71266-h.htm) at Project Gutenberg.
-I was surprised to find that Lipton's title, in the _Book of St Albans,_ is rendered as "an exaltyng of larks";
-it's only in [Egerton MS 1995](https://searcharchives.bl.uk/catalog/032-001982919) (fols. 55b–58),
-Lipton says, that we find "an exaltacyon of larks" proper.
+I was surprised to find that Lipton's title, in the _Book of St Albans,_ is rendered as "an exaltyng of larkis";
+it's only in [Egerton MS 1995](https://searcharchives.bl.uk/catalog/032-001982919) (fol. 56r)
+that we find "an exaltacyon of larkys" proper.
 
 ---
 
