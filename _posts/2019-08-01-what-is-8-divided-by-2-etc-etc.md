@@ -4,6 +4,7 @@ title: "What is 8÷2(2+2)?"
 date: 2019-08-01 00:01:00 +0000
 tags:
   math
+  memes
 ---
 
 Google's recommendation algorithm has been trying to get me interested in
@@ -45,7 +46,7 @@ such as $$\frac{8}{2}\cdot(2+2)$$, if that's really what you meant to express.
 
 > [Communicating badly and then acting smug when you're misunderstood is not cleverness.](https://xkcd.com/169/)
 
------
+---
 
 By the way...
 
@@ -61,3 +62,9 @@ Wolfram Alpha — another computer program designed by mathematicians — takes 
 $$\frac{8}{2}(2+2)$$ (that is, 16); but it explicitly shows you that it's rewriting the expression
 as $$\frac{8}{2}(2+2)$$ in order to make sense of it, and (because it's interactive) gives you a
 chance to rewrite the expression if that's not what you intended. Exactly the way a mathematician might!
+
+---
+
+See also:
+
+* ["How old is Ann?"](/blog/2026/07/29/how-old-is-ann/) (2026-07-29)

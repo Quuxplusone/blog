@@ -140,3 +140,9 @@ has lived rent-free in my head for the past 25 years:
 By the way, Wodehouse never gives the answer to Lord Uffenham's cryptic clue
 "So the subordinate professional on trial gets wages in advance not without demur,"
 but I see a strong case for PAY UNDER PROTEST.
+
+---
+
+See also:
+
+* ["How old is Ann?"](/blog/2026/07/29/how-old-is-ann/) (2026-07-29)

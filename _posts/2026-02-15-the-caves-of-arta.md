@@ -94,5 +94,5 @@ is printed under the title “¡Wellcome, to the Caves of Arta!”
 > &emsp; The every of stalactites will make you stop and stay.  
 > Grand peril amenaces now, your nostrills aprehending  
 > &emsp; An odour least delicious of lamentable decay.  
-> <i><span style="font-variant-caps: small-caps;">It is poor touristers, in the depth of obscure cristal,</span></i>  
-> &emsp; <i><span style="font-variant-caps: small-caps;">Which deceased of their emocion on a past excursion day.</span></i>
+> <i><span class="headline">It is poor touristers, in the depth of obscure cristal,</span></i>  
+> &emsp; <i><span class="headline">Which deceased of their emocion on a past excursion day.</span></i>

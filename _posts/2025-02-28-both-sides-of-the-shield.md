@@ -188,7 +188,7 @@ I wasn't the first to wonder the source of this story. From _Notes & Queries_
 ([1880-02-14](https://archive.org/details/s6notesqueries01londuoft/page/137)),
 the Rev. Edward Marshall of Sandford St Martin inquires:
 
-> <span class="headline">"The gold and silver shield."</span>—[Lord Granville](https://en.wikipedia.org/wiki/Granville_Leveson-Gower,_2nd_Earl_Granville)
+> <span class="sc">"The gold and silver shield."</span>—[Lord Granville](https://en.wikipedia.org/wiki/Granville_Leveson-Gower,_2nd_Earl_Granville)
 > is reported to have said, in his speech at the opening of Parliament,
 > "Unlike the old knight, he sees both the silver and the golden side of the shield."
 > I take the opportunity to ask whether any correspondent of "N. & Q." can refer to the
@@ -198,7 +198,7 @@ the Rev. Edward Marshall of Sandford St Martin inquires:
 The following week ([1880-02-21](https://archive.org/details/s6notesqueries01londuoft/page/165)) William Platt
 of Piccadilly provided the answer:
 
-> <span class="headline">"The gold and silver shield"</span> (6th S. i. 137).—The story of
+> <span class="sc">"The gold and silver shield"</span> (6th S. i. 137).—The story of
 > "the party-coloured shield," selected from Beaumont's _Moralities_, was reprinted in a collection
 > of [_Useful and Entertaining Passages in Prose_](https://books.google.com/books?id=CW1RAAAAcAAJ&pg=PA92) (pp. 92–4),
 > and published at Paris in 1826 by G. Hamonière.
