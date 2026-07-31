@@ -75,12 +75,10 @@ _Inferno_, along with
 > bristling thigh: flipping, climbs still,  
 > till sighting night's shining, inspiring pinpricks.
 
-(This is also a good place to mention that within the present decade (the 2020s),
+This is a good place to mention that circa 2020
 "Kinton Ford" (a pseudonym) composed a lipogrammatic English translation of all 136 lines
-of Dante's first canto, _in full terza rima_, without using the letter "e". Ford's canto
-was as recently as 2025-01-02 available online [here](https://www.exquisitepandemicarchives.com/copy-of-kinton-ford),
-but that's a 404 page now and it's not even in the Wayback Machine. Luckily I saved a copy
-back in January; I may post it here later.)
+of Dante's first canto, _in full terza rima_, without using the letter "e". See
+["Kinton Ford's _Canto I_"](/blog/2026/07/31/kinton-ford-inferno-i) (2026-07-31).
 
 ----
 
@@ -139,7 +137,7 @@ of the French [Oulipo](https://en.wikipedia.org/wiki/Oulipo). The Oplepo publish
 into the first volume of _La Biblioteca Oplepiana_ (Zanichelli, 2005).
 The [second volume](https://amzn.to/3HqtiGO) (covering 2005–2014) and
 the [third volume](https://amzn.to/3UpsvJb) (covering 2014–2020) were both released
-in 2022 and appear to be available for purchase on Amazon. The first volume, though,
+in 2022 and are available for purchase on Amazon. The first volume, though,
 appears out of print. Thanks to Naomi Gold I managed to view a copy of the first volume
 from Stanford's library... which proved only that _Shahrazad_'s fifty sonnets didn't
 appear in it.
