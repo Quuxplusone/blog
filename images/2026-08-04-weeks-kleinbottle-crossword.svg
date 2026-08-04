@@ -1,0 +1,61 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="520" height="400" viewBox="0 0 130 100">
+<g>
+  <rect x="10" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="10" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="20" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="30" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="40" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="50" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+
+  <g font-size="4" font-family="sans-serif" text-anchor="start" transform="translate(1 4)">
+    <text x="40" y="10">1</text>
+    <text x="30" y="20">2</text>
+    <text x="50" y="30">5</text>
+    <text x="40" y="40">6</text>
+  </g>
+  <g font-size="4" font-family="sans-serif" text-anchor="end" transform="translate(-1 4)">
+    <text x="50" y="20">3</text>
+    <text x="40" y="30">4</text>
+    <text x="30" y="50">7</text>
+  </g>
+  <g font-size="4" font-family="sans-serif" text-anchor="middle" transform="translate(0 4)">
+    <text x="45" y="10">▶</text>
+    <text x="45" y="20">◀</text>
+    <text x="35" y="30">◀</text>
+    <text x="45" y="40">▶</text>
+    <text x="25" y="50">◀</text>
+  </g>
+
+  <text font-family="sans-serif" font-size="6">
+    <tspan x="10" y="70" font-weight="bold">Across</tspan>
+    <tspan x="10" dy="8">1. Do they justify the means?</tspan>
+    <tspan x="10" dy="8">2. By another other name it’d smell as sweet</tspan>
+    <tspan x="72" y="14">4. Fuse metal</tspan>
+    <tspan x="72" dy="8">6. High seas</tspan>
+    <tspan x="72" dy="8">7. Vanished</tspan>
+    <tspan x="72" dy="12" font-weight="bold">Down</tspan>
+    <tspan x="72" dy="8">2. Ouch!</tspan>
+    <tspan x="72" dy="8">5. Common flower</tspan>
+    <tspan x="72" dy="8">6. Courier</tspan>
+  </text>
+</g>
+</svg>

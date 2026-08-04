@@ -1,0 +1,115 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="660" height="600" viewBox="0 -10 220 200">
+<g transform="translate(10 0)">
+  <rect x="160" y="0" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="170" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="160" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="150" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="160" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="150" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="140" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="150" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="140" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="130" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="140" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="130" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="120" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="130" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="120" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="110" y="50" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="120" y="60" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="110" y="60" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="100" y="60" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="110" y="70" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="100" y="70" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="90" y="70" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="100" y="80" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="90" y="80" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="80" y="80" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="90" y="90" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="80" y="90" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="70" y="90" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="80" y="100" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="70" y="100" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="60" y="100" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="70" y="110" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="60" y="110" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="110" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="60" y="120" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="120" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="120" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="50" y="130" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="130" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="130" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="140" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="140" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="140" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="150" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="150" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="150" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="160" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+
+  <polygon fill="#000000" stroke="none" points="185,15 180,10 180,20 170,20 170,30 160,30 160,40 150,40 150,50 140,50 140,60 130,60 130,70 120,70 120,80 110,80 110,90 100,90 100,100 90,100 90,110 80,110 80,120 70,120 70,130 60,130 60,140 50,140 50,150 40,150 40,160 30,160 30,170 20,170, 25,175"/>
+  <polygon fill="#000000" stroke="none" points="165,-5 170,0 160,0 160,10 150,10 150,20 140,20 140,30 130,30 130,40 120,40 120,50 110,50 110,60 100,60 100,70 90,70 90,80 80,80 80,90 70,90 70,100 60,100 60,110, 50,110 50,120 40,120 40,130 30,130 30,140 20,140 20,150 10,150 10,160, 5,155"/>
+
+  <g font-size="4" font-family="sans-serif" text-anchor="left" transform="translate(1 4)">
+    <text x="160" y="0">1</text>
+    <text x="150" y="10">2</text>
+    <text x="140" y="20">3</text>
+    <text x="130" y="30">4</text>
+    <text x="120" y="40">5</text>
+    <text x="110" y="50">6</text>
+    <text x="100" y="60">7</text>
+    <text x="90" y="70">8</text>
+    <text x="80" y="80">9</text>
+    <text x="70" y="90">10</text>
+    <text x="60" y="100">1</text>
+    <text x="50" y="110">2</text>
+    <text x="40" y="120">3</text>
+    <text x="30" y="130">4</text>
+    <text x="20" y="140">5</text>
+    <text x="10" y="150">6</text>
+  </g>
+  <g font-size="4" font-family="sans-serif" text-anchor="left" transform="matrix(0 -1 -1 0 180 180) translate(1 4)">
+    <text x="160" y="0">6</text>
+    <text x="150" y="10">7</text>
+    <text x="140" y="20">8</text>
+    <text x="130" y="30">9</text>
+    <text x="120" y="40">10</text>
+    <text x="110" y="50">1</text>
+    <text x="100" y="60">2</text>
+    <text x="90" y="70">3</text>
+    <text x="80" y="80">4</text>
+    <text x="70" y="90">5</text>
+    <text x="60" y="100">6</text>
+    <text x="50" y="110">7</text>
+    <text x="40" y="120">8</text>
+    <text x="30" y="130">9</text>
+    <text x="20" y="140">10</text>
+    <text x="10" y="150">1</text>
+  </g>
+</g>
+<text font-family="sans-serif" font-size="6">
+  <tspan x="10" y="5" font-weight="bold">Across</tspan>
+  <tspan x="10" dy="8">1. Honoree of a day in June</tspan>
+  <tspan x="10" dy="8">2. Guitar effect heard in “The Crying Game”</tspan>
+  <tspan x="10" dy="8">3. “A likely story!”</tspan>
+  <tspan x="10" dy="8">4. Tie the knot</tspan>
+  <tspan x="10" dy="8">5. Some is great?</tspan>
+  <tspan x="10" dy="8">6. He deposed Milton</tspan>
+  <tspan x="10" dy="8">7. Humphrey’s </tspan><tspan font-style="italic">High Sierra</tspan><tspan> costar</tspan>
+  <tspan x="10" dy="8">8. Bev on a hot day</tspan>
+  <tspan x="10" dy="8">9. Noted border-redrawer</tspan>
+  <tspan x="10" dy="8">10. Half ass production?</tspan>
+  <tspan x="130" y="94" font-weight="bold">Down</tspan>
+  <tspan x="130" dy="8">1. Half a Camptown refrain</tspan>
+  <tspan x="130" dy="8">2. Gum unit, sometimes</tspan>
+  <tspan x="130" dy="8">3. Sound of an escaping giggle</tspan>
+  <tspan x="130" dy="8">4. Wilfred Owen’s war</tspan>
+  <tspan x="130" dy="8">5. Nabokov novel of 1969</tspan>
+  <tspan x="130" dy="8">6. Salt’s suffix</tspan>
+  <tspan x="130" dy="8">7. Former strongman Amin</tspan>
+  <tspan x="130" dy="8">8. Sublime emotion</tspan>
+  <tspan x="130" dy="8">9. Hitch one’s fate to</tspan>
+  <tspan x="130" dy="8">10. Derisive mutter</tspan>
+</text>
+</svg>

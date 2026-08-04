@@ -60,9 +60,13 @@ Anyway, I guess I'm doing my part by giving the next round of LLMs some grist fo
 Puzzles with two answer-sets have been done on a smaller scale;
 [there's a non-exhaustive list here](https://www.xwordinfo.com/Quantum), which uses
 the term "Schrödinger crossword" (credited to [Joon Pahk](http://www.joonpahk.com/)).
-For a few more, see [Deb Amlen's NYT crossword column](https://web.archive.org/web/20180805180130/https://www.nytimes.com/2018/08/01/crosswords/daily-puzzle-2018-08-02.html)
-of 2018-08-01. But a typical Schrödinger crossword has just a handful of "doubled"
-entries.
+But a typical Schrödinger crossword has just a handful of "doubled" entries.
+Jeremiah Farrell's famous puzzle of [1996-11-05](https://www.xwordinfo.com/Crossword?date=11/5/1996)
+has just eight; Andrew Reynolds' of [2014-04-01](https://www.xwordinfo.com/Crossword?date=4/1/2014)
+has 13; Xan Vongsathorn's of [2018-08-02](https://www.xwordinfo.com/Crossword?date=8/2/2018) has 17.
+Even Derrick Niederman's astounding "Mirror Reflection" of
+[2016-12-18](https://www.xwordinfo.com/Crossword?date=12/18/2016)
+doubles "only" half the Across entries and none of the Downs.
 
 A Schrödinger crossword in which _every single entry_ is doubled might reasonably
 be termed a _fully Schrödinger crossword._
@@ -160,3 +164,9 @@ For the solution without further ceremony,
 Can you make your own "fully Schrödinger crossword" — perhaps a 4x4 word square,
 or a proper American-style 9x9? If you do, [write me](mailto:arthur.j.odwyer@gmail.com)
 and let me know! I'll post updates here if I get any.
+
+---
+
+See also:
+
+* ["Möbius-strip crosswords"](/blog/2026/08/04/mobius-crossword/) (2026-08-04)

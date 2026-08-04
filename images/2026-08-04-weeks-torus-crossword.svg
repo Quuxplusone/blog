@@ -1,0 +1,43 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 120 100">
+<g>
+  <rect x="10" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="10" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="10" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="20" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="20" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="30" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="30" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="10" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="20" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="30" y="40" fill="#000000" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+  <rect x="40" y="40" fill="#FFFFFF" stroke="#000000" stroke-width="0.1" width="10" height="10"/>
+
+  <g font-size="4" font-family="sans-serif" text-anchor="left" transform="translate(1 4)">
+    <text x="30" y="10">1</text>
+    <text x="10" y="20">2</text>
+    <text x="20" y="20">3</text>
+    <text x="20" y="30">4</text>
+    <text x="40" y="30">5</text>
+    <text x="10" y="40">6</text>
+    <text x="40" y="40">7</text>
+  </g>
+
+  <text font-family="sans-serif" font-size="6">
+    <tspan x="10" y="60" font-weight="bold">Across</tspan>
+    <tspan x="10" dy="8">1. Put on</tspan>
+    <tspan x="10" dy="8">2. Chinese philosophy</tspan>
+    <tspan x="10" dy="8">4. Fish catcher</tspan>
+    <tspan x="10" dy="8">7. Literal meaning of 2-Across</tspan>
+    <tspan x="60" y="16" font-weight="bold">Down</tspan>
+    <tspan x="60" dy="8">1. A female deer</tspan>
+    <tspan x="60" dy="8">2. Whatever</tspan>
+    <tspan x="60" dy="8">4. A brace</tspan>
+    <tspan x="60" dy="8">7. Social insect</tspan>
+  </text>
+</g>
+</svg>
