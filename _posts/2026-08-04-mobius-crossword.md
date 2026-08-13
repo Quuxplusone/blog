@@ -24,11 +24,9 @@ Robert Guilbert Sr.
 > called Pago Pago and first became aware of crossword fans' passion for the pastime.
 
 "Guilbert invented the crossword-based game Pago Pago" is repeated in
-[a news-or-magazine article](https://kolynychboss8.blogspot.com/2012/03/fan-passes-word-on-puzzle-hall-of-fame.html)
-reprinted sans bibliographic data on a blog from 2012-03-14. That article begins
-"Robert Guilbert Sr. wants to open a Crossword Puzzle Hall of Fame. Or — as Guilbert might say from force of habit —
-a museum, shrine, repository, gallery or pantheon of immortals." (If you know where this article originally came from,
-tell me and I'll update this post!) Anyway, that's all I can find in print about Pago Pago.
+Thomas Frisbie, ["Fan passes word on puzzle hall of fame"](https://kolynychboss8.blogspot.com/2012/03/fan-passes-word-on-puzzle-hall-of-fame.html)
+(_Chicago Sun-Times_, 1988-08-14). (Thanks to Ben Zimmer for identifying the article!)
+But that's all I can find in print about Pago Pago.
 
 Helene Hovanec's article ["Robert Guilbert's Crossword Academy"](https://www.scribd.com/document/266289455/Robert-Guilbert-s-Crossword-Academy-by-Helene-Hovanec)
 (_CROSSW RD_, Nov/Dec 1992) contains no text about Pago Pago, but does include this uncaptioned photograph
@@ -60,6 +58,22 @@ The same sentence appears in Raphel's book
 The game of telephone continues in Natan Last's [_Across the Universe_](/blog/2026/07/28/puzzle-miscellany/) (2025):
 "he'd invented a game called Pago Pago, an infinite crossword on a Möbius strip, and wanted to hawk
 it to the greats."
+
+---
+
+UPDATE, 2026-08-13: Actually, Guilbert had already gotten _Pago Pago_ into circulation
+long before these articles were written! The July 1986 issue of _GAMES_ magazine has
+[a review](https://archive.org/details/Games-Magazine-July-1986-images/page/n61/mode/1up)
+of _Pago Pago_ (Garden City, New York: Just Games). Indeed there's no Möbius element;
+the game is simply a pack of 24 William Lutwiniak crosswords plus rules for up to four
+players to complete a set of grids competitively: fill squares for three minutes, then pass
+the grid to your left and fill squares in your opponent's old grid. Whoever fills in
+the most squares correctly ("with penalties for errors and bonuses for correcting
+opponents' errors") is the winner. The game has an entry
+[on BoardGameGeek](https://boardgamegeek.com/boardgame/24621/pago-pago),
+and as of this writing you can buy a copy for $25
+[on eBay](https://www.ebay.com/itm/384956997282). (Thanks to Virginia Downes
+for this information!)
 
 ---
 
@@ -136,7 +150,8 @@ Words mirrorable this way of _more_ than three letters are rare as hen's teeth: 
 ALOE into WOLD, and ALOUD into A COLD; that's about all.
 
 Can you come up with a better Möbius-strip crossword? or do you have additional information on
-Robert Guilbert's Pago Pago project? [Email](mailto:arthur.j.odwyer@gmail.com) and tell me about it!
+Robert Guilbert's Pago Pago and Möbius-strip projects?
+[Email](mailto:arthur.j.odwyer@gmail.com) and tell me about it!
 
 ---
 

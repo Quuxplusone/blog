@@ -167,6 +167,14 @@ and let me know! I'll post updates here if I get any.
 
 ---
 
+UPDATE, 2026-08-13: An alert reader sends me Will Nediger's puzzle #212
+["Two for the Price of One"](http://blog.bewilderinglypuzzles.com/2023/07/puzzle-212-two-for-price-of-one.html)
+(2023-07-17). It's a fully Schrödinger 15&times;15, with entries such as
+SAGA/TOME ("Really long book"), RAGU/EVOO ("Common source of flavor in Italian
+cuisine"), and ALA/ORO ("Au alternative, in a Romance language"). Super impressive!
+
+---
+
 See also:
 
 * ["Möbius-strip crosswords"](/blog/2026/08/04/mobius-crossword/) (2026-08-04)
