@@ -74,9 +74,28 @@ ROBE0665 has a superficially similar slip-up at Three-Opening Arch:
 
 Here LEFT correctly matches NE, but goes UP where the room description says "plunges down";
 and RIGHT correctly matches SE, but goes DOWN where the room description says "climbs up."
-I reported that bug to Eric Roberts on 2025-04-23, although at that time I don't think I'd noticed
-that LEFT and RIGHT actually worked correctly in that location, and that it was only the UP
-and DOWN directions that were wrong.
+I reported that bug to Eric Roberts on 2025-04-23, although at that time I don't think I'd
+noticed that LEFT and RIGHT actually worked correctly in that location, and that it was
+only the UP and DOWN directions that were wrong.
+
+By the way, Three-Opening Arch comes straight from _The Fellowship of the Ring_:
+
+> Before him stood a wide dark arch opening into three
+> passages: all led in the same general direction, eastwards;
+> but the left-handed passage plunged down, while the right-hand
+> climbed up, and the middle way seemed to run on, smooth and level
+> but very narrow.
+>
+> "I have no memory of this place at all!" said Gandalf, standing
+> uncertainly under the arch. [...]
+>
+> To the left of the arch they found a stone door: it
+> was half closed, but swung back easily to a gentle thrust.
+> Beyond there seemed to lie a wide chamber cut in the rock.
+
+As in Tolkien, behind the door is "top of well." But where Gandalf takes
+the rightward upward path to the bridge of Khazad-Dûm, in ROBE0665
+it's the middle level path that leads to the black hall and the bridge.
 
 ---
 
