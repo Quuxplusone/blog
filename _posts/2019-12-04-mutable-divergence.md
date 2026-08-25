@@ -4,6 +4,7 @@ title: 'Implementation divergence with `const int i;` and `mutable`'
 date: 2019-12-04 00:01:00 +0000
 tags:
   implementation-divergence
+  training
 ---
 
 While teaching the other day, I had just finished talking about one place in which
@@ -46,8 +47,6 @@ Clang, GCC, MSVC, ICC?
 
     error: const variable "a" requires an initializer --
     class "A" has no user-provided default constructor
-
-----
 
 We went on to talk about the opposite of `const`, which is `mutable`.
 And then a student asked me a question I hadn't thought of before.
