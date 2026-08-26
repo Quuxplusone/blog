@@ -50,7 +50,7 @@ simplest option; but here are a few other workarounds.
 
 This one matches my advice in ["The ‘array size constant’ antipattern"](/blog/2020/08/06/array-size/) (2020-08-06).
 Sadly, now that `size()` depends on `data_`, we must make `size()` a non-static member function.
-We can actually fix that by exploiting a quirk of the `sizeof` operator:
+We can actually fix that by exploiting a quirk of unevaluated operands:
 
     struct C {
       static constexpr size_t size() { return sizeof(data_) / sizeof(data_[0]); }
@@ -58,8 +58,13 @@ We can actually fix that by exploiting a quirk of the `sizeof` operator:
     };
 
 `std::size(data_)` treats `data_` as meaning `this->data_`, and requires a `this` pointer.
-`sizeof(data_)` treats `data_` as meaning `C::data_`, and is able to tell us the size of
-that field without associating it with any particular `C` object.
+But `sizeof(data_)` treats `data_` as meaning `C::data_`, and is able to tell us the size of
+that member "hypothetically," without associating it with any particular `C` object.
+Likewise `sizeof(data_[0])`, and even complicated expressions like `decltype(data_ + 1)` — as
+long as the _id-expression_ appears inside an unevaluated expression. This is specified in
+<a href="https://eel.is/c++draft/expr.prim#id.general-4.3">[expr.prim.id]/4.3</a>
+(via [N2253](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2253.html)
+"Extending `sizeof` to apply to non-static data members without an object," 2007).
 
 This approach is great when the array bound is just `42`, but it's not so great when the
 array bound is computed and lengthy to spell out. In that case, we might want a different workaround.
