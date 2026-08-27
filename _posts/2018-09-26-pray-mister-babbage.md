@@ -5,6 +5,7 @@ date: 2018-09-26 00:01:00 +0000
 tags:
   memes
   old-shit
+  sre
 excerpt: |
   > On two occasions I have been asked,—
   > "Pray, Mr. Babbage, if you put into the machine wrong figures,
@@ -62,3 +63,9 @@ And Babbage concludes his chapter by resuming the curmudgeonly position:
 
 (This is an example of "seeing the rabbit-hole and refusing to go down it,"
 an action I take with disappointing infrequency.)
+
+---
+
+See also:
+
+* ["Tennyson and Babbage? No! Trevelyan"](/blog/2026/08/27/babbage-and-tennyson/) (2026-08-27)
