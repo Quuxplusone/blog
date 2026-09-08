@@ -94,7 +94,7 @@ By the way, Three-Opening Arch comes straight from _The Fellowship of the Ring_:
 > Beyond there seemed to lie a wide chamber cut in the rock.
 
 As in Tolkien, behind the door is "top of well." But where Gandalf takes
-the rightward upward path to the bridge of Khazad-Dûm, in ROBE0665
+the rightward upward path to the Bridge of Khazad-dûm, in ROBE0665
 it's the middle level path that leads to the black hall and the bridge.
 
 ---
