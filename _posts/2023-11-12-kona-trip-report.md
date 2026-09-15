@@ -5,6 +5,7 @@ date: 2023-11-12 00:01:00 +0000
 tags:
   attributes
   exception-handling
+  explicit-object-parameters
   implicit-move
   initializer-list
   kona-2023

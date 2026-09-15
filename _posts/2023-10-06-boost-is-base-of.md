@@ -4,6 +4,7 @@ title: "How `boost::is_base_of` matches private and/or ambiguous bases"
 date: 2023-10-06 00:01:00 +0000
 tags:
   classical-polymorphism
+  explicit-object-parameters
   metaprogramming
   type-traits
 excerpt: |

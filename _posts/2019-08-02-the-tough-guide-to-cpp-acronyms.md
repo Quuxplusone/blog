@@ -3,8 +3,10 @@ layout: post
 title: "A C++ acronym glossary"
 date: 2019-08-02 00:01:00 +0000
 tags:
+  abi
   c++-learner-track
   cpplang-slack
+  explicit-object-parameters
   wg21-folkloristics
 ---
 

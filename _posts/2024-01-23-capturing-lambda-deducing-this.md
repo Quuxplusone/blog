@@ -4,6 +4,7 @@ title: 'Fun with "deducing `this`" lambdas'
 date: 2024-01-23 00:01:00 +0000
 tags:
   cpplang-slack
+  explicit-object-parameters
   lambdas
   name-lookup
 ---
