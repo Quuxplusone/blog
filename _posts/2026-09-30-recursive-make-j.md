@@ -17,7 +17,7 @@ at how the behavior has changed over time, from GNU Make 3.81 to 4.3.
 Basically, the issue is that if you have a recipe in your Makefile like this:
 
     ser:
-        make -C bar
+        make -C subdir
 
 and then you run `make -j4 ser`, recent versions of GNU Make will give a warning
 (`jobserver unavailable: using -j1`). And you'll lose the parallelism you wanted,
@@ -36,32 +36,32 @@ Here's the pair of Makefiles I used for my test:
 
     detab -E -4 - >Makefile <<EOF
     ser:
-        make -C bar
+        make -C subdir
     par2:
-        make -j2 -C bar
+        make -j2 -C subdir
     par4:
-        make -j4 -C bar
+        make -j4 -C subdir
     par:
-        make -j -C bar
+        make -j -C subdir
     serplus:
-        +make -C bar
+        +make -C subdir
     par2plus:
-        +make -j2 -C bar
+        +make -j2 -C subdir
     par4plus:
-        +make -j4 -C bar
+        +make -j4 -C subdir
     parplus:
-        +make -j -C bar
+        +make -j -C subdir
     sermake:
-        $(MAKE) -C bar
+        $(MAKE) -C subdir
     par2make:
-        $(MAKE) -j2 -C bar
+        $(MAKE) -j2 -C subdir
     par4make:
-        $(MAKE) -j4 -C bar
+        $(MAKE) -j4 -C subdir
     parmake:
-        $(MAKE) -j -C bar
+        $(MAKE) -j -C subdir
     EOF
-    mkdir bar
-    detab -E -4 - >bar/Makefile <<EOF
+    mkdir subdir
+    detab -E -4 - >subdir/Makefile <<EOF
     all: one two three four five
     one:
         echo 'one' && sleep 1 && echo 'ONE'
@@ -85,18 +85,18 @@ differ among the versions of Make I tested; those idioms are
 
 | `make`...  |   | `-j2` | `-j4` | `-j` |
 |------------|---|-------|-------|------|
-| `ser`†     | 1 |   2   |   4   |   ∞  |
+| `ser`<sup>†</sup>     | 1 |   2   |   4   |   ∞  |
 | `serplus`  | 1 |   2   |   4   |   ∞  |
 | `sermake`  | 1 |   2   |   4   |   ∞  |
-| `par2`     | 2 |   2b  |   2b  |   2  |
-| `par2plus` | 2 |   2b  |   2b  |   2  |
-| `par2make` | 2 |   2b  |   2b  |   2  |
-| `par4`     | 4 |   4b  |   4b  |   4  |
-| `par4plus` | 4 |   4b  |   4b  |   4  |
-| `par4make` | 4 |   4b  |   4b  |   4  |
-| `par`†     | ∞ |   2   |   4   |   ∞  |
-| `parplus`† | ∞ |   2   |   4   |   ∞  |
-| `parmake`† | ∞ |   2   |   4   |   ∞  |
+| `par2`     | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par2plus` | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par2make` | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par4`     | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par4plus` | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par4make` | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par`<sup>†</sup>     | ∞ |   2   |   4   |   ∞  |
+| `parplus`<sup>†</sup> | ∞ |   2   |   4   |   ∞  |
+| `parmake`<sup>†</sup> | ∞ |   2   |   4   |   ∞  |
 
 In the table above, "b" indicates this warning:
 
@@ -107,18 +107,18 @@ GNU Make 4.0 (on Debian 8.11):
 
 | `make`...  |   | `-j2` | `-j4` | `-j` |
 |------------|---|-------|-------|------|
-| `ser`†     | 1 |   1a  |   1a  |   ∞  |
+| `ser`<sup>†</sup>     | 1 |   1<sup>a</sup>  |   1<sup>a</sup>  |   ∞  |
 | `serplus`  | 1 |   2   |   4   |   ∞  |
 | `sermake`  | 1 |   2   |   4   |   ∞  |
-| `par2`     | 2 |   2b  |   2b  |   2  |
-| `par2plus` | 2 |   2b  |   2b  |   2  |
-| `par2make` | 2 |   2b  |   2b  |   2  |
-| `par4`     | 4 |   4b  |   4b  |   4  |
-| `par4plus` | 4 |   4b  |   4b  |   4  |
-| `par4make` | 4 |   4b  |   4b  |   4  |
-| `par`†     | ∞ |   1a  |   1a  |   ∞  |
-| `parplus`† | ∞ |   2   |   4   |   ∞  |
-| `parmake`† | ∞ |   2   |   4   |   ∞  |
+| `par2`     | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par2plus` | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par2make` | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par4`     | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par4plus` | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par4make` | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par`<sup>†</sup>     | ∞ |   1<sup>a</sup>  |   1<sup>a</sup>  |   ∞  |
+| `parplus`<sup>†</sup> | ∞ |   2   |   4   |   ∞  |
+| `parmake`<sup>†</sup> | ∞ |   2   |   4   |   ∞  |
 
 In the table above, "a" and "b" indicate these two warnings, respectively:
 
@@ -140,24 +140,24 @@ and also change the behavior of rows `par`, `parplus`, and `parmake`:
 
 | `make`...  |   | `-j2` | `-j4` | `-j` |
 |------------|---|-------|-------|------|
-| `ser`†     | 1 |   1a  |   1a  |   ∞  |
+| `ser`<sup>†</sup>     | 1 |   1<sup>a</sup>  |   1<sup>a</sup>  |   ∞  |
 | `serplus`  | 1 |   2   |   4   |   ∞  |
 | `sermake`  | 1 |   2   |   4   |   ∞  |
-| `par2`     | 2 |   2b  |   2b  |   2  |
-| `par2plus` | 2 |   2b  |   2b  |   2  |
-| `par2make` | 2 |   2b  |   2b  |   2  |
-| `par4`     | 4 |   4b  |   4b  |   4  |
-| `par4plus` | 4 |   4b  |   4b  |   4  |
-| `par4make` | 4 |   4b  |   4b  |   4  |
-| `par`†     | ∞ |   ∞b  |   ∞b  |   ∞  |
-| `parplus`† | ∞ |   ∞b  |   ∞b  |   ∞  |
-| `parmake`† | ∞ |   ∞b  |   ∞b  |   ∞  |
+| `par2`     | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par2plus` | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par2make` | 2 |   2<sup>b</sup>  |   2<sup>b</sup>  |   2  |
+| `par4`     | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par4plus` | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par4make` | 4 |   4<sup>b</sup>  |   4<sup>b</sup>  |   4  |
+| `par`<sup>†</sup>     | ∞ |   ∞<sup>b</sup>  |   ∞<sup>b</sup>  |   ∞  |
+| `parplus`<sup>†</sup> | ∞ |   ∞<sup>b</sup>  |   ∞<sup>b</sup>  |   ∞  |
+| `parmake`<sup>†</sup> | ∞ |   ∞<sup>b</sup>  |   ∞<sup>b</sup>  |   ∞  |
 
 Warning "a," which explicitly tells you to "Add `'+'` to parent make rule," will indeed
 always vanish if you prefix the `make`-containing line with `+`, like this:
 
     serplus:
-        +make -C bar
+        +make -C subdir
 
 I find that solution as uncomfortably magical as [prefix `@`](https://www.gnu.org/software/make/manual/make.html#Echoing)
 or [prefix `-`](https://www.gnu.org/software/make/manual/make.html#Errors).
@@ -166,7 +166,7 @@ A solution that's less magic-looking (although equally magic under the hood, app
 is to use `$(MAKE)`, like this:
 
     sermake:
-        $(MAKE) -C bar
+        $(MAKE) -C subdir
 
 Neither method silences warning "b," about "resetting jobserver mode," though.
 
