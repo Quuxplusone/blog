@@ -6,6 +6,8 @@ tags:
   c++-style
   compiler-diagnostics
   llvm
+  makefiles
+  sd-8-adjacent
 ---
 
 What warning flags should you use to compile your project under GCC and/or Clang?
