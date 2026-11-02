@@ -279,6 +279,9 @@ Many of these terms are repeated, as commands, in Wynken de Worde's
 | a Raale breſtyde | a rail breasted | Rayle ys Breſtyde | — |
 | a Wodecoke thyghed | a woodcock thighed | Woodecocke [ys] <i>y-</i>ſchrydde | thye that woodcocke |
 | — | (thigh, or shred, all manner of small birds) | alle ſmalle Bryddys ben <i>y-</i>ſchrydde | thye all maner ſmall byrdes |
+| — | an egret kneed | Egrete ys <i>y-</i>kneyde | — |
+| — | a pawper lowered<sup>(?)</sup> | Papyr ys lowryde<sup>(?)</sup> | — |
+| — | a gull brawned | Gulle ys <i>y-</i>Brawynde | — |
 | A Sawmon Chyned | a salmon chined | Samon ys Chynyde | chynne that ſamon |
 | a Pyke ſplatted | a pike splatted | Pyke ſplayde | ſplatte that pyke |
 | an Haddoke ſided | a haddock sided | Haddocke ys Sydyde | ſyde that haddocke |
@@ -318,6 +321,13 @@ but they can't decide which is which. Some modernizations have "_untack_ that cu
 and so _untach_ would mean "take apart." (Another sense of _tachen_
 [relates](https://quod.lib.umich.edu/m/middle-english-dictionary/dictionary/MED44373)
 to a visible _token_ predictive of [_tetchiness._](https://www.etymonline.com/word/tetchy))
+
+The _pawper_ is apparently a kind of goose; see
+["Pawper or Pauper Bird"](https://archive.org/details/s11notesqueries03londuoft/s11notesqueries03londuoft/page/216)
+in _Notes & Queries_ (1911-03-18), replying to a query of
+[1911-02-04](https://archive.org/details/s11notesqueries03londuoft/s11notesqueries03londuoft/page/89),
+and citing also William Harrison's [_Description of England_](https://archive.org/details/holinshedchronicles01/page/n240/mode/1up) (1577):
+"As for Egretes, Pawperes and ſuch like, they are daily brought unto us from beyonde the ſea..."
 
 ---
 
