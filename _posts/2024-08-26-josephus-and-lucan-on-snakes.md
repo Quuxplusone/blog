@@ -41,6 +41,9 @@ Translator [William Whiston](https://en.wikipedia.org/wiki/William_Whiston) adds
 In other words: ["The little bird attacks the green snake, and in an astounding flurry drives the snake away."](https://quuxplusone.github.io/Advent/)
 Now if only I knew a classical reason why the rod should scare the bird...
 
+> "Serpentes avibus geminentur"  
+> &emsp; —Horace, _Ars Poetica_
+
 Roughly the same legend is recounted in the [Book of Jasher](https://en.wikipedia.org/wiki/Sefer_haYashar_(midrash))
 [24.4–7](https://archive.org/details/jasherlostbookof0000sefe/page/169), although that telling omits
 the wicker cages.

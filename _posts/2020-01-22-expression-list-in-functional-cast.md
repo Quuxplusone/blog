@@ -3,6 +3,7 @@ layout: post
 title: 'Hidden `reinterpret_cast`s'
 date: 2020-01-22 00:02:00 +0000
 tags:
+  contrived-examples
   cpplang-slack
   pitfalls
   templates

@@ -3,6 +3,7 @@ layout: post
 title: "C++Now 2020: A C++ Magic Trick"
 date: 2020-05-04 00:01:00 +0000
 tags:
+  contrived-examples
   cppnow
   parameter-only-types
   web

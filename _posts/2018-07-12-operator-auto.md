@@ -3,6 +3,7 @@ layout: post
 title: "`operator auto`"
 date: 2018-07-12 00:01:00 +0000
 tags:
+  contrived-examples
   implementation-divergence
   metaprogramming
   proposal
@@ -101,7 +102,7 @@ Bryce Adelstein Lelbach informed me that `operator auto` was already in the lang
         double x = s;
     }
 
-This is a valid C++14 program. But it doesn't do what you'd expect (even if you expected it
+This is [UPDATE: “was”] a valid C++14 program. But it doesn't do what you'd expect (even if you expected it
 to compile, which I certainly didn't!). Here the word `auto` is essentially standing in for
 the *return type* of the function, and then C++14's "return type deduction" kicks in to deduce
 the return type of the function as `decltype(42)` i.e. `int`. So this `S` is precisely equivalent
@@ -143,3 +144,11 @@ body to find out its return type, and thereafter treats the `auto` as equivalent
 
 Modest proposal: let's remove `operator auto` from C++, thus freeing up more real estate for P0672,
 and also eliminating the source of blog posts like this one.
+
+---
+
+UPDATE: In November 2025, we successfully removed `operator auto` from C++! This was done as
+a [DR](/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#dr)
+(namely [CWG 1670](https://cplusplus.github.io/CWG/issues/1670.html)). No vendor has yet implemented the
+fix as of November 2026; but once they do, you should expect them to reject the above "valid C++14 program"
+even in `-std=c++14` mode.

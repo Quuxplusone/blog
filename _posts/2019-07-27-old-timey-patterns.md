@@ -38,16 +38,16 @@ In "PATTERNS.C", I actually used four states: the "dead" state and three
 different "live" states. The different "live" states are used to track the "age"
 of a living cell. On each turn in which a cell doesn't move into the "dead" state,
 it moves to the next greater "live" state; unless it has already reached state 3,
-in which case it just remains there. The extra states don't much change the
+in which case it just remains there. The extra states don't change the
 mathematical properties of the automaton; they just add some visual interest.
 
-Now for the sad part. No matter what pattern of cells you start with, if you
+The sad part: No matter what pattern of cells you start with, if you
 run the automaton for exactly 32 time-steps, you'll wind up with a grid consisting
 entirely of "dead" cells. Each living cell in the starting configuration sends out
 "waves" that bounce off the boundaries of the grid and ultimately cancel each other
 out.
 
-Now for the happy part! If you stop after 31 time-steps, the configuration
+Now the happy part! The configuration after exactly 31 time-steps
 displays surprising, intricate, even beautiful symmetry.
 
 <iframe src="/blog/code/2019-07-27-patterns.html" height="auto" onload="this.height = this.contentWindow.document.body.scrollHeight + 'px';">
