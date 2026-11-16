@@ -81,3 +81,9 @@ were equivalent to
     a[argc] = 1;
 
 but in fact both GCC and Clang reject it.
+
+---
+
+See also:
+
+* ["C's designated initializers give us named arguments"](/blog/2026/11/16/named-arguments-in-c/)
