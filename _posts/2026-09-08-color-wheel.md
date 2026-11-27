@@ -46,8 +46,19 @@ and the best possible move replaces 8 components with 2. Five perfect moves
 could reduce the number of components to 10, but a solved board has even fewer
 (no more than 7).
 
-It's easy to construct a valid setup that's solvable in seven moves.
-I doubt that any valid setup is solvable in six.
+> UPDATE, 2026-11-27: A correspondent provides the sketch of a proof that every
+> Color Wheel game must take at least seven moves to complete. Instead of looking
+> at the 40 spaces, look at the 50 edges _between_ spaces. Call an edge "monochromatic"
+> if it separates two pieces of the same color. The game starts with zero monochromatic
+> edges. A connected component of size $$k$$ supplies at least $$k-1$$ monochromatic edges,
+> so a solved board (with at most 7 components) must have at least 33 monochromatic edges.
+> A six-move solution would touch at most 12 spaces on the board, so it can "monochromify"
+> only the edges touching those 12 spaces. There are (he wrote) 119,335 sets of 12 spaces
+> that touch at least 33 edges, and a computer search proves (he wrote) that in none of
+> those 119,335 cases does "monochromifying" all its edges produce a graph with seven or
+> fewer connected components. But I did not attempt to reproduce that computer search.
+
+It's easy to construct a valid setup that's solvable in exactly seven moves.
 
 ![A configuration solvable in seven moves](/blog/images/2026-09-08-solvable-in-7.jpg)
 
@@ -65,18 +76,29 @@ a comically loose upper bound — 195 moves certainly suffice.
 <b>Challenge: Write a Color Wheel solver.</b>
 
 Here's [a vibe-coded Color Wheel solver](/blog/code/2026-09-08-color-wheel-solver.py)
-that can do the average board in about 33.8 moves (standard deviation about 4.5);
-[the worst case](/blog/code/2026-09-08-worst-case.txt) I've seen so far took 50 moves.
+that can do the average board in about 31.3 moves (standard deviation about 3.9).
 This is dramatically worse than the rules' suggestion of 27 moves! Is that more readily
 explained by the badness of this solver's heuristics, or by the conjecture that most
 Color Wheel boards are not solvable in 27 moves?
 
-![Histogram of solution lengths found by this solver](/blog/images/2026-09-08-solver-histogram.png)
+UPDATE, 2026-11-27: A correspondent found a bug in my solver: a loop that accidentally
+never ran more than once. Fixing that bug made the solver run about five times as slow,
+but improved its mean solution length by about 2.2 moves. Meanwhile, _his_ vibe-coded
+solver found a 23-move solution for a board that took my solver 45 moves, and a 21-move
+solution for a board that took me 41. So "this solver is bad" is certainly supported
+by the evidence.
 
-The Python code that generated that plot was:
+![Histogram of solution lengths found by the buggy solver](/blog/images/2026-09-08-old-solver-histogram.png)
 
+![Histogram of solution lengths found by the fixed solver](/blog/images/2026-09-08-new-solver-histogram.png)
+
+The Python code that generated those plots was:
+
+    values=[~~~~]
     import matplotlib.pyplot as plt
+    plt.figure(figsize=(8, 2))
     plt.hist(values, bins=[x-0.5 for x in range(20, 52)], edgecolor="white", color="#4f81bd")
     plt.xticks(range(20, 51, 2))
-    plt.xlabel("Number of moves taken by the heuristic solver")
+    plt.xlabel("Number of moves taken by my solver")
+    plt.tight_layout()
     plt.show()

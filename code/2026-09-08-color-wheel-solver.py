@@ -107,14 +107,11 @@ def components(state):
     result[c].append(component)
   return result
 
-
 def component_count(state):
   return sum(len(x) for x in components(state).values())
 
-
 def is_solved(state):
   return all(len(x) <= 1 for x in components(state).values())
-
 
 def color_positions(state, c):
   return {i for i, piece in enumerate(state) if color(piece) == c}
@@ -193,7 +190,6 @@ def grow_region(start, wanted, preferred, forbidden):
     region.add(p)
   return region
 
-
 def make_target_partition(state):
   """
   Try to partition the 40 cells into connected regions,
@@ -255,8 +251,6 @@ def make_target_partition(state):
     if score > best_score:
       best_score = score
       best_targets = targets
-      if best_score <= 50:
-        break
   return best_targets
 
 
@@ -314,8 +308,7 @@ def unconstrained_swap(state, a, b, found_moves):
     (b, d),
   ]
 
-
-def move_colors_to_targets(state, targets, route):
+def move_colors_to_targets(state, targets, route, max_route_len):
   for c, target in targets.items():
     target = set(target)
     for target_cell in target:
@@ -332,32 +325,36 @@ def move_colors_to_targets(state, targets, route):
         assert legal_move(state, a, b)
         state = swap(state, a, b)
       route += moves
+      if len(route) >= max_route_len:
+        return state
   return state
+
 
 # ============================================================
 # Complete heuristic solver
 # ============================================================
 
-
-def solve(initial, attempts=20):
+def solve(initial, attempts):
   initial = tuple(initial)
   initial_route = []
   initial = greedy_merge(initial, initial_route)
   print("After greedy phase: %d components, %d moves taken" % (component_count(initial), len(initial_route)))
 
+  # Remake the target partition every this many moves.
+  # But since empirically this doesn't seem to help, just set it to 100.
+  remake_every = 100
+
   best_route = None
   for attempt in range(attempts):
     state = initial
     route = initial_route[:]
-    if not is_solved(state):
+    while not is_solved(state):
       targets = make_target_partition(state)
       assert targets is not None
-      state = move_colors_to_targets(state, targets, route)
-
+      state = move_colors_to_targets(state, targets, route, len(route) + remake_every)
     assert is_solved(state)
     if best_route is None or len(route) < len(best_route):
       best_route = route[:]
-
   return best_route
 
 
@@ -365,16 +362,27 @@ def solve(initial, attempts=20):
 # Main
 # ============================================================
 
+def generate_random_board(seed):
+  random.seed(seed)
+  bag = [c+s for c in 'abcdefg' for s in '123' for i in '123']
+  while True:
+    random.shuffle(bag)
+    initial = parse_state(' '.join(bag[:40]))
+    if component_count(initial) == 40:
+      break
+  return initial
+
+
 if __name__ == "__main__":
+  initial_boards = [
+    generate_random_board(i) for i in range(1000)
+  ]
+
   successes = []
   failures = 0
   for i in range(1000):
-    bag = [c+s for c in 'abcdefg' for s in '123' for i in '123']
-    while True:
-      random.shuffle(bag)
-      initial = parse_state(' '.join(bag[:40]))
-      if component_count(initial) == 40:
-        break
+    initial = initial_boards[i]
+    random.seed(0)
 
     # initial = parse_state('c2 b1 c2 b3 f2 b3 c1 d3 a3 b2 g1 f1 c1 g2 f1 d1 f1 b1 e1 d3 f2 g2 c3 a1 e1 c3 g3 d1 b1 a2 e2 b3 g3 e1 d2 c2 g1 f3 g3 f3')
 
@@ -398,8 +406,11 @@ if __name__ == "__main__":
       for number, (a, b) in enumerate(route, 1):
         print("%2d. swap %02d (%s) <-> %02d (%s)" % (number, a, state[a], b, state[b]))
         state = swap(state, a, b)
-
       print("Solved:", is_solved(state))
       print("Final components:", component_count(state))
 
-    print("So far: %d/%d solved, in %.02f moves (std=%.02f), worst case %d moves\n%r" % (len(successes), len(successes)+failures, statistics.mean(successes), statistics.stdev(successes) if len(successes) >= 3 else 0.0, max(successes), successes))
+    print("So far: %d/%d solved, in %.02f moves (std=%.02f), worst case %d moves\nvalues=%r" % (
+      len(successes), len(successes)+failures,
+      statistics.mean(successes), statistics.stdev(successes) if len(successes) >= 3 else 0.0,
+      max(successes), successes)
+    )

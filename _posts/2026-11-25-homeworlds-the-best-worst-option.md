@@ -10,7 +10,7 @@ tags:
 
 Here's another [Binary Homeworlds](https://boardgamegeek.com/boardgame/14634/homeworlds) puzzle.
 
-For details of how I created the puzzle, how I created the image (thanks to Sleafar on Puzzling
+For details of how I created the image (thanks to Sleafar on Puzzling
 StackExchange!), and where to get your own physical set of Homeworlds pieces,
 see [the first post in this series](/blog/2020/05/29/homeworlds-mini-doomsday-machine/).
 
